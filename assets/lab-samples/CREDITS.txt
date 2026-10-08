@@ -1,0 +1,4 @@
+Synthetic FFmpeg test patterns and tones generated for this course.
+No third-party footage, music, people or speech.
+Educational assets follow the course CC BY-NC-SA 4.0 license.
+See scripts/generate_samples.py for reproducible generation and manifest.json for properties.

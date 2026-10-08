@@ -1,0 +1,3267 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Εργαστηριακό υλικό μαθήματος — ΣΑΕΚ, Γ΄ εξάμηνο">
+      
+      
+        <meta name="author" content="Θόδωρος Θεμελής">
+      
+      
+        <link rel="canonical" href="https://ththemelis.github.io/kdenlive-site/14-export-web/lesson-14/">
+      
+      
+        <link rel="prev" href="../../13-screen-capture/worksheet-13/">
+      
+      
+        <link rel="next" href="../worksheet-14/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Μάθημα - Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#14" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-header__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Μάθημα
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Σκοτεινό θέμα"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Σκοτεινό θέμα" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Φωτεινό θέμα"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Φωτεινό θέμα" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Αναζήτηση" placeholder="Αναζήτηση" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Αναζήτηση">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Καθαρισμός" aria-label="Καθαρισμός" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Αρχικοποίηση αναζήτησης
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-nav__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Αρχική
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εγκατάσταση και ρύθμιση
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Δείγματα εργαστηρίου
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/lesson-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/worksheet-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/lesson-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/worksheet-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/lesson-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/worksheet-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/lesson-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/worksheet-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/lesson-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/worksheet-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 6 — Keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 6 — Keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/lesson-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/worksheet-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/lesson-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/worksheet-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/lesson-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/worksheet-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/lesson-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/worksheet-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 10 — Μάσκες
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 10 — Μάσκες
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/lesson-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/worksheet-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/lesson-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/worksheet-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/lesson-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/worksheet-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/lesson-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/worksheet-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Συμπίεση και πρώτη εξαγωγή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Συμπίεση και πρώτη εξαγωγή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Πώς συμπιέζεται το βίντεο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Πρώτη εξαγωγή, ανάγνωση ιδιοτήτων
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Bitrate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Bitrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bitrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Bitrate: το πραγματικό κλειδί του μεγέθους αρχείου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Σύγκριση εξαγωγών στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Προορισμοί και 9:16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Προορισμοί και 9:16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Ρυθμίσεις ανά προορισμό
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-916" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Υποχρεωτική προσαρμογή σε 9:16
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Ιστός και τελική έκδοση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Ιστός και τελική έκδοση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-html-tag-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Ενσωμάτωση βίντεο σε HTML: φιλοξενία και tag &lt;video&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webvtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Υπότιτλοι στο &lt;video&gt;: από το SRT στο WebVTT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-poster-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Poster frame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Ενσωμάτωση σε HTML και υπότιτλοι
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksheet-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension-handbrake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Επέκταση — HandBrake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/lesson-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/worksheet-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Συμπίεση και πρώτη εξαγωγή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Συμπίεση και πρώτη εξαγωγή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Πώς συμπιέζεται το βίντεο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Πρώτη εξαγωγή, ανάγνωση ιδιοτήτων
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Bitrate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Bitrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bitrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Bitrate: το πραγματικό κλειδί του μεγέθους αρχείου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Σύγκριση εξαγωγών στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Προορισμοί και 9:16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Προορισμοί και 9:16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Ρυθμίσεις ανά προορισμό
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-916" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Υποχρεωτική προσαρμογή σε 9:16
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Ιστός και τελική έκδοση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Ιστός και τελική έκδοση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-html-tag-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Ενσωμάτωση βίντεο σε HTML: φιλοξενία και tag &lt;video&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webvtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Υπότιτλοι στο &lt;video&gt;: από το SRT στο WebVTT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-poster-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Poster frame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Ενσωμάτωση σε HTML και υπότιτλοι
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="14">Μάθημα 14: Εξαγωγή, συμπίεση, ενσωμάτωση στον ιστό<a class="headerlink" href="#14" title="Permanent link">&para;</a></h1>
+<p><strong>Διάρκεια:</strong> 3 διδακτικές ώρες (3 × 45′ μάθημα + 3 × 15′ διάλειμμα)  <strong>Παραδοτέο:</strong> το ίδιο μοντάζ εξαγόμενο σε 2-3 μορφές/προορισμούς, ένα ενσωματωμένο σε HTML</p>
+<div class="admonition info">
+<p class="admonition-title">Φύλλο εργασίας</p>
+<p>Οι δραστηριότητες του εργαστηρίου βρίσκονται στο <a href="../worksheet-14/">Φύλλο εργασίας 14</a>.</p>
+</div>
+<h2 id="required-core">Υποχρεωτικός πυρήνας<a class="headerlink" href="#required-core" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Δύο εξαγωγές για διαφορετικό προορισμό, η μία σε διαφορετικές διαστάσεις/αναλογία, με αιτιολόγηση ρυθμίσεων.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Λειτουργική τοπική σελίδα HTML με video, controls και poster, ελεγμένη σε browser.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Επαλήθευση των υποτίτλων του Μ4 και παράδοση του SRT και του WebVTT (<code>.vtt</code>) μαζί με το αντίστοιχο MP4, με γραμμή <code>&lt;track&gt;</code> στη σελίδα HTML.</li>
+</ul>
+<h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Ως τώρα η εξαγωγή ήταν «πάτα Render και περίμενε» — χωρίς να ξέρεις γιατί το αρχείο
+είναι 400MB, ή γιατί μια πλατφόρμα το απορρίπτει. Σήμερα καταλαβαίνεις πώς ο codec
+αποφασίζει τι θα κρατήσει από κάθε καρέ, τι πραγματικά καθορίζει το μέγεθος/ποιότητα
+ενός αρχείου, συγκρίνεις διαφορετικές ρυθμίσεις Render στο <strong>Kdenlive</strong>, εξάγεις για
+διαφορετικούς προορισμούς, και ενσωματώνεις βίντεο <strong>με υπότιτλους</strong> σε μια απλή
+ιστοσελίδα.</p>
+<h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>να εξηγείς γιατί ένα στατικό πλάνο συμπιέζεται πολύ καλύτερα από ένα πλάνο με κίνηση</li>
+<li>να ξεχωρίζεις απωλεστική από μη απωλεστική συμπίεση και τα καρέ I, P και B</li>
+<li>να εξηγείς τι είναι το bitrate και πώς επηρεάζει μέγεθος/ποιότητα</li>
+<li>να συγκρίνεις δύο εξαγωγές από το Kdenlive ως προς ποιότητα και μέγεθος</li>
+<li>να διαλέγεις σωστές ρυθμίσεις εξαγωγής ανάλογα με τον προορισμό (YouTube, κατακόρυφο social, web)</li>
+<li>να ενσωματώνεις βίντεο σε σελίδα HTML με το tag <code>&lt;video&gt;</code></li>
+<li>να μετατρέπεις υπότιτλους SRT σε WebVTT και να τους προσθέτεις με <code>&lt;track&gt;</code></li>
+<li>να ορίζεις poster frame</li>
+</ul>
+<h2 id="_3">Πριν ξεκινήσεις<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Άνοιξε το τελικό σου project και κράτησε ένα απόσπασμα 10–20 s για γρήγορα renders.
+Έχε διαθέσιμα το MP4 και το SRT του Μ4. Το HandBrake χρειάζεται μόνο για την <a href="../extension-handbrake/">Επέκταση HandBrake</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ο κύκλος των τεσσάρων βημάτων</p>
+<p><strong>δες το αποτέλεσμα → αντέγραψε τα βήματα → παράλλαξε μία παράμετρο → φτιάξε το δικό σου</strong></p>
+</div>
+<h2 id="_4">Οι τέσσερις κύκλοι<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Το μάθημα έχει τέσσερις κύκλους. Κάθε κύκλος έχει θεωρία (όπου χρειάζεται) και ένα στάδιο του ίδιου βίντεο:
+όταν τελειώσεις τον κύκλο, έχεις ένα νέο κομμάτι που έχεις ελέγξει. Το φύλλο εργασίας ακολουθεί τους κύκλους.</p>
+<table>
+<thead>
+<tr>
+<th>Κύκλος</th>
+<th>Τι προσθέτεις</th>
+<th>Φύλλο εργασίας</th>
+<th>Ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Συμπίεση και πρώτη εξαγωγή</td>
+<td>πρώτη εξαγωγή και ανάγνωση ιδιοτήτων</td>
+<td>βήματα 0–2</td>
+<td>1η</td>
+</tr>
+<tr>
+<td>2 — Bitrate</td>
+<td>σύγκριση δύο ποιοτήτων Render</td>
+<td>βήμα 3</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>3 — Προορισμοί και 9:16</td>
+<td>κατακόρυφη εκδοχή 9:16</td>
+<td>βήμα 4</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>4 — Ιστός και τελική έκδοση</td>
+<td>σελίδα HTML με βίντεο και υπότιτλους, τελική έκδοση</td>
+<td>βήματα 5–9</td>
+<td>3η</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cycle-1">Κύκλος 1 — Συμπίεση και πρώτη εξαγωγή<a class="headerlink" href="#cycle-1" title="Permanent link">&para;</a></h2>
+<h3 id="compression">1.1 Πώς συμπιέζεται το βίντεο<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h3>
+<p><strong>Γιατί χρειάζεται συμπίεση.</strong> Στο Μάθημα 2 §3.2 υπολόγισες ότι 10″ ασυμπίεστου FHD
+στα 25fps είναι περίπου 1,5 GB. Σε ένα δευτερόλεπτο αυτό είναι περίπου <strong>155 MB</strong>,
+δηλαδή περίπου 1,2 Gbit/s. Ένα βίντεο στα 8 Mbit/s (1 MB/s) έχει περίπου <strong>150 φορές
+μικρότερο ρυθμό δεδομένων</strong>. Αυτό το πετυχαίνει ο <strong>codec</strong> (κωδικοποιητής και
+αποκωδικοποιητής).</p>
+<p><strong>Απωλεστική και μη απωλεστική συμπίεση.</strong> Η <strong>μη απωλεστική</strong> (π.χ. FFV1) επιστρέφει
+ακριβώς τα ίδια pixel, αλλά μικραίνει το αρχείο μόνο λίγες φορές. Η <strong>απωλεστική</strong>
+(π.χ. H.264, H.265) πετά πληροφορία που το μάτι δύσκολα προσέχει και μικραίνει το
+αρχείο πολύ. Η απώλεια <strong>δεν αναιρείται</strong>: κάθε νέα εξαγωγή από απωλεστικό αρχείο
+προσθέτει νέα απώλεια.</p>
+<p><strong>Δύο τρόποι να εξοικονομηθούν δεδομένα:</strong></p>
+<ul>
+<li><strong>Χωρική (intra-frame) συμπίεση:</strong> μέσα σε ένα καρέ, όπως στο JPEG. Περιοχές με
+  παρόμοιο χρώμα και λεπτομέρεια που δεν φαίνεται απλοποιούνται.</li>
+<li><strong>Χρονική (inter-frame) συμπίεση:</strong> ανάμεσα σε καρέ. Αν το φόντο δεν αλλάζει, δεν
+  αποθηκεύεται ξανά· αποθηκεύεται μόνο <strong>η διαφορά</strong>.</li>
+</ul>
+<p>Η χρονική συμπίεση χρησιμοποιεί τρία είδη καρέ:</p>
+<table>
+<thead>
+<tr>
+<th>Καρέ</th>
+<th>Τι αποθηκεύει</th>
+<th>Ρόλος</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I</strong> (intra)</td>
+<td>ολόκληρη εικόνα, ανεξάρτητη από τα άλλα καρέ</td>
+<td>σημείο εκκίνησης· εκεί «πηδά» ο player όταν μετακινείς τη γραμμή χρόνου</td>
+</tr>
+<tr>
+<td><strong>P</strong> (predicted)</td>
+<td>διαφορές από προηγούμενο καρέ</td>
+<td>μικρότερο από το I</td>
+</tr>
+<tr>
+<td><strong>B</strong> (bidirectional)</td>
+<td>διαφορές από προηγούμενο <strong>και</strong> επόμενο καρέ</td>
+<td>συνήθως το μικρότερο</td>
+</tr>
+</tbody>
+</table>
+<p>Μια ομάδα καρέ που ξεκινά με I λέγεται <strong>GOP</strong> (group of pictures):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>I  B  B  P  B  B  P  B  B  P  B  B  I  B  B  P ...
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└────────────── GOP ──────────────┘
+</span></code></pre></div>
+<p><strong>Τι σημαίνει αυτό για το μέγεθος του αρχείου:</strong></p>
+<ul>
+<li><strong>Στατικό πλάνο:</strong> σχεδόν όλα τα καρέ λένε «καμία αλλαγή», άρα το αρχείο είναι πολύ μικρό.</li>
+<li><strong>Πολλή κίνηση, κόκκος/θόρυβος ή συνεχή κοψίματα:</strong> πολλές διαφορές, και κάθε
+  κόψιμο συνήθως απαιτεί νέο καρέ I. Στο ίδιο bitrate η ποιότητα πέφτει, ή για ίδια
+  ποιότητα το αρχείο μεγαλώνει. Γι' αυτό η αποθορυβοποίηση του Μαθήματος 12 μικραίνει
+  και το αρχείο.</li>
+</ul>
+<p>Μια μέτρηση με τα <a href="../../lab-samples/">δείγματα εργαστηρίου</a>, με ίδιες ρυθμίσεις (x264, σταθερή ποιότητα
+CRF 23, 960×540, 6″):</p>
+<table>
+<thead>
+<tr>
+<th>Πλάνο</th>
+<th style="text-align: right;">Μέγεθος αρχείου</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ακίνητη φωτογραφία (<code>still-image.png</code>)</td>
+<td style="text-align: right;">29 KB</td>
+</tr>
+<tr>
+<td>τρεμάμενο πλάνο (<code>progressive-shaky.mp4</code>)</td>
+<td style="text-align: right;">153 KB</td>
+</tr>
+<tr>
+<td>πλάνο με πολλή κίνηση (<code>landscape-25fps.mp4</code>)</td>
+<td style="text-align: right;">1,05 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Η διαφορά ανάμεσα στο πρώτο και στο τελευταίο είναι περίπου <strong>36 φορές</strong>. Στο Kdenlive
+οι τιμές θα διαφέρουν, αλλά αναμένεται η ίδια τάξη μεγέθους.</p>
+<p><strong>Η συμπίεση είναι ασύμμετρη.</strong> Η κωδικοποίηση (Render) είναι πολύ πιο βαριά από την
+αποκωδικοποίηση (αναπαραγωγή): ο encoder δοκιμάζει πολλές λύσεις για να βρει τις
+διαφορές, ο player απλώς εφαρμόζει το αποτέλεσμα. Γι' αυτό το Render (Μάθημα 1 §1.6)
+μπορεί να διαρκεί περισσότερο από το ίδιο το βίντεο, ενώ η αναπαραγωγή είναι ομαλή.</p>
+<div class="admonition warning">
+<p class="admonition-title">Δύο φορές η λέξη «keyframe»</p>
+<p>Στο Μάθημα 6 <strong>keyframe</strong> ήταν μια αποθηκευμένη <em>τιμή ιδιότητας</em> σε μια στιγμή
+(π.χ. ζουμ 120% στο δευτερόλεπτο 4). Στους codecs τα «keyframes» είναι τα <strong>καρέ I</strong>.
+Δεν σχετίζονται: το πρώτο το ορίζεις εσύ για κίνηση, το δεύτερο το ορίζει ο encoder
+για συμπίεση. Σε ρυθμίσεις εξαγωγής μπορεί να δεις όρους όπως <em>keyframe interval</em>
+ή <em>GOP</em>.</p>
+</div>
+<p><strong>Οι codecs που θα συναντήσεις:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Codec</th>
+<th>Περίπου από</th>
+<th>Χαρακτηριστικό</th>
+<th>Πού τον συναντάς</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M-JPEG</strong></td>
+<td>δεκαετία 1990</td>
+<td>κάθε καρέ είναι ξεχωριστή εικόνα JPEG (μόνο χωρική συμπίεση)· μεγάλα αρχεία, εύκολη επεξεργασία</td>
+<td>παλιές κάμερες και webcams, ενδιάμεσα αρχεία</td>
+</tr>
+<tr>
+<td><strong>MPEG-2</strong></td>
+<td>1995</td>
+<td>χρονική συμπίεση με καρέ I, P, B</td>
+<td>DVD, ψηφιακή τηλεόραση· το δείγμα <code>.mpg</code> του εργαστηρίου</td>
+</tr>
+<tr>
+<td><strong>MPEG-4 Part 2</strong> (DivX, XviD)</td>
+<td>γύρω στο 2000</td>
+<td>πιο αποδοτικός από τον MPEG-2· δύο γνωστές υλοποιήσεις</td>
+<td>παλιές ταινίες σε <code>.avi</code></td>
+</tr>
+<tr>
+<td><strong>H.264 / AVC</strong></td>
+<td>2003</td>
+<td>ο πιο διαδεδομένος· καλή ποιότητα με μικρό αρχείο</td>
+<td>MP4 παντού: κινητά, web, πλατφόρμες</td>
+</tr>
+<tr>
+<td><strong>H.265 / HEVC</strong></td>
+<td>2013</td>
+<td>συχνά παρόμοια ποιότητα με σημαντικά μικρότερο bitrate από τον H.264, με βαρύτερη επεξεργασία και πιο σύνθετες άδειες</td>
+<td>4K, νεότερα κινητά και κάμερες</td>
+</tr>
+<tr>
+<td><strong>VP9, AV1</strong></td>
+<td>2013, 2018</td>
+<td>ανοιχτοί, χωρίς δικαιώματα χρήσης</td>
+<td>WebM, πλατφόρμες streaming</td>
+</tr>
+<tr>
+<td><strong>FFV1</strong></td>
+<td></td>
+<td>μη απωλεστικός</td>
+<td>αρχειοθέτηση</td>
+</tr>
+</tbody>
+</table>
+<p>Για το μάθημα και για τον ιστό η ασφαλής επιλογή είναι <strong>H.264 σε MP4/AAC</strong>, όπως
+στο preset που χρησιμοποιείς από το Μάθημα 1. Τους υπόλοιπους τους αναγνωρίζεις·
+δεν τους εξάγεις σήμερα.</p>
+<h3 id="1">Στάδιο 1 — Πρώτη εξαγωγή, ανάγνωση ιδιοτήτων<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Έλεγχος bitrate/μεγέθους εξαγόμενου αρχείου.</p>
+</div>
+<ol>
+<li>Πάτησε <strong>Ctrl+Enter</strong> για Render και διάλεξε <strong>MP4-H264/AAC</strong>.
+   Στο <strong>Output file</strong> όρισε φάκελο/όνομα, π.χ. <code>demo_16x9.mp4</code>, έλεγξε τη διάρκεια
+   που θα εξαχθεί και πάτησε <strong>Render to File</strong>. Περίμενε την ολοκλήρωση.</li>
+<li>Βρες το πραγματικό bitrate του <strong>εξαγόμενου MP4</strong>: στα Windows, δεξί κλικ στο
+   αρχείο → <strong>Ιδιότητες → Λεπτομέρειες → Συνολικός ρυθμός μετάδοσης bit</strong>.
+   Αν δίνεται σε kbps, διαίρεσε με 1000 για Mbps. Αν το πεδίο λείπει, δες
+   τα στατιστικά/ιδιότητες μέσου στον player που χρησιμοποιείς.</li>
+<li>Υπολόγισε: συνολικό Mbps × δευτερόλεπτα / 8 ≈ MB; Επαλήθευσε με το πραγματικό μέγεθος αρχείου.</li>
+</ol>
+<h2 id="cycle-2">Κύκλος 2 — Bitrate<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
+<h3 id="21-bitrate">2.1 Bitrate: το πραγματικό κλειδί του μεγέθους αρχείου<a class="headerlink" href="#21-bitrate" title="Permanent link">&para;</a></h3>
+<p>Θυμήσου το Μάθημα 2 §3.2. Το <strong>bitrate</strong> είναι πόσα δεδομένα «επιτρέπονται» στον codec
+ανά δευτερόλεπτο βίντεο, σε Mbps (megabits ανά δευτερόλεπτο). Ισχύει ένας απλός,
+χρήσιμος κανόνας εκτίμησης:</p>
+<blockquote>
+<p><strong>μέγεθος MB ≈ (μέσο video Mbps + μέσο audio Mbps) × διάρκεια σε s / 8</strong></p>
+</blockquote>
+<p>Προστίθεται μικρό overhead του container. Π.χ. 120 s με 8 Mbps video και 0,192 Mbps
+audio αντιστοιχούν σε περίπου 122,88 MB. Αν μετράς συνολικό bitrate, μην ξαναπροσθέτεις τον ήχο.</p>
+<p>Ένα βίντεο 10 λεπτών σε 10 Mbps είναι περίπου διπλάσιο σε μέγεθος από το ίδιο βίντεο
+σε 5 Mbps — ίδια ανάλυση, ίδια διάρκεια, μόνο το bitrate άλλαξε.</p>
+<table>
+<thead>
+<tr>
+<th>Bitrate</th>
+<th>CBR / VBR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CBR</strong> (Constant Bitrate)</td>
+<td>Σταθερό σε όλη τη διάρκεια — προβλέψιμο μέγεθος αρχείου</td>
+</tr>
+<tr>
+<td><strong>VBR</strong> (Variable Bitrate)</td>
+<td>Προσαρμόζεται: περισσότερα δεδομένα σε πολύπλοκες σκηνές (κίνηση, λεπτομέρεια), λιγότερα σε απλές (στατικό πλάνο) — καλύτερη ποιότητα για το ίδιο μέσο μέγεθος</td>
+</tr>
+</tbody>
+</table>
+<p>Οι περισσότερες σύγχρονες πλατφόρμες/εργαλεία προτιμούν VBR ως προεπιλογή, ακριβώς
+επειδή αξιοποιεί καλύτερα τα δεδομένα εκεί που πραγματικά χρειάζονται.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ποιότητα αντί για αριθμό bitrate</p>
+<p>Το HandBrake επιτρέπει να ζητήσεις <strong>σταθερή ποιότητα</strong> (CRF) αντί για συγκεκριμένο
+bitrate. Δεν είναι απαραίτητο για τον πυρήνα· δες την προαιρετική
+<a href="../extension-handbrake/">Επέκταση HandBrake</a>.</p>
+</div>
+<h3 id="2-kdenlive">Στάδιο 2 — Σύγκριση εξαγωγών στο Kdenlive<a class="headerlink" href="#2-kdenlive" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Με ενεργό το <strong>Project Monitor</strong>, πήγαινε στην αρχή του αποσπάσματος και πάτησε
+   <strong>I</strong>, μετά στο τέλος και <strong>O</strong>. Στο <strong>Render → Selected zone</strong> κράτησε
+   MP4/H.264 και τις ίδιες διαστάσεις/fps για τις δύο δοκιμές.</li>
+<li>Στο <strong>More Options → Custom Quality</strong>, ενεργοποίησε τη χειροκίνητη ρύθμιση
+   και άλλαξε μόνο την ποιότητα βίντεο, με σαφώς διαφορετικές τιμές.
+   Κατέγραψε τις τιμές και τα ονόματα αρχείων· μην αλλάξεις όλα τα πεδία μαζί.
+   Εξήγαγε σε <code>quality_A.mp4</code> και <code>quality_B.mp4</code>, ώστε να κρατήσεις και τις δύο εκδοχές.</li>
+<li>Σύγκρινε μέγεθος και λεπτομέρεια στα ίδια καρέ. Διάλεξε αιτιολογημένα την έκδοση
+   για web. Το HandBrake μπορεί να δοκιμαστεί μετά ως <a href="../extension-handbrake/">επέκταση</a> σε έτοιμο αρχείο.</li>
+</ol>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/exporting/render.html">Kdenlive — Render και Custom Quality</a>.</p>
+<h2 id="cycle-3">Κύκλος 3 — Προορισμοί και 9:16<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 Ρυθμίσεις ανά προορισμό<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Προορισμός</th>
+<th>Τι προσέχεις</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>YouTube/Vimeo</strong></td>
+<td>Υψηλή ανάλυση/bitrate γίνεται αποδεκτό — η πλατφόρμα ξανασυμπιέζει ούτως ή άλλως κατά το ανέβασμα</td>
+</tr>
+<tr>
+<td><strong>Κατακόρυφο social (Reels/Shorts/TikTok)</strong></td>
+<td>Αναλογία 9:16 (Μάθημα 2 §1.4) — χρειάζεται νέα εξαγωγή/crop, όχι απλή αλλαγή bitrate</td>
+</tr>
+<tr>
+<td><strong>Ενσωμάτωση σε ιστοσελίδα</strong></td>
+<td>Μικρότερο αρχείο προτεραιότητα (χρόνος φόρτωσης) — πιο επιθετική συμπίεση αποδεκτή</td>
+</tr>
+<tr>
+<td><strong>Παράδοση/αρχειοθέτηση</strong></td>
+<td>Υψηλή ποιότητα, μέγεθος δευτερεύον — «master» αντίγραφο</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-916">Στάδιο 3 — Υποχρεωτική προσαρμογή σε 9:16<a class="headerlink" href="#3-916" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Save As</strong> σε νέο project για να κρατήσεις το οριζόντιο έργο.</li>
+<li>Στα <strong>Project Settings</strong> επίλεξε/όρισε profile <strong>1080×1920</strong>, ίδια fps και
+   progressive σάρωση. Αναζήτησε τα κατακόρυφα profiles στην κατηγορία <strong>Custom</strong>
+   και έλεγξε τις ιδιότητες πριν επιβεβαιώσεις. Η αλλαγή μεγέθους αφορά το κάδρο εξόδου.</li>
+<li>Επίλεξε κάθε πλάνο στο timeline και άνοιξε το υπάρχον <strong>Transform</strong>, ή
+   πρόσθεσέ το από το Effects αν δεν υπάρχει ήδη.
+   Με κλειδωμένη αναλογία και <strong>Distort απενεργοποιημένο</strong>,
+   ρύθμισε μέγεθος και θέση του θέματος. Διάλεξε crop ή λωρίδες, χωρίς τέντωμα.</li>
+<li>Προσάρμοσε τίτλους/υπότιτλους στο νέο κάδρο. Εξήγαγε 10–20 s και έλεγξε
+   πραγματικές διαστάσεις και αναγνωσιμότητα. Παράδωσε μαζί με την οριζόντια έκδοση.</li>
+</ol>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/project_and_asset_management/project_settings/general_settings.html">Kdenlive — Project Profile</a>.</p>
+<h2 id="cycle-4">Κύκλος 4 — Ιστός και τελική έκδοση<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
+<h3 id="41-html-tag-video">4.1 Ενσωμάτωση βίντεο σε HTML: φιλοξενία και tag <code>&lt;video&gt;</code><a class="headerlink" href="#41-html-tag-video" title="Permanent link">&para;</a></h3>
+<p>Η <strong>φιλοξενία στην ίδια ιστοσελίδα</strong> (self-hosting) δίνει άμεσο έλεγχο αρχείων,
+codec, poster και διαδρομών, αλλά ο χώρος και η μεταφορά δεδομένων βαρύνουν τον
+διακομιστή σου. Υπηρεσίες όπως <strong>YouTube/Vimeo</strong> φιλοξενούν και επεξεργάζονται
+το αρχείο και δίνουν κώδικα ενσωμάτωσης, συνήθως <code>iframe</code>. Αυτός δεν είναι η ίδια
+διαδικασία με <code>&lt;source src="video.mp4"&gt;</code> προς το δικό σου αρχείο.</p>
+<p>Πριν επιλέξεις, έλεγξε άδειες υλικού, ποιος πρέπει να έχει πρόσβαση, δυνατότητα
+ενσωμάτωσης, ιδιωτικότητα και τους ισχύοντες όρους/περιορισμούς υπηρεσίας.
+Για την άσκηση παραδίδεις τοπικό HTML με τα αρχεία του και αιτιολογείς σε δύο
+προτάσεις αν θα το δημοσίευες με self-hosting ή υπηρεσία. Δεν απαιτείται ανέβασμα
+ή δημιουργία λογαριασμού για την αξιολόγηση.</p>
+<p>Το HTML5 (ήδη γνωστό από το Β΄ εξάμηνό σου) έχει ενσωματωμένο tag για βίντεο, χωρίς
+plugins:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">width</span><span class="o">=</span><span class="s">"640"</span> <span class="na">poster</span><span class="o">=</span><span class="s">"thumbnail.jpg"</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"video.mp4"</span> <span class="na">type</span><span class="o">=</span><span class="s">"video/mp4"</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  Ο browser σου δεν υποστηρίζει video.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ul>
+<li><strong><code>controls</code></strong> εμφανίζει τα κουμπιά play/pause/ένταση</li>
+<li><strong><code>poster</code></strong> ορίζει μια εικόνα που φαίνεται <strong>πριν</strong> ξεκινήσει η αναπαραγωγή</li>
+<li><strong><code>&lt;source&gt;</code></strong> μπορεί να επαναληφθεί με διαφορετικά αρχεία/formats — ο browser
+  διαλέγει το πρώτο που υποστηρίζει</li>
+</ul>
+<h3 id="webvtt">4.2 Υπότιτλοι στο <code>&lt;video&gt;</code>: από το SRT στο WebVTT<a class="headerlink" href="#webvtt" title="Permanent link">&para;</a></h3>
+<p>Στο Μάθημα 4 έφτιαξες υπότιτλους σε <strong>SRT</strong>. Ο browser όμως δεν διαβάζει SRT μέσα
+στο <code>&lt;video&gt;</code>: διαβάζει <strong>WebVTT</strong> (<code>.vtt</code>). Οι δύο μορφές μοιάζουν πολύ, και η
+μετατροπή γίνεται με επεξεργαστή κειμένου. Ο ίδιος υπότιτλος και στις δύο:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>00:00:00,500 --&gt; 00:00:02,500
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Καλημέρα!
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>WEBVTT
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>1
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>00:00:00.500 --&gt; 00:00:02.500
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Καλημέρα!
+</span></code></pre></div>
+<p>Οι διαφορές που πρέπει να θυμάσαι:</p>
+<ul>
+<li>Η πρώτη γραμμή είναι <code>WEBVTT</code>, ακολουθούμενη από μία κενή γραμμή.</li>
+<li>Στα χιλιοστά του δευτερολέπτου μπαίνει <strong>τελεία</strong>, όχι κόμμα.</li>
+<li>Το αρχείο αποθηκεύεται σε <strong>UTF-8</strong>, αλλιώς τα ελληνικά παραμορφώνονται.</li>
+<li>Ο αριθμός του υπότιτλου είναι προαιρετικός στο WebVTT.</li>
+</ul>
+<p>Η γραμμή που τους συνδέει με το βίντεο είναι το <code>&lt;track&gt;</code>:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">width</span><span class="o">=</span><span class="s">"640"</span> <span class="na">poster</span><span class="o">=</span><span class="s">"thumbnail.png"</span><span class="p">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"video.mp4"</span> <span class="na">type</span><span class="o">=</span><span class="s">"video/mp4"</span><span class="p">&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="p">&lt;</span><span class="nt">track</span> <span class="na">kind</span><span class="o">=</span><span class="s">"subtitles"</span> <span class="na">srclang</span><span class="o">=</span><span class="s">"el"</span> <span class="na">label</span><span class="o">=</span><span class="s">"Ελληνικά"</span> <span class="na">src</span><span class="o">=</span><span class="s">"subtitles.vtt"</span> <span class="na">default</span><span class="p">&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  Ο browser σου δεν υποστηρίζει video.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ul>
+<li><strong><code>kind="subtitles"</code></strong> δηλώνει ότι πρόκειται για μετάφραση ή απόδοση του λόγου</li>
+<li><strong><code>srclang</code></strong> είναι η γλώσσα (<code>el</code> για τα ελληνικά) και <strong><code>label</code></strong> το όνομα στο μενού του player</li>
+<li><strong><code>default</code></strong> ενεργοποιεί τους υπότιτλους από την αρχή</li>
+</ul>
+<p><strong>Τι είδη αρχείων υποτίτλων υπάρχουν:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Μορφή</th>
+<th>Τι είναι</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SRT</strong></td>
+<td>απλό κείμενο: αριθμός, χρόνοι, κείμενο· ευρύτατα υποστηριζόμενο, χωρίς στυλ</td>
+</tr>
+<tr>
+<td><strong>WebVTT</strong></td>
+<td>η μορφή του web· συνδέεται με το <code>&lt;video&gt;</code> μέσω <code>&lt;track&gt;</code> και δέχεται βασικά στυλ</td>
+</tr>
+<tr>
+<td><strong>ASS/SSA</strong></td>
+<td>πλούσια μορφοποίηση: γραμματοσειρές, χρώματα, θέσεις</td>
+</tr>
+<tr>
+<td><strong>Ενσωματωμένοι (soft)</strong></td>
+<td>μέσα στο ίδιο αρχείο βίντεο, π.χ. σε MKV ή MP4· ο θεατής τους ανοίγει και τους κλείνει</td>
+</tr>
+<tr>
+<td><strong>«Καμένοι» (burned-in)</strong></td>
+<td>ζωγραφισμένοι πάνω στην εικόνα· δεν κλείνουν και δεν αλλάζουν γλώσσα</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Δοκίμασέ το σωστά</p>
+<p>Σε δοκιμή με Chrome: χωρίς <code>WEBVTT</code> στην πρώτη γραμμή ο browser <strong>απορρίπτει</strong> το
+αρχείο· με <strong>κόμμα</strong> στους χρόνους το αρχείο φορτώνει αλλά <strong>δεν εμφανίζεται κανένας
+υπότιτλος</strong>, χωρίς κανένα μήνυμα· με λάθος κωδικοποίηση τα ελληνικά
+<strong>παραμορφώνονται</strong>.</p>
+<p>Επιπλέον, ο <strong>Chrome και ο Edge δεν φορτώνουν το <code>.vtt</code> όταν η σελίδα ανοίγει
+απευθείας από τον δίσκο</strong> (διεύθυνση <code>file://</code>): το <code>&lt;track&gt;</code> δίνει σφάλμα και δεν
+εμφανίζεται κανένας υπότιτλος, ακόμη κι αν το αρχείο είναι σωστό. Η σελίδα πρέπει να
+ανοίγει από <strong>τοπικό server</strong>, όπως η επέκταση <strong>Live Server</strong> του VS Code, ή από το
+διαδίκτυο. Το βίντεο και το poster παίζουν κανονικά και από τον δίσκο. Ο διδάσκων θα σου
+πει ποιον τρόπο έχει ο υπολογιστής σου.</p>
+</div>
+<h3 id="43-poster-frame">4.3 Poster frame<a class="headerlink" href="#43-poster-frame" title="Permanent link">&para;</a></h3>
+<p>Το <strong>poster frame</strong> είναι μια στατική εικόνα-προεπισκόπηση του βίντεο. Την εξάγεις από
+το Kdenlive σταματώντας το playhead σε ένα αντιπροσωπευτικό καρέ και επιλέγοντας
+<strong>δεξί κλικ στο Project Monitor → Extract Frame</strong>. Η εικόνα περιλαμβάνει το
+αποτέλεσμα του μοντάζ στο συγκεκριμένο καρέ.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/monitors/project_monitor.html">Kdenlive — Project Monitor</a>.</p>
+<h3 id="4-html">Στάδιο 4 — Ενσωμάτωση σε HTML και υπότιτλοι<a class="headerlink" href="#4-html" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Tag <code>&lt;video&gt;</code>, poster frame, <code>&lt;track&gt;</code> και WebVTT.</p>
+</div>
+<ol>
+<li>Εξήγαγε poster με <strong>Extract Frame</strong> (4.3), π.χ. <code>thumbnail.png</code>, στον φάκελο του MP4.</li>
+<li>Σε επεξεργαστή κειμένου αντέγραψε τον κώδικα του 4.1 και αποθήκευσε ως
+   <code>index.html</code>, όχι <code>index.html.txt</code>. Αντικατάστησε <code>video.mp4</code> με το πραγματικό
+   όνομα του βίντεο και <code>thumbnail.png</code> με το όνομα του poster σου.</li>
+<li><strong>Μετάτρεψε τους υπότιτλους.</strong> Κάνε <strong>αντίγραφο</strong> του <code>.srt</code> του Μ4 με όνομα
+   <code>subtitles.vtt</code> και άνοιξέ το σε επεξεργαστή κειμένου. Πρόσθεσε στην πρώτη γραμμή
+   <code>WEBVTT</code> και μία κενή γραμμή. Άλλαξε τα κόμματα σε τελείες <strong>μόνο στις γραμμές με
+   <code>--&gt;</code></strong>: τα κόμματα μέσα στο κείμενο του υπότιτλου μένουν. Αποθήκευσε σε <strong>UTF-8</strong>.</li>
+<li>Πρόσθεσε τη γραμμή <code>&lt;track …&gt;</code> μέσα στο <code>&lt;video&gt;</code>, όπως στο 4.2.</li>
+<li>Άνοιξε τη σελίδα σε browser. Έλεγξε poster πριν το Play, εικόνα/ήχο κατά την
+   αναπαραγωγή και τα controls. Για να εμφανιστούν οι <strong>υπότιτλοι</strong> (κουμπί CC του player)
+   στον Chrome, άνοιξε τη σελίδα από <strong>τοπικό server</strong> (π.χ. στο VS Code: δεξί κλικ στο
+   <code>index.html</code> → <strong>Open with Live Server</strong>), όχι με διπλό κλικ στο αρχείο. Αν κάποιο
+   αρχείο δεν φορτώνει, σύγκρινε όνομα και επέκταση με την αντίστοιχη τιμή <code>src</code> ή
+   <code>poster</code>. Αν δεν εμφανίζονται υπότιτλοι, έλεγξε με τη σειρά: ότι άνοιξες τη σελίδα από
+   server, διαδρομή και όνομα, πρώτη γραμμή <code>WEBVTT</code>, τελείες στους χρόνους, UTF-8.</li>
+<li>Παράδωσε στον ίδιο φάκελο HTML, MP4, poster και το <code>.vtt</code>. Κράτησε επιπλέον το SRT
+   με το αντίστοιχο MP4 του Μ4, αφού ελέγξεις ξανά τον χρονισμό. Η απλή παρουσία
+   ενός SRT ή VTT στον φάκελο δεν ενεργοποιεί υπότιτλους· τους ενεργοποιεί μόνο το <code>&lt;track&gt;</code>.</li>
+<li>Κατέγραψε επιλογή φιλοξενίας και έναν συμβιβασμό (π.χ. έλεγχος αρχείων,
+   πρόσβαση ή κόστος μεταφοράς). Προετοίμασε τον φάκελο και το archive για το Μ15.</li>
+</ol>
+<hr />
+<h1 id="_5">Μετά το μοντάζ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">Συνηθισμένα λάθη<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Δεν ελέγχθηκε ποτέ το πραγματικό bitrate.</strong> Σύμπτωμα: έκπληξη με το μέγεθος αρχείου.</li>
+<li><strong>Ίδιο αρχείο για κάθε προορισμό.</strong> Σύμπτωμα: πολύ μεγάλο για web, ή λάθος αναλογία για social.</li>
+<li><strong>Λάθος διαδρομή στο <code>&lt;source src=""&gt;</code>.</strong> Σύμπτωμα: το βίντεο δεν φορτώνει καθόλου στη σελίδα.</li>
+<li><strong>Καμία τιμή <code>poster</code>.</strong> Σύμπτωμα: μαύρο/άδειο ορθογώνιο πριν το play.</li>
+<li><strong>SRT αυτούσιο στο <code>&lt;track&gt;</code>, ή <code>.vtt</code> χωρίς <code>WEBVTT</code> στην πρώτη γραμμή.</strong> Σύμπτωμα: καμία εμφάνιση υποτίτλων· ο browser απορρίπτει το αρχείο.</li>
+<li><strong>Άνοιγμα της σελίδας με διπλό κλικ (<code>file://</code>) στον Chrome.</strong> Σύμπτωμα: το βίντεο παίζει, αλλά δεν εμφανίζεται κανένας υπότιτλος, παρότι το <code>.vtt</code> είναι σωστό. Λύση: άνοιξε τη σελίδα από τοπικό server.</li>
+<li><strong>Κόμμα αντί για τελεία στους χρόνους του <code>.vtt</code>.</strong> Σύμπτωμα: το αρχείο φορτώνει, αλλά δεν εμφανίζεται κανένας υπότιτλος και κανένα μήνυμα σφάλματος.</li>
+<li><strong><code>.vtt</code> σε λάθος κωδικοποίηση.</strong> Σύμπτωμα: τα ελληνικά εμφανίζονται ως σύμβολα.</li>
+</ul>
+<h2 id="_7">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Στο <code>.vtt</code> σου άλλαξε την τελεία σε κόμμα στον χρόνο του πρώτου υποτίτλου. Τι βλέπεις στον player και ποιο μήνυμα σφάλματος εμφανίζεται;</li>
+<li>Βάλε λάθος διαδρομή στο <code>src</code> του <code>&lt;source&gt;</code>. Τι δείχνει ο browser;</li>
+<li>Εξήγαγε 16:9 project ως 9:16 χωρίς αλλαγή profile, μόνο «τεντώνοντας». Πώς δείχνει το αποτέλεσμα;</li>
+</ol>
+<h2 id="_8">Ασκήσεις εμπέδωσης<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Ποιο πλάνο είναι «ακριβό» για τον codec;</strong> Διάλεξε από το project σου ένα πλάνο που περιμένεις να
+   συμπιέζεται εύκολα και ένα που περιμένεις να είναι δύσκολο, και εξήγησε γιατί. Γράψε πρώτα την
+   πρόβλεψή σου για το μέγεθος. Μετά εξήγαγε 5″ από το καθένα με <strong>ίδιες</strong> ρυθμίσεις και σύγκρινε.
+   Τι σε εξέπληξε περισσότερο;</li>
+<li><strong>Πρόβλεψη πριν την εξαγωγή.</strong> Υπολόγισε με το χέρι πόσο μέγεθος περιμένεις για
+   βίντεο 2 λεπτών σε 8 Mbps, <strong>πριν</strong> εξάγεις. Μετά εξήγαγε και σύγκρινε με την πρόβλεψή σου.</li>
+</ol>
+<h2 id="_9">Δική σου εκδοχή<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Αν μείνει χρόνος, διάλεξε μία επέκταση και κάνε <strong>μία αλλαγή τη φορά</strong>.</p>
+<ul>
+<li><strong>Επέκταση Α:</strong> Πρόσθετη δοκιμή συμπίεσης με HandBrake, στη σελίδα <a href="../extension-handbrake/">Επέκταση HandBrake</a>.</li>
+<li><strong>Επέκταση Β:</strong> Τρίτη έκδοση με τεκμηριωμένη σύγκριση ποιότητας/μεγέθους.</li>
+</ul>
+<h2 id="_10">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Τι είναι το bitrate, και πώς σχετίζεται με το μέγεθος αρχείου;</li>
+<li>Τι κράτησες σταθερό στις δύο δοκιμές Render, ώστε η σύγκριση να έχει νόημα;</li>
+<li>Τι κάνει το attribute <code>poster</code> στο tag <code>&lt;video&gt;</code>;</li>
+<li>Τι είναι ένα καρέ I και γιατί ένα κόψιμο κοστίζει περισσότερα δεδομένα από την κίνηση ενός αντικειμένου;</li>
+<li>Γιατί ο φάκελος με SRT ή VTT δεν αρκεί για να εμφανίσει υπότιτλους στη σελίδα HTML;</li>
+</ol>
+<h2 id="_11">Για να θυμάσαι<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Η <strong>απωλεστική</strong> συμπίεση (H.264, H.265) πετά πληροφορία και μικραίνει πολύ το αρχείο· η <strong>μη απωλεστική</strong> (FFV1) τα κρατά όλα. Η απώλεια δεν αναιρείται: κάθε νέα εξαγωγή από απωλεστικό αρχείο προσθέτει νέα απώλεια.</li>
+<li><strong>Χωρική</strong> συμπίεση μέσα στο καρέ· <strong>χρονική</strong> ανάμεσα σε καρέ, όπου αποθηκεύεται μόνο η <strong>διαφορά</strong>. Καρέ <strong>I</strong> = ολόκληρη εικόνα, <strong>P</strong> και <strong>B</strong> = διαφορές· μια ομάδα καρέ που ξεκινά με I είναι ένα GOP.</li>
+<li>Στατικό πλάνο δίνει μικρό αρχείο. Πολλή κίνηση, θόρυβος ή συνεχή κοψίματα δίνουν μεγάλο· κάθε κόψιμο συνήθως απαιτεί νέο καρέ I.</li>
+<li>Στο Μ6 «keyframe» ήταν μια τιμή ιδιότητας· στους codecs είναι το καρέ I. Δεν σχετίζονται.</li>
+<li><strong>MB ≈ (video Mbps + audio Mbps) × διάρκεια σε s / 8</strong>, με μικρό overhead του container. Με ίδια διάρκεια, το μέγεθος το καθορίζει κυρίως το bitrate.</li>
+<li>Ο προορισμός ορίζει τις ρυθμίσεις: web → μικρότερο αρχείο, παράδοση ή αρχειοθέτηση → υψηλή ποιότητα, 9:16 → νέα εξαγωγή και όχι απλή αλλαγή bitrate. Για το web η ασφαλής επιλογή είναι H.264 σε MP4/AAC.</li>
+<li>Στο <code>&lt;video controls poster="…"&gt;</code> με <code>&lt;source&gt;</code>, το <code>poster</code> είναι η εικόνα που φαίνεται πριν ξεκινήσει η αναπαραγωγή.</li>
+<li>Ο browser διαβάζει υπότιτλους σε <strong>WebVTT</strong> (<code>.vtt</code>) μέσω <code>&lt;track&gt;</code>, όχι SRT. Στον Chrome το <code>&lt;track&gt;</code> δεν φορτώνει από <code>file://</code>: άνοιξε τη σελίδα με Live Server.</li>
+</ul>
+<h2 id="_12">Λεξιλόγιο<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><strong>codec</strong>, <strong>απωλεστική / μη απωλεστική συμπίεση</strong>, <strong>καρέ I / P / B</strong>, <strong>GOP</strong>,
+<strong>bitrate</strong>, <strong>CBR / VBR</strong>, <strong>preset εξαγωγής</strong>, <strong><code>&lt;video&gt;</code> / <code>&lt;source&gt;</code> / <code>&lt;track&gt;</code> /
+<code>poster</code></strong>, <strong>WebVTT</strong>, <strong>master αρχείο</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Επιστροφή στην αρχή
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Υποσέλιδο" >
+        
+          
+          <a href="../../13-screen-capture/worksheet-13/" class="md-footer__link md-footer__link--prev" aria-label="Προηγούμενο: Φύλλο εργασίας">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Προηγούμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worksheet-14/" class="md-footer__link md-footer__link--next" aria-label="Επόμενο: Φύλλο εργασίας">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Επόμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Θόδωρος Θεμελής — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el"
+   target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

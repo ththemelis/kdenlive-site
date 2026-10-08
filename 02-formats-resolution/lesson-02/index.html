@@ -1,0 +1,3866 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Εργαστηριακό υλικό μαθήματος — ΣΑΕΚ, Γ΄ εξάμηνο">
+      
+      
+        <meta name="author" content="Θόδωρος Θεμελής">
+      
+      
+        <link rel="canonical" href="https://ththemelis.github.io/kdenlive-site/02-formats-resolution/lesson-02/">
+      
+      
+        <link rel="prev" href="../../01-first-cut/worksheet-01/">
+      
+      
+        <link rel="next" href="../worksheet-02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Μάθημα - Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-formats-fps" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-header__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Μάθημα
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Σκοτεινό θέμα"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Σκοτεινό θέμα" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Φωτεινό θέμα"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Φωτεινό θέμα" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Αναζήτηση" placeholder="Αναζήτηση" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Αναζήτηση">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Καθαρισμός" aria-label="Καθαρισμός" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Αρχικοποίηση αναζήτησης
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-nav__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Αρχική
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εγκατάσταση και ρύθμιση
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Δείγματα εργαστηρίου
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/lesson-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/worksheet-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Αρχεία εργαστηρίου
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Διάγνωση ενός προβλήματος
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Διάγνωση ενός προβλήματος">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-container-vs-codec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Container vs codec — η πιο συχνή σύγχυση
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clip-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Πώς διαβάζω τις ιδιότητες στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Οι containers που θα συναντήσεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Ανάλυση και αναλογία διαστάσεων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Το προφίλ έργου (project profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Επιλογή προφίλ βήμα προς βήμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Το μήνυμα «Switch to clip profile»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Πώς ξεχωρίζω τα συμπτώματα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Διάγνωση ενός προβλήματος
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Δύο πηγές σε ένα project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Δύο πηγές σε ένα project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ntsc-pal-secam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Λίγη ιστορία: γιατί υπάρχουν NTSC, PAL, SECAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Fps: πόσα καρέ ανά δευτερόλεπτο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Δύο πηγές σε ένα project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Συνειδητή ρύθμιση και διόρθωση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Συνειδητή ρύθμιση και διόρθωση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fit-crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Κρατάω ολόκληρη την εικόνα ή γεμίζω το κάδρο;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Μέγεθος αρχείου και συμπίεση — μια πρώτη ματιά
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Βάθος χρώματος και ασυμπίεστο μέγεθος
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Πού αποθηκεύεις και πώς μεταφέρεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Ακριβές κόψιμο σε πολλαπλά πλάνα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Συνειδητή ρύθμιση και διόρθωση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksheet-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/lesson-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/worksheet-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/lesson-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/worksheet-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/lesson-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/worksheet-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 6 — Keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 6 — Keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/lesson-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/worksheet-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/lesson-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/worksheet-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/lesson-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/worksheet-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/lesson-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/worksheet-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 10 — Μάσκες
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 10 — Μάσκες
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/lesson-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/worksheet-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/lesson-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/worksheet-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/lesson-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/worksheet-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/lesson-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/worksheet-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/lesson-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/worksheet-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/extension-handbrake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Επέκταση — HandBrake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/lesson-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/worksheet-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Αρχεία εργαστηρίου
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Διάγνωση ενός προβλήματος
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Διάγνωση ενός προβλήματος">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-container-vs-codec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Container vs codec — η πιο συχνή σύγχυση
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clip-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Πώς διαβάζω τις ιδιότητες στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Οι containers που θα συναντήσεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Ανάλυση και αναλογία διαστάσεων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Το προφίλ έργου (project profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Επιλογή προφίλ βήμα προς βήμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Το μήνυμα «Switch to clip profile»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Πώς ξεχωρίζω τα συμπτώματα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Διάγνωση ενός προβλήματος
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Δύο πηγές σε ένα project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Δύο πηγές σε ένα project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ntsc-pal-secam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Λίγη ιστορία: γιατί υπάρχουν NTSC, PAL, SECAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Fps: πόσα καρέ ανά δευτερόλεπτο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Δύο πηγές σε ένα project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Συνειδητή ρύθμιση και διόρθωση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Συνειδητή ρύθμιση και διόρθωση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fit-crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Κρατάω ολόκληρη την εικόνα ή γεμίζω το κάδρο;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Μέγεθος αρχείου και συμπίεση — μια πρώτη ματιά
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Βάθος χρώματος και ασυμπίεστο μέγεθος
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Πού αποθηκεύεις και πώς μεταφέρεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Ακριβές κόψιμο σε πολλαπλά πλάνα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Συνειδητή ρύθμιση και διόρθωση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-formats-fps">Μάθημα 2: Formats, ανάλυση, fps — «Τεχνική υγιεινή»<a class="headerlink" href="#2-formats-fps" title="Permanent link">&para;</a></h1>
+<p><strong>Διάρκεια:</strong> 3 διδακτικές ώρες (3 × 45′ μάθημα + 3 × 15′ διάλειμμα)  <strong>Παραδοτέα:</strong> θεματικό μοντάζ 25–30″ και δοκιμή fit/crop 12″, με καταγραφή ιδιοτήτων και αιτιολόγηση</p>
+<div class="admonition info">
+<p class="admonition-title">Φύλλο εργασίας</p>
+<p>Οι δραστηριότητες του εργαστηρίου βρίσκονται στο <a href="../worksheet-02/">Φύλλο εργασίας 2</a>.</p>
+</div>
+<h2 id="required-core">Υποχρεωτικός πυρήνας<a class="headerlink" href="#required-core" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Καταγραφή container, codec, ανάλυσης και fps δύο πηγών και αιτιολόγηση του προφίλ έργου.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Μοντάζ 25–30″ για οριζόντια προβολή FHD/25fps, με τουλάχιστον 5 πλάνα από οριζόντιες και κατακόρυφες πηγές, χωρίς παραμόρφωση.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Σύγκριση fit/crop στο ίδιο απόσπασμα: 6″ με λωρίδες + 6″ με crop. Αποθήκευση και εξαγωγή και των δύο projects.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Καταγραφή βάθους χρώματος όπου είναι διαθέσιμο, υπολογισμός ασυμπίεστου RGB και αιτιολόγηση αποθήκευσης/αντιγράφου.</li>
+</ul>
+<h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Στην άσκηση <strong>«Η ίδια ιστορία, διαφορετικές πηγές»</strong> θα συνεχίσεις το μοντάζ 20″
+του Μ1, προσθέτοντας ένα κατακόρυφο πλάνο. Ο στόχος είναι βίντεο <strong>25–30″,
+1920×1080 / 25fps</strong>, για οριζόντια προβολή στην αίθουσα. Θα συγκρίνεις επίσης
+fit και crop στο ίδιο απόσπασμα, με ένα ξεχωριστό βίντεο <strong>12″</strong>.
+Η <a href="../worksheet-02/#mixed-sources-mission">εκφώνηση και οι 6 σύνδεσμοι Pexels</a>
+βρίσκονται στο φύλλο εργασίας. Θα μάθεις να διαβάζεις τις ιδιότητες ενός αρχείου,
+να ορίζεις το πλαίσιο του τελικού βίντεο και να χρησιμοποιείς το <strong>Transform</strong>
+για μια σταθερή προσαρμογή κάδρου, χωρίς κίνηση ή πρόσθετα keyframes.</p>
+<p>Δεν είναι το πιο εντυπωσιακό μάθημα του εξαμήνου, αλλά είναι αυτό που κάνει κάθε επόμενο
+μάθημα να δουλεύει χωρίς παράξενα προβλήματα που δεν εξηγούνται.</p>
+<h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>να εξηγήσεις τη διαφορά <strong>container</strong> και <strong>codec</strong></li>
+<li>να αναγνωρίζεις ανάλυση, αναλογία διαστάσεων (aspect ratio) και fps ενός πλάνου</li>
+<li>να ξεχωρίζεις FHD, UHD/4K και 8K σε πραγματικούς αριθμούς pixel</li>
+<li>να ρυθμίζεις το <strong>προφίλ έργου</strong> (project profile) σύμφωνα με τον προορισμό και τις πηγές σου</li>
+<li>να ξεχωρίζεις τις ιδιότητες της πηγής, του project και του εξαγόμενου αρχείου</li>
+<li>να προσαρμόζεις διαφορετική αναλογία με λωρίδες ή crop, διατηρώντας τις αναλογίες της εικόνας</li>
+<li>να αναγνωρίζεις τα συμπτώματα αναντιστοιχίας: παραμόρφωση, μαύρες λωρίδες (letterbox/pillarbox), «κολλημένη» κίνηση</li>
+<li>να εξηγείς σε γενικές γραμμές γιατί ένα αρχείο βίντεο είναι μεγάλο ή μικρό σε μέγεθος</li>
+<li>να καταγράφεις βάθος χρώματος όπου αναφέρεται και να υπολογίζεις χώρο με συγκεκριμένες παραδοχές</li>
+</ul>
+<h2 id="_3">Αρχεία εργαστηρίου<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Από το <a href="../../lab-samples/">πακέτο δειγμάτων</a>. Είναι συνθετικά δείγματα για έλεγχο, όχι πλάνα FHD.</p>
+<table>
+<thead>
+<tr>
+<th>Αρχείο</th>
+<th>Ιδιότητες</th>
+<th>Πού το χρησιμοποιείς</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../assets/lab-samples/landscape-25fps.mp4">landscape-25fps.mp4</a></td>
+<td>960×540, 25fps</td>
+<td>Αν δεν έχεις δικό σου ζεύγος (Πριν ξεκινήσεις, βήμα 3)· Άσκηση 1</td>
+</tr>
+<tr>
+<td><a href="../../assets/lab-samples/portrait-30fps.mp4">portrait-30fps.mp4</a></td>
+<td>360×640, 30fps</td>
+<td>Όπως το προηγούμενο· Άσκηση 1 και Άσκηση 3</td>
+</tr>
+<tr>
+<td><a href="../../assets/lab-samples/interlaced-noisy-tff.mpg">interlaced-noisy-tff.mpg</a></td>
+<td>720×576, MPEG-2, πλεγμένο</td>
+<td>2.1 (οι 576 γραμμές του PAL) και Άσκηση 1 (container και codec)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">Πριν ξεκινήσεις<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Κράτησε το <strong>project 20″ του Μ1 και τα αρχικά του μέσα</strong>. Στο Στάδιο 2 θα κάνεις
+   <strong>File → Save As</strong> για να δημιουργήσεις <code>M02/02-formats.kdenlive</code>.
+   Για τη διάγνωση και τη σύγκριση fit/crop θα χρησιμοποιήσεις ξεχωριστά projects.</li>
+<li>Από την <a href="../worksheet-02/#video-bank">τράπεζα του Μ2</a> πρόσθεσε <strong>ένα κατακόρυφο</strong>
+   στα 4 οριζόντια του Μ1. Έλεγξε ανάλυση, αναλογία και fps στο πραγματικό αρχείο.
+   Για την καταγραφή σύγκρινε δύο πηγές με διαφορετική αναλογία και διαφορετικά fps.</li>
+<li>Αν δεν έχεις κατάλληλο ζεύγος για τη δοκιμή, χρησιμοποίησε τα
+   <a href="../../lab-samples/">δείγματα εργαστηρίου</a>: <code>landscape-25fps.mp4</code>
+   (960×540, 25fps) και <code>portrait-30fps.mp4</code> (360×640, 30fps), διάρκειας 6″ το καθένα.
+   Είναι συνθετικά δείγματα για έλεγχο, όχι πλάνα FHD.</li>
+<li>Βάλε το νέο αρχείο στο <code>M02/media</code> και κράτησε τις εξαγωγές στο <code>M02/exports</code>.
+   Αποθήκευε τα νέα <code>.kdenlive</code> στον <code>M02</code>. Μην μετακινείς τα ήδη συνδεδεμένα μέσα
+   του Μ1: το Save As δεν τα αντιγράφει στον νέο φάκελο. Συμπεριέλαβέ τα στο backup.</li>
+</ol>
+<p><strong>Στόχος της αποστολής και των δοκιμών fit/crop:</strong> οριζόντιο βίντεο
+<strong>1920×1080, 16:9, 25fps, progressive</strong>. Η προδιαγραφή παράδοσης είναι δεδομένη·
+διαφορετικά προφίλ δοκιμάζονται μόνο στα ξεχωριστά πειραματικά projects.
+Τα μικρότερα πλάνα του Μ1 μεγεθύνονται χωρίς να αποκτούν νέα λεπτομέρεια.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ο κύκλος των τεσσάρων βημάτων</p>
+<p><strong>δες το αποτέλεσμα → αντέγραψε τα βήματα → παράλλαξε μία παράμετρο → φτιάξε το δικό σου</strong></p>
+</div>
+<h2 id="_5">Οι τέσσερις κύκλοι<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Το μάθημα έχει τέσσερις κύκλους. Κάθε κύκλος έχει θεωρία (όπου χρειάζεται) και ένα στάδιο του ίδιου βίντεο:
+όταν τελειώσεις τον κύκλο, έχεις ένα νέο κομμάτι που έχεις ελέγξει. Το φύλλο εργασίας ακολουθεί τους κύκλους.</p>
+<table>
+<thead>
+<tr>
+<th>Κύκλος</th>
+<th>Τι προσθέτεις</th>
+<th>Φύλλο εργασίας</th>
+<th>Ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Διάγνωση ενός προβλήματος</td>
+<td>ανάγνωση ιδιοτήτων πηγής και project</td>
+<td>βήματα 0–1</td>
+<td>1η</td>
+</tr>
+<tr>
+<td>2 — Δύο πηγές σε ένα project</td>
+<td>δεύτερη πηγή, fps και πρότυπα</td>
+<td>βήμα 2</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>3 — Συνειδητή ρύθμιση και διόρθωση</td>
+<td>fit ή crop, μέγεθος αρχείου, ακριβές κόψιμο</td>
+<td>βήμα 3</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>4 — Το ολοκληρωμένο μοντάζ</td>
+<td>έλεγχος, εξαγωγή και ιδιότητες του MP4</td>
+<td>βήματα 4–9</td>
+<td>3η</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cycle-1">Κύκλος 1 — Διάγνωση ενός προβλήματος<a class="headerlink" href="#cycle-1" title="Permanent link">&para;</a></h2>
+<h3 id="11-container-vs-codec">1.1 Container vs codec — η πιο συχνή σύγχυση<a class="headerlink" href="#11-container-vs-codec" title="Permanent link">&para;</a></h3>
+<p>Το <code>.mp4</code>, το <code>.mov</code>, το <code>.avi</code> δεν είναι «τύποι βίντεο» με την έννοια που νομίζει
+συνήθως κανείς. Είναι <strong>containers</strong> (περιέκτες) — σαν ένα κουτί που μπορεί να περιέχει
+διαφορετικό περιεχόμενο μέσα του.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Τι είναι</th>
+<th>Παράδειγμα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Container</strong></td>
+<td>Ο «φάκελος» που ομαδοποιεί εικόνα, ήχο, υπότιτλους, μεταδεδομένα</td>
+<td><code>.mp4</code>, <code>.mov</code>, <code>.avi</code>, <code>.mkv</code></td>
+</tr>
+<tr>
+<td><strong>Codec</strong></td>
+<td>Ο αλγόριθμος που <strong>συμπιέζει</strong> την πραγματική εικόνα/ήχο μέσα στο container</td>
+<td>H.264, H.265/HEVC, ProRes</td>
+</tr>
+</tbody>
+</table>
+<p>Δύο αρχεία <code>.mp4</code> μπορεί να έχουν διαφορετικό codec — π.χ. H.264 το ένα και
+H.265/HEVC το άλλο — και διαφορετική συμβατότητα με έναν player. Η κατάληξη δεν
+αρκεί για διάγνωση: ελέγχεις codec, χαρακτηριστικά του βίντεο και δυνατότητες
+αναπαραγωγής. Η μετονομασία από <code>.mov</code> σε <code>.mp4</code> δεν μετατρέπει το αρχείο.</p>
+<h3 id="clip-info">1.2 Πώς διαβάζω τις ιδιότητες στο Kdenlive<a class="headerlink" href="#clip-info" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Εισήγαγε το αρχείο με <strong>Add Clip or Folder</strong> στο <strong>Project Bin</strong>.</li>
+<li>Κάνε δεξί κλικ στο <strong>αρχικό clip μέσα στο Bin</strong> → <strong>Clip Properties</strong>.
+   Αν το panel δεν φαίνεται, άνοιξέ το από <strong>View → Clip Properties</strong>.</li>
+<li>Άνοιξε την καρτέλα <strong>File Info</strong>. Επιβεβαίωσε πρώτα το όνομα/τη διαδρομή,
+   ώστε να καταγράφεις το σωστό αρχείο.</li>
+<li>Αντέγραψε τις ενδείξεις για <strong>video codec</strong>, πλάτος × ύψος και <strong>frame rate</strong>.
+   Ξεχώρισε τον codec εικόνας από τον codec ήχου: π.χ. H.264 και AAC αντίστοιχα.</li>
+<li>Κατέγραψε container/format όπου εμφανίζεται και την κατάληξη του αρχείου.
+   Αν βλέπεις μόνο την κατάληξη, γράψε π.χ. «MP4 — από την κατάληξη», αντί να
+   υποθέσεις ότι διάβασες πλήρη ανάλυση του container.</li>
+<li>Αν εμφανίζονται <strong>Pixel format</strong> ή <strong>Bit depth</strong>, αντέγραψέ τα ακριβώς.
+   Αν λείπουν, γράψε <strong>«δεν αναφέρεται»</strong>. Η ένδειξη H.264 ή η κατάληξη MP4
+   από μόνη της δεν αποδεικνύει συγκεκριμένο βάθος χρώματος.</li>
+</ol>
+<p>Μείνε στην ανάγνωση του <strong>File Info</strong>. Η διπλανή καρτέλα <strong>Properties</strong> περιέχει
+παραμέτρους που αλλάζουν τον τρόπο ερμηνείας του clip· δεν χρειάζεται να τις
+πειράξεις για να συμπληρώσεις την καταγραφή.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/project_and_asset_management/project_bin/clip_properties.html">Kdenlive — Clip Properties</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">MPEG δεν είναι ένα πράγμα</p>
+<p>Ο όρος <strong>MPEG</strong> (Moving Picture Experts Group) είναι ο οργανισμός που όρισε πολλά
+πρότυπα codec/container (MPEG-1, MPEG-2, MPEG-4 — από το οποίο προέρχεται και το
+«MP4»). Όταν βλέπεις «αρχείο MPEG», σημαίνει «κάποιο πρότυπο αυτής της οικογένειας»,
+όχι ένα συγκεκριμένο format.</p>
+</div>
+<h3 id="container-table">1.3 Οι containers που θα συναντήσεις<a class="headerlink" href="#container-table" title="Permanent link">&para;</a></h3>
+<p>Ένα ακατέργαστο ρεύμα εικόνας (π.χ. μόνο H.264, χωρίς ήχο) δεν είναι container. Ο
+container είναι το «πακέτο» που ενώνει εικόνα, ήχο, υπότιτλους και μεταδεδομένα σε ένα
+αρχείο. Οι συνδυασμοί του πίνακα είναι <strong>συνηθισμένοι, όχι κανόνες</strong>: ο μόνος σίγουρος
+τρόπος είναι το File Info.</p>
+<table>
+<thead>
+<tr>
+<th>Container</th>
+<th>Προέλευση</th>
+<th>Πού τον συναντάς</th>
+<th>Συνηθισμένοι codecs (εικόνα / ήχος)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp4</code> (MPEG-4 Part 14)</td>
+<td>διεθνές πρότυπο ISO/IEC</td>
+<td>κινητά, web, πλατφόρμες βίντεο· ο πιο διαδεδομένος</td>
+<td>H.264, H.265 / AAC</td>
+</tr>
+<tr>
+<td><code>.mov</code> (QuickTime, QTFF)</td>
+<td>Apple</td>
+<td>κάμερες και κινητά της Apple, επαγγελματικό μοντάζ</td>
+<td>H.264, H.265, ProRes / AAC, PCM</td>
+</tr>
+<tr>
+<td><code>.avi</code> (Audio Video Interleave)</td>
+<td>Microsoft, 1992</td>
+<td>παλιά αρχεία και κάμερες· σπάνιος σε νέες παραγωγές</td>
+<td>πολλοί, π.χ. DV, DivX, XviD / MP3, PCM</td>
+</tr>
+<tr>
+<td><code>.mkv</code> (Matroska)</td>
+<td>ανοιχτό πρότυπο</td>
+<td>ταινίες και σειρές με πολλά κανάλια ήχου και υπότιτλους</td>
+<td>σχεδόν οποιοσδήποτε</td>
+</tr>
+<tr>
+<td><code>.webm</code></td>
+<td>Google, ανοιχτό· βασίζεται στο Matroska</td>
+<td>βίντεο μέσα σε browser</td>
+<td>VP8, VP9, AV1 / Vorbis, Opus</td>
+</tr>
+<tr>
+<td><code>.wmv</code> (Windows Media Video)</td>
+<td>Microsoft</td>
+<td>παλιά περιβάλλοντα Windows</td>
+<td>WMV / WMA</td>
+</tr>
+<tr>
+<td><code>.flv</code> (Flash Video)</td>
+<td>Adobe</td>
+<td>ιστορικό: το online βίντεο πριν από το HTML5</td>
+<td>H.264 και παλαιότεροι / MP3, AAC</td>
+</tr>
+<tr>
+<td><code>.3gp</code> (3GPP)</td>
+<td>οργανισμοί κινητής τηλεφωνίας</td>
+<td>παλιά κινητά, πολύ μικρά αρχεία</td>
+<td>H.263, H.264 / AMR, AAC</td>
+</tr>
+<tr>
+<td><code>.mts</code>, <code>.m2ts</code> (AVCHD)</td>
+<td>Sony, Panasonic</td>
+<td>κάμερες HD· συχνά χρειάζονται μετατροπή πριν το μοντάζ</td>
+<td>H.264 / AC-3</td>
+</tr>
+<tr>
+<td><code>.mpg</code>, <code>.mpeg</code> (MPEG-1/2)</td>
+<td>MPEG</td>
+<td>DVD και παλιά ψηφιακή τηλεόραση</td>
+<td>MPEG-2 / MP2, AC-3</td>
+</tr>
+</tbody>
+</table>
+<p>Το <strong>FLV</strong> ήταν το κυρίαρχο format online video τη δεκαετία 2000-2010, δεμένο με το
+Adobe Flash Player. Σήμερα είναι ουσιαστικά εγκαταλελειμμένο: το βλέπεις στον οδηγό
+κατάρτισης ως ιστορική αναφορά, όχι ως κάτι που θα εξάγεις.</p>
+<h3 id="14">1.4 Ανάλυση και αναλογία διαστάσεων<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>Η <strong>ανάλυση</strong> μετριέται σε pixel πλάτος × ύψος. Η <strong>αναλογία διαστάσεων</strong> (aspect
+ratio) είναι η σχέση πλάτους/ύψους, ανεξάρτητα από τον απόλυτο αριθμό pixel:</p>
+<table>
+<thead>
+<tr>
+<th>Ονομασία</th>
+<th>Ανάλυση (pixel)</th>
+<th>Αναλογία</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FHD</strong> (Full HD / 1080p)</td>
+<td>1920 × 1080</td>
+<td>16:9</td>
+</tr>
+<tr>
+<td><strong>UHD / 4K</strong></td>
+<td>3840 × 2160</td>
+<td>16:9</td>
+</tr>
+<tr>
+<td><strong>8K</strong></td>
+<td>7680 × 4320</td>
+<td>16:9</td>
+</tr>
+<tr>
+<td><strong>Κατακόρυφο (social/reels)</strong></td>
+<td>1080 × 1920</td>
+<td>9:16</td>
+</tr>
+</tbody>
+</table>
+<p>Το <strong>UHD 3840×2160</strong> έχει τετραπλάσιο πλήθος pixel από το FHD: διπλάσιο πλάτος
+× διπλάσιο ύψος. Το κινηματογραφικό <strong>4K 4096×2160</strong> έχει διαφορετικό πλάτος·
+το «4K» δεν δηλώνει πάντα ακριβώς τις ίδιες διαστάσεις. Περισσότερα pixel αυξάνουν
+το υπολογιστικό φορτίο. Το μέγεθος συμπιεσμένου αρχείου εξαρτάται από bitrate και διάρκεια (3.2).</p>
+<p><strong>Παράδειγμα ανάγνωσης:</strong> <code>1920×1080</code> σημαίνει 1.920 pixel οριζόντια και 1.080
+κατακόρυφα. Το <code>1080×1920</code> έχει το ίδιο πλήθος pixel, αλλά κατακόρυφο κάδρο.
+Τα <code>960×540</code> και <code>1920×1080</code> έχουν και τα δύο αναλογία <strong>16:9</strong>: η διαφορετική
+ανάλυση μόνη της δεν απαιτεί μαύρες λωρίδες.</p>
+<p>Στα σημερινά δείγματα τα pixel είναι τετράγωνα (<strong>pixel aspect ratio 1:1</strong>),
+οπότε η διαίρεση πλάτους/ύψους δίνει την αναλογία εικόνας. Σε παλαιότερο υλικό
+με μη τετράγωνα pixel ελέγχεις και το <strong>display aspect ratio</strong>.</p>
+<h3 id="project-profile">1.5 Το προφίλ έργου (project profile)<a class="headerlink" href="#project-profile" title="Permanent link">&para;</a></h3>
+<p>Το προφίλ ορίζει το κοινό πλαίσιο του μοντάζ: ανάλυση, αναλογία, fps και τύπο σάρωσης.
+Η επιλογή <strong>progressive</strong> σημαίνει πλήρη καρέ· την επιλέγουμε στις σημερινές δοκιμές.
+Ξεχώρισε τρία επίπεδα:</p>
+<table>
+<thead>
+<tr>
+<th>Τι ελέγχεις</th>
+<th>Πού το βλέπεις</th>
+<th>Τι περιγράφει</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Πηγή</strong></td>
+<td>Bin → Clip Properties → File Info</td>
+<td>Το αρχείο που εισήγαγες, π.χ. 1080×1920/59.94fps.</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td>Project Settings → Settings</td>
+<td>Το κοινό κάδρο και fps του μοντάζ, π.χ. 1920×1080/25fps.</td>
+</tr>
+<tr>
+<td><strong>Εξαγωγή</strong></td>
+<td>Render και μετά ιδιότητες του νέου MP4</td>
+<td>Το πραγματικό αρχείο που παραδίδεις. Πρόσθετες επιλογές εξαγωγής μπορούν να αλλάξουν την ανάλυσή του.</td>
+</tr>
+</tbody>
+</table>
+<p>Η αλλαγή προφίλ δεν ξαναγράφει τις πηγές. Επίσης, το preset <strong>MP4-H.264/AAC</strong>
+στην εξαγωγή δεν είναι από μόνο του επιλογή προφίλ έργου.</p>
+<h3 id="16">1.6 Επιλογή προφίλ βήμα προς βήμα<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Γράψε πρώτα τον <strong>προορισμό</strong>: π.χ. «οριζόντιο βίντεο για προβολή στην τάξη».
+   Έπειτα διάβασε τις πηγές με το 1.2. Για την κοινή δοκιμή διαλέγουμε FHD/25fps.</li>
+<li>Για νέο έργο πάτησε <strong>File → New</strong>. Για υπάρχον, αποθήκευσε πρώτα αντίγραφο
+   με <strong>File → Save As</strong>, π.χ. <code>02-profile-test.kdenlive</code>.</li>
+<li>Στο υπάρχον έργο άνοιξε <strong>File → Project Settings</strong> στις νεότερες εκδόσεις
+   ή <strong>Project → Project Settings</strong> στις παλαιότερες, και την καρτέλα <strong>Settings</strong>.</li>
+<li>Στη λίστα προφίλ εντόπισε το επιθυμητό preset. Χρησιμοποίησε τα φίλτρα <strong>Fps</strong>
+   και <strong>Scanning</strong>, ή καθάρισέ τα αν κρύβουν επιλογές.</li>
+<li>Πριν πατήσεις <strong>OK</strong>, διάβασε τις λεπτομέρειες: για τη δοκιμή πρέπει να είναι
+   <strong>1920×1080, 25fps, 16:9, progressive</strong>, με pixel aspect ratio <strong>1:1</strong>.
+   Επίλεξε από τις τιμές, όχι μόνο από ένα όνομα όπως «HD».</li>
+<li>Πάτησε <strong>OK</strong>, έλεγξε το Project Monitor και ξανακοίτα τις ρυθμίσεις για
+   επιβεβαίωση. Αποθήκευσε. Αν άλλαξες υπάρχον μοντάζ, έλεγξε διάρκεια και κοπές.</li>
+</ol>
+<p>Στο τελικό έργο προέχει ο προορισμός. Τα χαρακτηριστικά της βασικής πηγής σε
+βοηθούν να επιλέξεις fps/ανάλυση, αλλά δεν υπερισχύουν μιας συγκεκριμένης απαίτησης
+παράδοσης. Απόφυγε αλλαγή προφίλ αφού αρχίσεις τίτλους και keyframes.</p>
+<h3 id="switch-profile">1.7 Το μήνυμα «Switch to clip profile»<a class="headerlink" href="#switch-profile" title="Permanent link">&para;</a></h3>
+<p>Κατά την εισαγωγή του πρώτου clip μπορεί να εμφανιστεί πρόταση αλλαγής προφίλ.
+Το μήνυμα <strong>δεν σημαίνει ότι το βίντεο δεν υποστηρίζεται</strong>. Για παράδειγμα,
+<code>1080×1920, 59.94fps</code> περιγράφει κατακόρυφο κάδρο και περίπου 60 καρέ/s.</p>
+<table>
+<thead>
+<tr>
+<th>Επιλογή</th>
+<th>Τι κάνει</th>
+<th>Πότε τη διαλέγεις</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Switch</strong></td>
+<td>Αλλάζει το προφίλ έργου ώστε να ταιριάζει στο clip.</td>
+<td>Όταν θέλεις το τελικό έργο με αυτά τα χαρακτηριστικά.</td>
+</tr>
+<tr>
+<td><strong>Cancel</strong></td>
+<td>Κρατά το προφίλ που έχεις ήδη ορίσει· το clip παραμένει διαθέσιμο για εισαγωγή/χρήση.</td>
+<td>Στη δοκιμή κατακόρυφου πλάνου μέσα στο οριζόντιο FHD/25fps έργο.</td>
+</tr>
+</tbody>
+</table>
+<p>Αν δεν εμφανιστεί πρόταση, συνέχισε ελέγχοντας το <strong>Project Settings</strong>· η εμφάνιση
+του μηνύματος δεν είναι προϋπόθεση για την άσκηση. Μετά την επιλογή επιβεβαίωσε
+το πραγματικό προφίλ, αντί να το συμπεραίνεις από το όνομα του πρώτου αρχείου.</p>
+<h3 id="18">1.8 Πώς ξεχωρίζω τα συμπτώματα<a class="headerlink" href="#18" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Σύμπτωμα</th>
+<th>Αιτία</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Μαύρες λωρίδες πάνω/κάτω ή αριστερά/δεξιά (letterbox/pillarbox)</td>
+<td>Διαφορετική <strong>αναλογία διαστάσεων</strong> από το προφίλ</td>
+</tr>
+<tr>
+<td>Το πλάνο φαίνεται τραβηγμένο/πλατυσμένο</td>
+<td>Έχει εφαρμοστεί μη αναλογικό τέντωμα ή λανθασμένη ερμηνεία αναλογίας· δεν είναι υποχρεωτικό αποτέλεσμα της εισαγωγής</td>
+</tr>
+<tr>
+<td>Ασυνεχής κίνηση</td>
+<td>Πιθανή μετατροπή fps, αδυναμία ομαλής προεπισκόπησης ή πρόβλημα αναπαραγωγής· το σύμπτωμα μόνο του δεν αποδεικνύει μία αιτία</td>
+</tr>
+</tbody>
+</table>
+<p>Πηγές: <a href="https://docs.kdenlive.org/en/project_and_asset_management/project_settings/general_settings.html">Project Settings</a>,
+<a href="https://docs.kdenlive.org/en/troubleshooting/faq.html#asset-management">μήνυμα αλλαγής προφίλ</a>.</p>
+<h3 id="1">Στάδιο 1 — Διάγνωση ενός προβλήματος<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Αναγνώριση συμπτωμάτων αναντιστοιχίας, Ρυθμίσεις έργου (Project Settings).</p>
+</div>
+<ol>
+<li>Από <strong>File → New</strong> διάλεξε <strong>1920×1080, 16:9, 25fps, progressive</strong>, σύμφωνα
+   με την <a href="#project-profile">οδηγία προφίλ</a>. Αποθήκευσε ως <code>02-diagnosi.kdenlive</code>.</li>
+<li>Εισήγαγε το κατακόρυφο πλάνο στο Bin. Αν εμφανιστεί <strong>Switch/Cancel</strong>, σημείωσε
+   τις προτεινόμενες τιμές και πάτησε <strong>Cancel</strong> για να κρατήσεις τον οριζόντιο στόχο.
+   Αν δεν εμφανιστεί, γράψε «δεν εμφανίστηκε».</li>
+<li>Διάλεξε ζώνη <strong>6″</strong> στο Clip Monitor, δημιούργησε sub-clip με <strong>Ctrl+I</strong> και
+   σύρε το στην αρχή του <strong>V1</strong>, χωρίς εφέ και με κενά τα άλλα video tracks.
+   Παίξε το και σημείωσε πού εμφανίζονται λωρίδες και αν οι αναλογίες του θέματος είναι φυσικές.</li>
+<li>Διάβασε τις ιδιότητες της πηγής από το <a href="#clip-info">File Info</a>, μετά το
+   προφίλ από το <strong>Project Settings</strong>. Γράψε τις δύο εγγραφές χωριστά στο φύλλο εργασίας.</li>
+<li>Κράτησε τις λωρίδες για αυτή τη δοκιμή: διατηρούν όλο το κατακόρυφο κάδρο μέσα
+   στον οριζόντιο στόχο. Αποθήκευσε. Εξήγησε τι θα άλλαζες στο προφίλ αν ο
+   προορισμός ήταν αντίθετα ένα <strong>κατακόρυφο</strong> τελικό βίντεο.</li>
+</ol>
+<p><strong>Σημείο ελέγχου:</strong> μπορείς να δείξεις διαφορετικές διαστάσεις στην πηγή και στο
+project, χωρίς να χαρακτηρίζεις τις σκόπιμες λωρίδες «χαλασμένη εικόνα».</p>
+<h2 id="cycle-2">Κύκλος 2 — Δύο πηγές σε ένα project<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
+<h3 id="21-ntsc-pal-secam">2.1 Λίγη ιστορία: γιατί υπάρχουν NTSC, PAL, SECAM<a class="headerlink" href="#21-ntsc-pal-secam" title="Permanent link">&para;</a></h3>
+<p>Πριν από το ψηφιακό βίντεο, η τηλεόραση ήταν αναλογική και κάθε περιοχή του κόσμου
+υιοθέτησε διαφορετικό πρότυπο μετάδοσης:</p>
+<table>
+<thead>
+<tr>
+<th>Πρότυπο</th>
+<th>Περιοχή</th>
+<th style="text-align: center;">Γραμμές ανά καρέ</th>
+<th style="text-align: center;">Καρέ/s</th>
+<th style="text-align: center;">Πεδία/s</th>
+<th style="text-align: center;">Λόγος εικόνας</th>
+<th style="text-align: center;">Χρωματικό μοντέλο</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NTSC</strong></td>
+<td>ΗΠΑ, Ιαπωνία</td>
+<td style="text-align: center;">525 (≈480 ορατές)</td>
+<td style="text-align: center;">≈29.97 (πρακτικά «30»)</td>
+<td style="text-align: center;">≈59.94</td>
+<td style="text-align: center;">4:3</td>
+<td style="text-align: center;">YIQ</td>
+</tr>
+<tr>
+<td><strong>PAL</strong></td>
+<td>μεγάλο μέρος της Ευρώπης και αλλού</td>
+<td style="text-align: center;">625 (≈576 ορατές)</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">4:3</td>
+<td style="text-align: center;">YUV</td>
+</tr>
+<tr>
+<td><strong>SECAM</strong></td>
+<td>Γαλλία και μέρη Ανατολικής Ευρώπης/Αφρικής</td>
+<td style="text-align: center;">625 (≈576 ορατές)</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">4:3</td>
+<td style="text-align: center;">YDbDr</td>
+</tr>
+</tbody>
+</table>
+<p>Κάθε καρέ της αναλογικής τηλεόρασης σχεδιαζόταν σε <strong>δύο πεδία</strong> (fields): το ένα
+περιείχε τις μονές γραμμές και το άλλο τις ζυγές. Γι' αυτό τα 25 καρέ αντιστοιχούν σε
+50 πεδία το δευτερόλεπτο. Η τεχνική λέγεται <strong>πεπλεγμένη σάρωση</strong> (interlaced) και θα τη
+δεις στην πράξη στο Μάθημα 12. Και τα τρία πρότυπα χωρίζουν το σήμα σε φωτεινότητα (Y)
+και δύο συνιστώσες χρώματος, ώστε να παραμένουν συμβατά με τις ασπρόμαυρες τηλεοράσεις·
+διαφέρουν στον τρόπο που κωδικοποιούν το χρώμα. Στα δείγματα εργαστηρίου, το
+<code>interlaced-noisy-tff.mpg</code> έχει 720×576, δηλαδή τις 576 ορατές γραμμές του PAL.</p>
+<p>Η επίγεια τηλεόραση μπορεί να μεταδίδει <strong>ψηφιακό</strong> βίντεο μέσω κεραίας (π.χ. DVB-T/T2).
+Οι καθιερωμένοι ρυθμοί καρέ παραμένουν προεπιλογές σε πολλές εφαρμογές και συσκευές,
+ανάλογα με την περιοχή και τον προορισμό — γι' αυτό συναντάς 25fps ή 29.97fps.</p>
+<p>Το <strong>DV</strong> (Digital Video) εμφανίστηκε στα μέσα της δεκαετίας του 1990 και το <strong>HDV</strong>
+(High Definition Video) στις αρχές της δεκαετίας του 2000. Και τα δύο ήταν μορφές
+βιντεοκασέτας mini-DV: το DV σε ανάλυση standard-definition, το HDV σε high-definition
+πάνω στην ίδια φυσική κασέτα. Αν ποτέ ψηφιοποιήσεις παλιά
+οικογενειακά βίντεο, αυτά τα ονόματα θα τα ξαναδείς. Στο Μάθημα 12 θα βελτιώσεις
+ήδη ψηφιακά αρχεία παλαιότερου υλικού.</p>
+<h3 id="22-fps">2.2 Fps: πόσα καρέ ανά δευτερόλεπτο<a class="headerlink" href="#22-fps" title="Permanent link">&para;</a></h3>
+<p>Το βίντεο δεν περιέχει κίνηση· περιέχει ακίνητες εικόνες που εναλλάσσονται. Η αίσθηση
+κίνησης οφείλεται σε ένα χαρακτηριστικό της όρασης: όταν οι εικόνες διαδέχονται η μία
+την άλλη αρκετά γρήγορα, δεν τις βλέπουμε χωριστά αλλά ως συνεχή κίνηση. Το φαινόμενο
+λέγεται παραδοσιακά <strong>μετείκασμα</strong> (persistence of vision). Με λίγες εικόνες το
+δευτερόλεπτο βλέπεις διαδοχή φωτογραφιών· όσο αυξάνονται, η κίνηση γίνεται πιο ομαλή.
+Ο κινηματογράφος καθιέρωσε τα 24 καρέ το δευτερόλεπτο ως συμβιβασμό ανάμεσα σε ομαλή
+κίνηση και κόστος φιλμ.</p>
+<p>Το <strong>fps</strong> (frames per second) καθορίζει πόσες ακίνητες εικόνες εναλλάσσονται ανά
+δευτερόλεπτο για να δημιουργηθεί η αίσθηση κίνησης:</p>
+<table>
+<thead>
+<tr>
+<th>fps</th>
+<th>Πού συναντάται συνήθως</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24</td>
+<td>Κινηματογραφικό look</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Ευρωπαϊκή τηλεόραση (κληρονομιά PAL)</td>
+</tr>
+<tr>
+<td>30 / 29.97</td>
+<td>Αμερικανική τηλεόραση (κληρονομιά NTSC), online video</td>
+</tr>
+<tr>
+<td>50 / 60</td>
+<td>Sports, gaming, ομαλή/«βιντεοσκοπική» αίσθηση, ιδανικό για slow-motion (Μάθημα 7)</td>
+</tr>
+</tbody>
+</table>
+<p>Δεν υπάρχει «σωστό» fps καθολικά — υπάρχει το fps που ταιριάζει στο <strong>project</strong> σου.
+Κάθε project έχει έναν ρυθμό καρέ, αλλά οι <strong>πηγές μπορούν να έχουν διαφορετικά fps</strong>.
+Το Kdenlive προσαρμόζει τα καρέ τους στον ρυθμό του project. Για συνηθισμένο μοντάζ
+στην κανονική ταχύτητα, ένα πλάνο 10″ εξακολουθεί να διαρκεί περίπου 10″.</p>
+<table>
+<thead>
+<tr>
+<th>Πηγή → project</th>
+<th>Τι σημαίνει σε κανονική ταχύτητα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50fps → 25fps</td>
+<td>Επιλέγονται λιγότερα καρέ ανά δευτερόλεπτο. Η δράση δεν γίνεται αυτόματα αργή.</td>
+</tr>
+<tr>
+<td>25fps → 50fps</td>
+<td>Χωρίς ειδική παραγωγή ενδιάμεσων καρέ, επαναλαμβάνονται καρέ· δεν αποκτάς 50 διαφορετικές λήψεις ανά δευτερόλεπτο.</td>
+</tr>
+<tr>
+<td>30fps → 25fps</td>
+<td>Χρειάζεται ανακατανομή των καρέ στον χρόνο· μπορεί να φανεί ανομοιόμορφος βηματισμός στην κίνηση.</td>
+</tr>
+</tbody>
+</table>
+<p>Τα <strong>29.97 και 30fps</strong>, όπως και τα <strong>59.94 και 60fps</strong>, είναι κοντινές αλλά
+διαφορετικές τιμές. Κατάγραψε την ένδειξη που διαβάζεις, χωρίς να τη στρογγυλεύεις
+αυθαίρετα. Η διαφορά fps δεν ισοδυναμεί με κατεστραμμένο αρχείο.</p>
+<p>Στο timecode <code>00:00:02:10</code> τα τελευταία ψηφία είναι <strong>καρέ</strong>. Σε project 25fps
+δηλώνει 2 δευτερόλεπτα και 10 καρέ, δηλαδή <strong>2,4 s</strong>. Αυτό βοηθά να τοποθετείς
+ακριβώς τις κοπές και να διαβάζεις σωστά τις διάρκειες.</p>
+<h3 id="2-project">Στάδιο 2 — Δύο πηγές σε ένα project<a class="headerlink" href="#2-project" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Αυτόματη πρόταση προφίλ κατά την εισαγωγή, συνειδητή επιλογή.</p>
+</div>
+<ol>
+<li>Αποθήκευσε τη διάγνωση και άνοιξε το <strong>project 20″ του Μ1</strong>. Κάνε
+   <strong>File → Save As → <code>M02/02-formats.kdenlive</code></strong>, και όρισε το προφίλ FHD/25fps.
+   Αν δεν έχεις project Μ1, ακολούθησε την ενδεικτική σειρά του φύλλου εργασίας.</li>
+<li>Εισήγαγε το νέο κατακόρυφο πλάνο. Διάλεξε αυτό και ένα από τα οριζόντια
+   για την καταγραφή, με διαφορετικά fps όπου είναι διαθέσιμα.
+   Συμπλήρωσε τον πίνακα ιδιοτήτων του φύλλου εργασίας με την <a href="#clip-info">οδηγία File Info</a>.</li>
+<li>Ελευθέρωσε χώρο πριν από το τελευταίο πλάνο, μετακινώντας το προς τα δεξιά.
+   Πρόσθεσε <strong>5″</strong> από το κατακόρυφο στο V1 και φέρε το τελευταίο πλάνο αμέσως μετά.
+   Κράτησε αρχικά fit και έλεγξε ότι δεν υπάρχουν κενά. Η ιστορία των 20″ γίνεται 25″.</li>
+<li>Σύγκρινε κάθε αναλογία με το project: ένα οριζόντιο 1280×720 έχει ίδια
+   αναλογία με το FHD, ενώ ένα 1080×1920 αφήνει πλευρικές λωρίδες με fit.</li>
+<li>Σημείωσε ποια πηγή έχει διαφορετικά fps. Μην αλλάξεις το <strong>Frame rate</strong> στην
+   καρτέλα <strong>Properties</strong> για να εξαναγκάσεις συμφωνία· εδώ καταγράφεις τις πηγές.</li>
+</ol>
+<p><strong>Σημείο ελέγχου:</strong> έχεις δύο συμπληρωμένες εγγραφές και ξέρεις ποια διαφορά αφορά
+το σχήμα της εικόνας και ποια τον χρόνο. Η πρόταση Switch/Cancel έχει ήδη ελεγχθεί στο Στάδιο 1.</p>
+<h2 id="cycle-3">Κύκλος 3 — Συνειδητή ρύθμιση και διόρθωση<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
+<h3 id="fit-crop">3.1 Κρατάω ολόκληρη την εικόνα ή γεμίζω το κάδρο;<a class="headerlink" href="#fit-crop" title="Permanent link">&para;</a></h3>
+<p>Για διαφορετικές αναλογίες εξετάζουμε δύο βασικές επιλογές χωρίς παραμόρφωση:</p>
+<table>
+<thead>
+<tr>
+<th>Επιλογή</th>
+<th>Τι κρατάς</th>
+<th>Τι θυσιάζεις</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Προσαρμογή ολόκληρης της εικόνας (fit)</strong></td>
+<td>Όλο το αρχικό κάδρο, στις σωστές αναλογίες του.</td>
+<td>Μένουν λωρίδες: <strong>pillarbox</strong> στα πλάγια ή <strong>letterbox</strong> πάνω/κάτω.</td>
+</tr>
+<tr>
+<td><strong>Γέμισμα με μεγέθυνση και περικοπή (crop)</strong></td>
+<td>Γεμάτο κάδρο, με σωστές αναλογίες του θέματος.</td>
+<td>Μέρος της εικόνας βγαίνει έξω από το πλαίσιο του project.</td>
+</tr>
+</tbody>
+</table>
+<p>Σε κατακόρυφο πλάνο μέσα σε οριζόντιο project, το fit αφήνει λωρίδες στα πλάγια.
+Με crop για πλήρες γέμισμα χάνεις εικόνα <strong>πάνω και κάτω</strong>. Η έντονη μεγέθυνση
+μπορεί επίσης να μειώσει την ευκρίνεια. Διάλεξε με βάση το θέμα που πρέπει να φαίνεται.</p>
+<p><strong>Α. Ολόκληρη εικόνα με λωρίδες</strong></p>
+<ol>
+<li>Σύρε το κατακόρυφο clip στο <strong>V1</strong>, με κενά τα υπόλοιπα video tracks.</li>
+<li>Βάλε το playhead μέσα του και κοίτα το <strong>Project Monitor</strong>. Στη συνηθισμένη
+   αρχική προσαρμογή το Kdenlive διατηρεί την αναλογία και εμφανίζει λωρίδες.</li>
+<li>Αν έχεις ήδη προσθέσει Transform για μεγέθυνση, απενεργοποίησέ το από τον
+   διακόπτη του στο <strong>Effect/Composition Stack</strong> ή αφαίρεσέ το για αυτή τη δοκιμή.</li>
+<li>Έλεγξε αρχή, μέση και τέλος: φαίνεται ολόκληρο το περιεχόμενο; Οι κύκλοι
+   παραμένουν κύκλοι και τα πρόσωπα έχουν φυσικές αναλογίες;</li>
+</ol>
+<p><strong>Β. Γέμισμα με Transform, χωρίς τέντωμα</strong></p>
+<ol>
+<li>Επίλεξε το κατακόρυφο <strong>clip στο timeline</strong>. Άνοιξε <strong>View → Effects</strong> αν
+   λείπει το panel και αναζήτησε <strong>Transform</strong>. Σύρε το εφέ πάνω στο clip.</li>
+<li>Στο <strong>Effect/Composition Stack</strong> επίλεξε το Transform και άφησε το
+   <strong>Distort απενεργοποιημένο</strong>, ώστε η αλλαγή μεγέθους να διατηρεί τις αναλογίες.</li>
+<li>Επίλεξε το <strong>πρώτο keyframe</strong> στη μικρή γραμμή χρόνου του εφέ. Κράτησε μόνο
+   αυτό το σημείο: θέλουμε σταθερό κάδρο σε όλο το clip, όχι κινούμενο zoom.</li>
+<li>Αύξησε σταδιακά το <strong>Size</strong> μέχρι η εικόνα να καλύψει το πλαίσιο του project.
+   Ρύθμισε <strong>X</strong> για οριζόντια και <strong>Y</strong> για κατακόρυφη μετατόπιση, ώστε να
+   μείνει μέσα στο κάδρο το σημαντικό θέμα. Παρατήρησε ποιες άκρες χάνονται.</li>
+<li>Παίξε ολόκληρο το clip. Αν το πρόσωπο ή η δράση βγαίνει έξω από το κάδρο,
+   διόρθωσε τη θέση ή διάλεξε fit για αυτό το πλάνο.</li>
+<li>Απενεργοποίησε και ενεργοποίησε το Transform για σύγκριση του <strong>ίδιου καρέ</strong>.
+   Στο τέλος κράτησε την επιλογή που αποφάσισες και αποθήκευσε.</li>
+</ol>
+<p>Εδώ το crop προκύπτει επειδή μέρος της μεγεθυμένης εικόνας βρίσκεται έξω από
+το πλαίσιο. Η πηγή παραμένει ολόκληρη. Αν το zoom μεταβάλλεται στην αναπαραγωγή,
+έλεγξε μήπως πρόσθεσες κατά λάθος δεύτερο keyframe.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/transform_distort_perspective/transform.html">Kdenlive — Transform</a>.</p>
+<h3 id="32">3.2 Μέγεθος αρχείου και συμπίεση — μια πρώτη ματιά<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>Για συμπιεσμένο αρχείο: <strong>MB ≈ μέσο συνολικό Mbps × διάρκεια σε s / 8</strong>, συν μικρό
+overhead του container. Με ίδια διάρκεια και ίδιο μέσο συνολικό bitrate, η αύξηση
+ανάλυσης δεν πολλαπλασιάζει από μόνη της το μέγεθος. Για συγκρίσιμη ποιότητα σε
+περισσότερα pixel μπορεί να χρειάζεται υψηλότερο bitrate. Υψηλότερο bitrate δεν
+ανακτά λεπτομέρεια που λείπει από την πηγή. Η απωλεστική συμπίεση μειώνει δεδομένα
+με συμβιβασμό ποιότητας· η μη απωλεστική διατηρεί την πληροφορία.</p>
+<p><strong>Παράδειγμα:</strong> για 20″ με μέσο <strong>συνολικό</strong> bitrate 8 Mbps:
+<code>8 × 20 ÷ 8 = 20 MB</code>, περίπου. Αν τα 8 Mbps αφορούν μόνο το βίντεο, προσθέτεις
+και το bitrate του ήχου. Τα <strong>Mb</strong> είναι megabits, τα <strong>MB</strong> megabytes· 8 bits = 1 byte.
+Η επιλογή σταθερής ποιότητας μπορεί να δώσει διαφορετικό μέσο bitrate ανάλογα
+με το περιεχόμενο, επομένως η ίδια ρύθμιση ποιότητας δεν εγγυάται ίδιο μέγεθος.</p>
+<h3 id="33">3.3 Βάθος χρώματος και ασυμπίεστο μέγεθος<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>Το <strong>βάθος χρώματος</strong> δηλώνει bits ανά χρωματικό κανάλι: 8 bit δίνουν 256 τιμές,
+10 bit δίνουν 1.024. Δεν είναι το bitrate. Περισσότερες διαβαθμίσεις βοηθούν να
+περιοριστούν οι ορατές «σκάλες» σε χρωματικές μεταβάσεις, εφόσον η πηγή και η ροή
+επεξεργασίας τις διατηρούν.</p>
+<p>Για ασυμπίεστο <strong>RGB, 8 bit ανά κανάλι, χωρίς alpha, ήχο ή overhead</strong>:</p>
+<blockquote>
+<p>bytes = πλάτος × ύψος × 3 × fps × δευτερόλεπτα</p>
+</blockquote>
+<p>FHD στα 25fps για 10 s: 1920 × 1080 × 3 × 25 × 10 = <strong>1.555.200.000 bytes</strong>,
+δηλαδή <strong>1.555,2 MB</strong> (δεκαδικά). Δεν εφαρμόζουμε αυτόν τον τύπο σε συμπιεσμένο MP4
+ούτε σε YUV με υποδειγματοληψία χρώματος χωρίς προσαρμογή των παραδοχών.</p>
+<p><strong>Πώς προκύπτει ο υπολογισμός:</strong></p>
+<ol>
+<li>Ένα καρέ: <code>1920 × 1080 = 2.073.600 pixel</code>.</li>
+<li>Κάθε pixel έχει τρία κανάλια RGB × 8 bit = <strong>24 bit = 3 bytes</strong>.</li>
+<li>Άρα ένα καρέ απαιτεί <code>2.073.600 × 3 = 6.220.800 bytes</code>.</li>
+<li>Σε 10″ στα 25fps έχουμε <code>25 × 10 = 250 καρέ</code>.</li>
+<li>Πολλαπλασίασε τα bytes/καρέ × 250 και διαίρεσε με <strong>1.000.000</strong> για MB.
+   Για MiB θα διαιρούσες με <strong>1.048.576</strong>· κράτησε τη μονάδα σου σαφή.</li>
+</ol>
+<p>Αυτός είναι υπολογισμός με γνωστές παραδοχές, όχι πρόβλεψη του μεγέθους ενός MP4.
+Ακόμη κι αν δεν αναφέρεται το βάθος της δικής σου πηγής, μπορείς να λύσεις το
+παράδειγμα χρησιμοποιώντας τα <strong>δοσμένα</strong> 8 bit/κανάλι.</p>
+<h3 id="34">3.4 Πού αποθηκεύεις και πώς μεταφέρεις<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>Ο τοπικός SSD διευκολύνει την πρόσβαση στα μέσα και στην cache. Ένας εξωτερικός
+δίσκος/USB είναι χρήσιμος για μεταφορά, αλλά ελέγχεις χώρο και ταχύτητα. Το cloud
+είναι πρόσθετο αντίγραφο, όχι εγγύηση ότι όλα τα μέσα έχουν κατέβει τοπικά. Κράτα
+δύο αντίγραφα σε διαφορετικά μέσα και μην αλλάζεις τις διαδρομές όσο μοντάρεις.
+Για αρχείο πάνω από 4 GB έλεγξε το σύστημα αρχείων: το FAT32 έχει όριο μεγέθους
+ανά αρχείο. Πριν διαλέξεις μέσο, υπολόγισε χώρο για πηγές, cache και εξαγωγές.</p>
+<p><strong>Μικρός έλεγχος αποθήκευσης:</strong></p>
+<ol>
+<li>Στην Εξερεύνηση αρχείων δες <strong>Ιδιότητες</strong> του φακέλου πηγών για το μέγεθός του
+   και τις ιδιότητες του δίσκου για τον ελεύθερο χώρο.</li>
+<li>Πρόσθεσε στην εκτίμησή σου τις εξαγωγές και χώρο για cache/proxies όπου
+   χρησιμοποιούνται. Π.χ. πηγές 2 GB + προβλεπόμενες εξαγωγές 0,5 GB απαιτούν
+   ήδη 2,5 GB πριν από τα προσωρινά αρχεία.</li>
+<li>Μετά την αποθήκευση, κράτησε δεύτερο αντίγραφο του <strong>project και των πηγών</strong>
+   σε διαφορετικό μέσο. Το <code>.kdenlive</code> μόνο του δεν περιλαμβάνει τα βίντεο.</li>
+<li>Έλεγξε ότι ολοκληρώθηκε η αντιγραφή ή ο συγχρονισμός και ότι τα αρχεία είναι
+   προσβάσιμα. Γράψε στο φύλλο εργασίας πού δουλεύεις και πού είναι το αντίγραφο.</li>
+</ol>
+<h3 id="35">3.5 Ακριβές κόψιμο σε πολλαπλά πλάνα<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<p>Επαναλαμβάνεις τις τεχνικές του Μ1 σε κάθε πλάνο. Το Razor δεν κόβει αυτόματα
+όλα τα ανεξάρτητα clips επειδή βρίσκονται στο ίδιο project.</p>
+<ol>
+<li>Μεγέθυνε το timeline και επίλεξε το clip που θέλεις να επεξεργαστείς.</li>
+<li>Φέρε το playhead κοντά στην επιθυμητή κοπή. Με την εστίαση στο timeline ή
+   στο Project Monitor, τα <strong>αριστερό/δεξί βέλος</strong> μετακινούν κατά ένα καρέ.</li>
+<li>Για κοπή ακριβώς στο playhead χρησιμοποίησε <strong>Shift+R / Cut Clip</strong> στο
+   επιλεγμένο clip. Εναλλακτικά, με <strong>X / Razor</strong> κάνε κλικ πάνω στο clip
+   στη θέση που θέλεις, όπως στο Μ1.</li>
+<li>Επέστρεψε με <strong>S</strong>, διάγραψε ό,τι περισσεύει και κλείσε τυχόν κενό.
+   Έλεγξε τον συνδεδεμένο ήχο και την ένωση σε κανονική αναπαραγωγή.</li>
+</ol>
+<p>Σε project 25fps, ένα καρέ διαρκεί <strong>0,04 s</strong>. Η ακρίβεια της κοπής αφορά τα
+καρέ του project. Δεν χρειάζεται να αλλάξεις τα fps για να κόψεις ακριβέστερα.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/cutting_and_assembling/editing.html">Kdenlive — Seeking / Cutting a Clip</a>.</p>
+<h3 id="3">Στάδιο 3 — Συνειδητή ρύθμιση και διόρθωση<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Χειροκίνητη ρύθμιση προφίλ, απόφαση crop έναντι letterbox.</p>
+</div>
+<ol>
+<li>Επιβεβαίωσε το προφίλ για τον προορισμό σου. Γράψε μία πρόταση που συνδέει
+   <strong>προορισμό, ανάλυση και fps</strong>, αντί για «το διάλεξα επειδή ήταν προεπιλεγμένο».</li>
+<li>Άνοιξε το <code>02-diagnosi.kdenlive</code> και αποθήκευσέ το ως <code>02-fit-crop.kdenlive</code>.
+   Βάλε δύο φορές τη <strong>μία και ίδια ζώνη 6″</strong> του κατακόρυφου στο timeline:
+   πρώτα fit, μετά crop. Εφάρμοσε την <a href="#fit-crop">οδηγία fit/crop</a> μόνο στο δεύτερο
+   clip. Η αναλυτική ακολουθία βρίσκεται στη Γ του φύλλου εργασίας.</li>
+<li>Αποθήκευσε τη δοκιμή 12″. Άνοιξε ξανά το <code>02-formats.kdenlive</code>, εφάρμοσε την
+   επιλογή σου στο κατακόρυφο των 5″ και γράψε <strong>ποια πληροφορία διασώζεις ή χάνεις</strong>.
+   Έλεγξε όλο το clip, όχι μόνο ένα καρέ. Οι αλλαγές δεν μεταφέρονται αυτόματα μεταξύ projects.</li>
+<li>Κόψε καθαρά τις περιττές στιγμές με τα βήματα του 3.5. Έλεγξε τις ενώσεις και τον ήχο.</li>
+<li>Ολοκλήρωσε τον υπολογισμό RGB και τον έλεγχο αποθήκευσης του 3.2 στο φύλλο
+   εργασίας. Κράτησε την ένδειξη «δεν αναφέρεται» για άγνωστο βάθος της πηγής.</li>
+<li>Αποθήκευσε το <code>.kdenlive</code>. Πριν την τελική εξαγωγή έλεγξε ότι η ενεργή
+   κατάσταση του Transform αντιστοιχεί στην επιλογή που κατέγραψες.</li>
+</ol>
+<h2 id="cycle-4">Κύκλος 4 — Το ολοκληρωμένο μοντάζ<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
+<h3 id="4">Στάδιο 4 — Τελική έκδοση<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Καμία νέα εντολή — μόνο προδιαγραφές.</p>
+</div>
+<p>Ξεκίνα από το project του Σταδίου 3 και ολοκλήρωσε:</p>
+<ol>
+<li>Ιστορία <strong>25–30″</strong>, με τα 4 οριζόντια του Μ1 και ένα νέο κατακόρυφο πλάνο.
+   Τα τμήματα μετά τις κοπές μπορεί να είναι περισσότερα από τα 5 αρχικά αρχεία.</li>
+<li>Προφίλ <strong>1920×1080, 16:9, 25fps, progressive</strong> — γραπτή αιτιολόγηση βάσει της παράδοσης.</li>
+<li>Κανένα ορατό σύμπτωμα αναντιστοιχίας (παραμόρφωση/λωρίδες που δεν τις θέλεις εσύ συνειδητά).</li>
+<li>Καθαρά, ακριβή κοψίματα σε κάθε πλάνο.</li>
+<li>Project και MP4 της ιστορίας, καθώς και ξεχωριστό project/MP4 <strong>12″</strong> με τη
+   σύγκριση <strong>6″ fit + 6″ crop</strong> του ίδιου αποσπάσματος.</li>
+</ol>
+<h4 id="export-check">Εξαγωγή και έλεγχος του πραγματικού αρχείου<a class="headerlink" href="#export-check" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Πάτησε <strong>Ctrl+S</strong>, μετά <strong>Render / Ctrl+Enter</strong>.</li>
+<li>Διάλεξε <strong>MP4-H.264/AAC</strong> και <strong>Full Project</strong>. Στο <strong>Output file</strong> όρισε
+   <code>M02/exports/02-formats.mp4</code>.</li>
+<li>Για εξαγωγή στις διαστάσεις του project, έλεγξε στο <strong>More Options</strong> ότι
+   <strong>Rescale</strong> και <strong>Render at Preview Resolution</strong> είναι απενεργοποιημένα.</li>
+<li>Πάτησε <strong>Render to File</strong>, περίμενε να ολοκληρωθεί και άνοιξε το MP4 σε player.
+   Έλεγξε τις αναλογίες, τη διάρκεια, τις ενώσεις και τον ήχο.</li>
+<li>Εισήγαγε το νέο MP4 <strong>μόνο στο Bin</strong>, χωρίς να το προσθέσεις στο timeline.
+   Από <strong>Clip Properties → File Info</strong> διάβασε codec, ανάλυση και fps.
+   Σύγκρινέ τα με το προφίλ που κατέγραψες.</li>
+<li>Αν υπάρχει διαφορά, έλεγξε τις επιλογές εξαγωγής πριν αλλάξεις τις πηγές.
+   Επανάλαβε για το αποθηκευμένο <code>02-fit-crop.kdenlive</code>, εξάγοντας
+   <code>M02/exports/02-fit-crop.mp4</code>. Παράδωσε τα δύο projects, τα δύο MP4 και το φύλλο εργασίας.</li>
+</ol>
+<p><strong>Επιτυχία:</strong> για την κοινή δοκιμή το MP4 είναι <strong>1920×1080/25fps</strong> με H.264,
+οι σκόπιμες λωρίδες ή η επιλεγμένη περικοπή διατηρούνται, και η εικόνα δεν είναι τεντωμένη.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/exporting/render.html">Kdenlive — Rendering</a>.</p>
+<hr />
+<h1 id="_6">Μετά το μοντάζ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<h2 id="_7">Συνηθισμένα λάθη<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Δέχεσαι το πρώτο πλάνο σαν προφίλ χωρίς έλεγχο.</strong> Μπορεί να αλλάξεις άθελά σου τον προσανατολισμό ή τα fps του τελικού έργου. Επιβεβαίωσε το Project Settings.</li>
+<li><strong>Μπερδεύεις container με codec.</strong> Σύμπτωμα: λες «είναι mp4, γιατί δεν παίζει;» χωρίς να ελέγξεις τον codec.</li>
+<li><strong>Νομίζεις ότι «4K» σημαίνει πάντα καλύτερο.</strong> Επιλέγεις μεγαλύτερη ανάλυση χωρίς νέα λεπτομέρεια· το μέγεθος εξαρτάται και από το bitrate.</li>
+<li><strong>Κόβεις χωρίς ζουμ στο timeline.</strong> Σύμπτωμα: το κόψιμο πέφτει μισό δευτερόλεπτο νωρίτερα/αργότερα απ' ό,τι ήθελες.</li>
+</ul>
+<h2 id="_8">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>Οι δύο δοκιμές γίνονται στον χρόνο «Τι θα συμβεί αν…;» του φύλλου εργασίας.
+Αποθήκευσε το κανονικό σου project και εργάσου σε ξεχωριστά δοκιμαστικά αρχεία.</p>
+<ol>
+<li><strong>Μεγαλύτερη ανάλυση:</strong> βάλε ένα πλάνο FHD σε νέο FHD/25fps project και
+   αποθήκευσε. Κάνε <strong>Save As → <code>02-test-uhd.kdenlive</code></strong> και άλλαξε μόνο το
+   προφίλ σε <strong>3840×2160/25fps, progressive</strong>, από το Project Settings.
+   Σύγκρινε την αναλογία και τη λεπτομέρεια. Ξαναδιάβασε το File Info της πηγής:
+   έγινε πράγματι UHD; Αν έχεις μόνο το δείγμα 960×540, δήλωσε αυτή την αρχική ανάλυση.</li>
+<li><strong>Περισσότερα fps:</strong> σε νέο project <strong>1920×1080/50fps, progressive</strong> βάλε
+   το ίδιο πλάνο <strong>25fps</strong> και πάτησε Cancel σε τυχόν πρόταση αλλαγής προφίλ.
+   Αποθήκευσε ως <code>02-test-50fps.kdenlive</code>. Παίξε το στην κανονική ταχύτητα και
+   προχώρησε καρέ-καρέ σε σημείο με κίνηση. Βλέπεις νέα κίνηση σε κάθε καρέ
+   ή επανάληψη; Άλλαξαν η διάρκεια της δράσης και τα fps της <strong>πηγής</strong>;</li>
+</ol>
+<p>Μετά τις δοκιμές άνοιξε ξανά το κανονικό <code>02-formats.kdenlive</code>. Το μέγεθος της
+προεπισκόπησης στην οθόνη δεν αρκεί για να αποδείξει νέα λεπτομέρεια ή νέα καρέ.</p>
+<h2 id="practice-exercises">Ασκήσεις εμπέδωσης<a class="headerlink" href="#practice-exercises" title="Permanent link">&para;</a></h2>
+<p>Χρησιμοποίησε τις ασκήσεις ως οδηγό στις αντίστοιχες δραστηριότητες του εργαστηρίου.
+Για πλήρη αυτοτελή επανάληψη μετά το μάθημα, δούλεψε σε ξεχωριστό project.
+Σε κάθε άσκηση έλεγξε το αποτέλεσμα πριν θεωρήσεις ότι ολοκληρώθηκε.</p>
+<h3 id="1_1">Άσκηση 1 — Ταυτότητα τριών αρχείων<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p><strong>Στόχος:</strong> να διαβάζεις πραγματικές ιδιότητες, χωρίς να τις μαντεύεις από την κατάληξη.</p>
+<ol>
+<li>Εισήγαγε στο Bin τα δύο MP4 των δειγμάτων εργαστηρίου και το
+   <code>interlaced-noisy-tff.mpg</code>.</li>
+<li><strong>Πριν ανοίξεις το File Info</strong>, γράψε μια πρόβλεψη για το <code>.mpg</code>: ποιος container και
+   ποιος codec νομίζεις ότι έχει; Βρες στον <a href="#container-table">πίνακα των containers</a> τη
+   γραμμή που του ταιριάζει.</li>
+<li>Με την <a href="#clip-info">οδηγία File Info</a> συμπλήρωσε μία γραμμή ανά αρχείο:
+   όνομα, container, <strong>video</strong> codec, ανάλυση, fps, pixel format/βάθος όπου αναφέρεται.</li>
+<li>Κύκλωσε τις κοινές τιμές και υπογράμμισε τις διαφορές. Η πρόβλεψή σου για το <code>.mpg</code>
+   επιβεβαιώθηκε ή διαψεύστηκε; Ποια τιμή σε εξέπληξε περισσότερο;</li>
+<li>Γράψε δύο προτάσεις: «Οι codecs είναι …» και «Η ίδια κατάληξη δεν αρκεί
+   για να γνωρίζω …». Αν οι codecs συμπίπτουν, κατέγραψέ το· δεν χρειάζεται να βρεις διαφορετικούς.</li>
+<li><strong>Απόφαση:</strong> αν έπρεπε να στείλεις ένα από τα τρία αρχεία σε φίλο, για να το δει
+   στο κινητό του, ποιο θα διάλεγες και γιατί; Απάντησε με μία πρόταση.</li>
+</ol>
+<p><strong>Παραδοτέο / έλεγχος:</strong> τρεις πλήρεις εγγραφές που μπορείς να επαληθεύσεις
+δείχνοντας το αντίστοιχο panel. Άγνωστα στοιχεία σημειώνονται ως άγνωστα.</p>
+<h3 id="2">Άσκηση 2 — Επιλέγω προφίλ πριν ξεκινήσω<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>Σενάριο στο χαρτί:</strong> το ζητούμενο είναι οριζόντιο FHD/25fps βίντεο για προβολή
+στην τάξη. Τα περισσότερα πλάνα είναι σαν το Α. Όλες οι πηγές έχουν τετράγωνα pixel.</p>
+<table>
+<thead>
+<tr>
+<th>Πηγή</th>
+<th>Χαρακτηριστικά</th>
+<th>Τι προβλέπεις μέσα στο επιλεγμένο project;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Α</td>
+<td>1920×1080 / 25fps</td>
+<td>____________________</td>
+</tr>
+<tr>
+<td>Β</td>
+<td>3840×2160 / 30fps</td>
+<td>____________________</td>
+</tr>
+<tr>
+<td>Γ</td>
+<td>1080×1920 / 25fps</td>
+<td>____________________</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Γράψε το προφίλ σου με <strong>ανάλυση, αναλογία και fps</strong> και αιτιολόγησέ το.</li>
+<li>Για κάθε πηγή εξέτασε χωριστά <strong>ανάλυση</strong>, <strong>αναλογία</strong>, <strong>fps</strong>. Μην χαρακτηρίσεις
+   το Β «διαφορετική αναλογία» μόνο επειδή έχει περισσότερα pixel.</li>
+<li>Για το Γ διάλεξε fit ή crop και ονόμασε το αντίτιμο. Γράψε επίσης τι θα
+   επέλεγες στο Switch/Cancel αν το Γ εισαγόταν πρώτο στο ήδη ορισμένο οριζόντιο project.</li>
+</ol>
+<p><strong>Παραδοτέο / έλεγχος:</strong> συμπληρωμένος πίνακας και σύντομη αιτιολόγηση.
+Δεν χρειάζεται να κατεβάσεις αυτά τα τρία αρχεία· το ζητούμενο είναι η τεκμηριωμένη πρόβλεψη.</p>
+<h3 id="3-crop">Άσκηση 3 — Το ίδιο πλάνο με λωρίδες και με crop<a class="headerlink" href="#3-crop" title="Permanent link">&para;</a></h3>
+<p><strong>Στόχος:</strong> να συγκρίνεις τι κερδίζεις και τι χάνεις με κάθε προσαρμογή.</p>
+<ol>
+<li>Δημιούργησε <strong>1920×1080/25fps, progressive</strong> project και εισήγαγε το
+   <code>portrait-30fps.mp4</code> των 6″. Στην πρόταση προφίλ επίλεξε <strong>Cancel</strong>.</li>
+<li>Σύρε το ίδιο αρχικό clip από το Bin <strong>δύο φορές</strong> στο V1: πρώτο από 0–6″,
+   δεύτερο από 6–12″, χωρίς κενό. Τα άλλα video tracks μένουν άδεια.</li>
+<li>Κράτησε το πρώτο χωρίς εφέ, ώστε να φαίνεται ολόκληρη η εικόνα με λωρίδες.</li>
+<li>Στο <strong>δεύτερο μόνο</strong> εφάρμοσε τη <a href="#fit-crop">διαδικασία Transform για crop</a>:
+   Distort κλειστό, ένα αρχικό keyframe, Size και X/Y μέχρι να γεμίσει το κάδρο.</li>
+<li>Σύγκρινε το ίδιο σημείο της δράσης, π.χ. στο 2″ και στο 8″ του timeline.
+   Γράψε τι έμεινε εκτός κάδρου και αν η μεγέθυνση επηρέασε την ευκρίνεια.</li>
+<li>Αποθήκευσε ως <code>02-fit-crop.kdenlive</code> και εξήγαγε <code>02-fit-crop.mp4</code>
+   με την <a href="#export-check">οδηγία εξαγωγής</a>, χρησιμοποιώντας αυτό το όνομα αρχείου.</li>
+</ol>
+<p><strong>Έλεγχος επιτυχίας:</strong> MP4 <strong>12″</strong>, 1920×1080/25fps. Στο πρώτο μισό βλέπεις
+ολόκληρο το πλάνο με πλευρικές λωρίδες, στο δεύτερο γεμάτο κάδρο με περικοπή,
+χωρίς τέντωμα ή κινούμενο zoom. Η δράση στα δύο μισά έχει ίδια διάρκεια.</p>
+<h2 id="_9">Δική σου εκδοχή<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Αν μείνει χρόνος, διάλεξε μία επέκταση και κάνε <strong>μία αλλαγή τη φορά</strong>.</p>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Οι επεκτάσεις αξιοποιούν τα ίδια βήματα
+σε δεύτερο προφίλ ή περισσότερες πηγές.</p>
+<ul>
+<li><strong>Επέκταση Α:</strong> Δοκιμή δεύτερου προφίλ σε αντίγραφο έργου.</li>
+<li><strong>Επέκταση Β:</strong> Σύγκριση τριών πηγών με διαφορετικά χαρακτηριστικά.</li>
+</ul>
+<h2 id="_10">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Ποια είναι η διαφορά container και codec;</li>
+<li>Ποιο προφίλ έργου διάλεξες και πώς εξυπηρετεί τον προορισμό και τις πηγές σου;</li>
+<li>Αν ένα πλάνο σου έχει διαφορετική αναλογία διαστάσεων, ποιες είναι οι δύο διαθέσιμες λύσεις και τι θυσιάζει η καθεμία;</li>
+<li>Με ίδια διάρκεια και ίδιο μέσο συνολικό bitrate, αλλάζει το μέγεθος μόνο επειδή η ανάλυση γίνεται UHD; Πότε μπορεί να χρειαστεί υψηλότερο bitrate;</li>
+<li>Τι αλλάζει με το Switch και τι διατηρεί το Cancel; Πού επιβεβαιώνεις το αποτέλεσμα;</li>
+<li>Αν βάλεις πηγή 25fps σε project 50fps, δημιουργούνται αυτόματα νέες λήψεις της κίνησης;</li>
+<li>Πώς ελέγχεις τις πραγματικές διαστάσεις/fps του MP4 που εξήγαγες;</li>
+</ol>
+<h2 id="_11">Για να θυμάσαι<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Container</strong> (<code>.mp4</code>, <code>.mov</code>, <code>.mkv</code>) είναι το κουτί· <strong>codec</strong> (H.264, H.265) είναι ο αλγόριθμος που συμπιέζει την εικόνα και τον ήχο μέσα του. Η κατάληξη δεν αρκεί για διάγνωση και η μετονομασία δεν μετατρέπει το αρχείο.</li>
+<li>Τα NTSC, PAL και SECAM είναι κληρονομιά της αναλογικής τηλεόρασης: γι' αυτό συναντάς 25 fps (PAL) και 30 / 29.97 fps (NTSC).</li>
+<li>Το <strong>fps</strong> είναι πόσες ακίνητες εικόνες εναλλάσσονται ανά δευτερόλεπτο· την κίνηση τη δημιουργεί το μετείκασμα. Σε project 25fps ένα καρέ διαρκεί 0,04 s και το timecode <code>00:00:02:10</code> σημαίνει 2,4 s.</li>
+<li>Ξεχώριζε τρία επίπεδα: <strong>πηγή</strong> (Clip Properties), <strong>project</strong> (Project Settings) και <strong>εξαγωγή</strong> (ιδιότητες του νέου MP4). Η αλλαγή προφίλ δεν ξαναγράφει τις πηγές.</li>
+<li>Στο μήνυμα προφίλ, <strong>Switch</strong> αλλάζει το προφίλ του project ώστε να ταιριάζει στο πρώτο βίντεο· <strong>Cancel</strong> κρατά το υπάρχον.</li>
+<li>Πηγή 25fps σε project 50fps δεν δίνει 50 διαφορετικές λήψεις το δευτερόλεπτο: επαναλαμβάνονται καρέ.</li>
+<li>Αν η αναλογία ενός πλάνου δεν ταιριάζει, κρατάς ολόκληρη την εικόνα (με λωρίδες) ή γεμίζεις το κάδρο (και χάνεις άκρες). Κάθε λύση θυσιάζει κάτι.</li>
+<li>Μέγεθος συμπιεσμένου αρχείου: <strong>MB ≈ Mbps × διάρκεια σε s / 8</strong>, συν μικρό overhead του container.</li>
+</ul>
+<h2 id="_12">Λεξιλόγιο<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><strong>container</strong>, <strong>codec</strong>, <strong>DV / HDV</strong>, <strong>NTSC / PAL / SECAM</strong>, <strong>πεδίο (field)</strong>,
+<strong>μετείκασμα (persistence of vision)</strong>, <strong>ανάλυση</strong>,
+<strong>αναλογία διαστάσεων (aspect ratio)</strong>, <strong>FHD / UHD (4K) / 8K</strong>, <strong>fps</strong>, <strong>προφίλ
+έργου (project profile)</strong>, <strong>letterbox / pillarbox</strong>, <strong>crop</strong>, <strong>bitrate</strong>, <strong>συμπίεση</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Επιστροφή στην αρχή
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Υποσέλιδο" >
+        
+          
+          <a href="../../01-first-cut/worksheet-01/" class="md-footer__link md-footer__link--prev" aria-label="Προηγούμενο: Φύλλο εργασίας">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Προηγούμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worksheet-02/" class="md-footer__link md-footer__link--next" aria-label="Επόμενο: Φύλλο εργασίας">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Επόμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Θόδωρος Θεμελής — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el"
+   target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

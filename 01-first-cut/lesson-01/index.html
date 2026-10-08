@@ -1,0 +1,3510 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Εργαστηριακό υλικό μαθήματος — ΣΑΕΚ, Γ΄ εξάμηνο">
+      
+      
+        <meta name="author" content="Θόδωρος Θεμελής">
+      
+      
+        <link rel="canonical" href="https://ththemelis.github.io/kdenlive-site/01-first-cut/lesson-01/">
+      
+      
+        <link rel="prev" href="../../lab-samples/">
+      
+      
+        <link rel="next" href="../worksheet-01/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Μάθημα - Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-kdenlive" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-header__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Μάθημα
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Σκοτεινό θέμα"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Σκοτεινό θέμα" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Φωτεινό θέμα"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Φωτεινό θέμα" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Αναζήτηση" placeholder="Αναζήτηση" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Αναζήτηση">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Καθαρισμός" aria-label="Καθαρισμός" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Αρχικοποίηση αναζήτησης
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-nav__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Αρχική
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εγκατάσταση και ρύθμιση
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Δείγματα εργαστηρίου
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-nle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Τι είναι το μη-γραμμικό μοντάζ (NLE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Το περιβάλλον του Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Εισαγωγή πλάνων (import)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-in-out-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Σημείο εισόδου και εξόδου (in / out point)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Αποθήκευση project ≠ Εξαγωγή βίντεο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Εξαγωγή (Render)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ασφαλείς συνήθειες από την πρώτη μέρα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Πολλά πλάνα σε σειρά
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Πολλά πλάνα σε σειρά">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bin-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Από το Bin στο timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Trim: επιλέγω πού αρχίζει και πού τελειώνει το πλάνο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Σειρά πλάνων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Πολλά πλάνα σε σειρά
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Ακριβές κόψιμο στη μέση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Ακριβές κόψιμο στη μέση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Κόψιμο στη μέση: το εργαλείο Razor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Razor βήμα προς βήμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Αφαίρεση κενού: τι ακριβώς μετακινείται;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Ακριβές κόψιμο στη μέση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksheet-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/lesson-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/worksheet-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/lesson-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/worksheet-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/lesson-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/worksheet-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/lesson-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/worksheet-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 6 — Keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 6 — Keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/lesson-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/worksheet-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/lesson-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/worksheet-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/lesson-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/worksheet-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/lesson-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/worksheet-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 10 — Μάσκες
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 10 — Μάσκες
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/lesson-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/worksheet-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/lesson-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/worksheet-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/lesson-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/worksheet-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/lesson-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/worksheet-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/lesson-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/worksheet-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/extension-handbrake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Επέκταση — HandBrake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/lesson-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/worksheet-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-nle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Τι είναι το μη-γραμμικό μοντάζ (NLE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Το περιβάλλον του Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Εισαγωγή πλάνων (import)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-in-out-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Σημείο εισόδου και εξόδου (in / out point)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Αποθήκευση project ≠ Εξαγωγή βίντεο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Εξαγωγή (Render)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ασφαλείς συνήθειες από την πρώτη μέρα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Πολλά πλάνα σε σειρά
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Πολλά πλάνα σε σειρά">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bin-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Από το Bin στο timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Trim: επιλέγω πού αρχίζει και πού τελειώνει το πλάνο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Σειρά πλάνων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Πολλά πλάνα σε σειρά
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Ακριβές κόψιμο στη μέση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Ακριβές κόψιμο στη μέση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Κόψιμο στη μέση: το εργαλείο Razor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Razor βήμα προς βήμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Αφαίρεση κενού: τι ακριβώς μετακινείται;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Ακριβές κόψιμο στη μέση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-kdenlive">Μάθημα 1: Πρώτη επαφή με το Kdenlive — «Το πρώτο σου μοντάζ»<a class="headerlink" href="#1-kdenlive" title="Permanent link">&para;</a></h1>
+<p><strong>Διάρκεια:</strong> 3 διδακτικές ώρες (3 × 45′ μάθημα + 3 × 15′ διάλειμμα)  <strong>Παραδοτέα:</strong> θεματικό μοντάζ 30–40″ και σύντομη εκδοχή 20″, ως projects και MP4</p>
+<div class="admonition info">
+<p class="admonition-title">Φύλλο εργασίας</p>
+<p>Οι δραστηριότητες του εργαστηρίου βρίσκονται στο <a href="../worksheet-01/">Φύλλο εργασίας 1</a>.
+Διάβασε πρώτα τη θεωρία αυτής της σελίδας και κράτησέ την ανοιχτή όσο δουλεύεις.</p>
+</div>
+<h2 id="required-core">Υποχρεωτικός πυρήνας<a class="headerlink" href="#required-core" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Θεματικό μοντάζ 30–40″ από 4 διαφορετικά αρχεία πηγής, με trim και αφαίρεση ενός ενδιάμεσου τμήματος με Razor, χωρίς ανεπιθύμητα κενά.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Συντομευμένη εκδοχή 20″ με την ίδια αρχή, εξέλιξη και κατάληξη, χωρίς αλλαγή ταχύτητας.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Αποθήκευση δύο .kdenlive και εξαγωγή δύο MP4 που παίζουν εκτός του προγράμματος.</li>
+</ul>
+<h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Θα συνδέσεις 4 βίντεο Pexels με θέμα <strong>«Από την ένταση στην ηρεμία»</strong>: πόλη,
+διαδρομή, φύση και ήρεμο κλείσιμο. Θα επιλέξεις τη σειρά και τα χρήσιμα τμήματα,
+θα φτιάξεις ένα μοντάζ <strong>30–40″</strong> και έπειτα θα κρατήσεις την ίδια ιδέα σε <strong>20″</strong>.
+Κάθε εκδοχή αποθηκεύεται ως project και εξάγεται ως αυτοτελές MP4.
+Η <a href="../worksheet-01/#thematic-montage">εκφώνηση και η τράπεζα 8 βίντεο</a> βρίσκονται στο
+φύλλο εργασίας. Τα πλάνα συνδέονται θεματικά· δεν χρειάζεται να έχουν τους ίδιους πρωταγωνιστές.</p>
+<p>Μικρό έργο, φαινομενικά. Κρύβει όμως μέσα του κάθε κομμάτι που θα ξαναχρησιμοποιείς σε
+όλο το εξάμηνο: ένα σύνολο πλάνων που εισάγεις, μια γραμμή χρόνου όπου τα τακτοποιείς,
+ένα σημείο αρχής και ένα σημείο τέλους για το καθένα, μια τελική εξαγωγή που μετατρέπει
+το project σου σε πραγματικό βίντεο.</p>
+<h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>να εξηγήσεις τη διαφορά ανάμεσα σε <strong>αποθήκευση project</strong> και <strong>εξαγωγή (render)</strong></li>
+<li>να εισάγεις πλάνα στο Project Bin και να τα βλέπεις στο Clip Monitor</li>
+<li>να ορίζεις σημείο εισόδου (in point) και εξόδου (out point) σε ένα πλάνο</li>
+<li>να τοποθετείς πλάνα στο timeline, στη σειρά που θέλεις</li>
+<li>να κάνεις trim στις δύο άκρες ενός clip και να το ξεχωρίζεις από τη μετακίνησή του</li>
+<li>να κόβεις (split) ένα πλάνο στα δύο και να αφαιρείς ένα ενδιάμεσο κομμάτι</li>
+<li>να κλείνεις το κενό που αφήνει η διαγραφή και να εξηγείς ποια clips μετακινούνται</li>
+<li>να εξάγεις (render) το project σου σε αρχείο MP4 που ανοίγει έξω από το Kdenlive</li>
+</ul>
+<h2 id="_3">Πριν ξεκινήσεις<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Πριν από την πρακτική, κατέβασε <strong>ένα βίντεο ανά ρόλο</strong> από την
+   <a href="../worksheet-01/#video-bank">τράπεζα του φύλλου εργασίας</a>, κατά προτίμηση σε HD 1280×720.</li>
+<li>Βάλε τα 4 αρχεία στο <code>M1-entasi-iremia/footage</code>. Οι πηγές μπορεί να είναι μεγάλες·
+   στο μοντάζ θα κρατήσεις μόνο σύντομα αποσπάσματα.</li>
+<li>Χρησιμοποίησε το κοινό προφίλ <strong>HD 720p / 25 fps</strong>. Αν προταθεί αλλαγή στο προφίλ
+   κάποιου clip, πάτησε <strong>Cancel</strong> για να διατηρηθεί το κοινό προφίλ της άσκησης.</li>
+</ol>
+<h2 id="_4">Οι τέσσερις κύκλοι<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Το μάθημα έχει τέσσερις κύκλους. Κάθε κύκλος έχει θεωρία (όπου χρειάζεται) και ένα στάδιο του ίδιου βίντεο:
+όταν τελειώσεις τον κύκλο, έχεις ένα νέο κομμάτι που έχεις ελέγξει. Το φύλλο εργασίας ακολουθεί τους κύκλους.
+Κάθε στάδιο προσθέτει μία νέα ιδέα και πρέπει να παίζεται σωστά στο Project Monitor πριν προχωρήσεις στο επόμενο.</p>
+<table>
+<thead>
+<tr>
+<th>Κύκλος</th>
+<th>Τι προσθέτεις</th>
+<th>Φύλλο εργασίας</th>
+<th>Ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Ένα πλάνο, από την αρχή ως την εξαγωγή</td>
+<td>project, εισαγωγή, in/out, πρώτη εξαγωγή</td>
+<td>βήματα 0–1</td>
+<td>1η</td>
+</tr>
+<tr>
+<td>2 — Πολλά πλάνα σε σειρά</td>
+<td>σειρά πλάνων και trim</td>
+<td>βήμα 2</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>3 — Ακριβές κόψιμο στη μέση</td>
+<td>Razor και Αφαίρεση κενού</td>
+<td>βήμα 3</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>4 — Το ολοκληρωμένο μοντάζ</td>
+<td>20″, έλεγχος, εξαγωγή</td>
+<td>βήματα 4–9</td>
+<td>3η</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cycle-1">Κύκλος 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή<a class="headerlink" href="#cycle-1" title="Permanent link">&para;</a></h2>
+<h3 id="11-nle">1.1 Τι είναι το μη-γραμμικό μοντάζ (NLE)<a class="headerlink" href="#11-nle" title="Permanent link">&para;</a></h3>
+<p>Το Kdenlive είναι ένα <strong>NLE</strong> (Non-Linear Editor) — πρόγραμμα μη-γραμμικού μοντάζ. Η
+λέξη «μη-γραμμικό» σημαίνει ότι δουλεύεις πάνω σε <strong>αναφορές</strong> στα αρχεία πλάνων, όχι
+πάνω στα ίδια τα αρχεία. Όταν κόβεις, μετακινείς ή διαγράφεις ένα πλάνο στο timeline,
+το αρχικό αρχείο βίντεο στον δίσκο σου <strong>δεν αλλάζει καθόλου</strong> — αλλάζουν μόνο οι
+οδηγίες για το ποιο κομμάτι, πότε, με ποια σειρά, θα εμφανιστεί στο τελικό βίντεο.</p>
+<p>Αυτό έχει μια πρακτική συνέπεια που θα σε απασχολήσει σήμερα: αν μετακινήσεις ή
+μετονομάσεις το αρχείο πλάνου στον υπολογιστή σου <strong>αφού</strong> το έχεις ήδη εισάγει στο
+Kdenlive, το πρόγραμμα δεν θα το βρίσκει πλέον — θα δεις κόκκινο πλαίσιο με την ένδειξη
+ότι λείπει το αρχείο. Δεν χάλασε τίποτα· απλώς η «οδηγία» δείχνει σε διαδρομή που δεν
+υπάρχει πια.</p>
+<h3 id="12-kdenlive">1.2 Το περιβάλλον του Kdenlive<a class="headerlink" href="#12-kdenlive" title="Permanent link">&para;</a></h3>
+<p>Το παράθυρο χωρίζεται σε τέσσερις περιοχές που θα χρησιμοποιείς σε κάθε μάθημα:</p>
+<table>
+<thead>
+<tr>
+<th>Περιοχή</th>
+<th>Πού βρίσκεται</th>
+<th>Τι κάνει</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Project Bin</strong> (Πλάνα Έργου)</td>
+<td>αριστερά</td>
+<td>Λίστα όλων των αρχείων που έχεις εισάγει στο project</td>
+</tr>
+<tr>
+<td><strong>Clip Monitor</strong></td>
+<td>πάνω, κέντρο/δεξιά</td>
+<td>Προεπισκόπηση ενός πλάνου <em>πριν</em> μπει στο timeline</td>
+</tr>
+<tr>
+<td><strong>Project Monitor</strong></td>
+<td>πάνω, δίπλα στο Clip Monitor</td>
+<td>Προεπισκόπηση του <em>αποτελέσματος</em> — αυτό που θα εξαχθεί</td>
+</tr>
+<tr>
+<td><strong>Timeline</strong></td>
+<td>κάτω, σε όλο το πλάτος</td>
+<td>Η γραμμή χρόνου όπου τακτοποιείς τα πλάνα σε tracks</td>
+</tr>
+</tbody>
+</table>
+<p>Ένα <strong>track</strong> (κομμάτι) στο timeline είναι μια οριζόντια λωρίδα: τα tracks βίντεο (V1,
+V2…) σχεδιάζονται από πάνω προς τα κάτω — ό,τι είναι σε ψηλότερο track καλύπτει ό,τι
+είναι από κάτω, ιδέα που θα χρειαστείς αυτούσια στο Μάθημα 8. Τα tracks ήχου (A1, A2…)
+είναι ξεχωριστά. Σήμερα θα χρησιμοποιήσεις μόνο <strong>ένα</strong> video track.</p>
+<p>Ο κατακόρυφος δείκτης πάνω στο timeline λέγεται <strong>playhead</strong> — δείχνει <em>πού βρίσκεσαι
+μέσα στον χρόνο</em> του project. Ό,τι βλέπεις στο Project Monitor είναι πάντα αυτό που
+συμβαίνει ακριβώς κάτω από το playhead.</p>
+<h3 id="13-import">1.3 Εισαγωγή πλάνων (import)<a class="headerlink" href="#13-import" title="Permanent link">&para;</a></h3>
+<p>Τα αρχεία πλάνων δεν μπαίνουν κατευθείαν στο timeline — πρώτα μπαίνουν στο <strong>Project
+Bin</strong>, με το κουμπί «Προσθήκη πλάνου» (Add Clip) ή απλώς σέρνοντάς τα από τον
+Explorer/Finder μέσα στο παράθυρο του Kdenlive.</p>
+<p>Κάθε πλάνο στο Bin είναι απλώς <strong>διαθέσιμο</strong> — δεν εμφανίζεται ακόμη πουθενά στο
+τελικό βίντεο. Κάνοντας διπλό κλικ πάνω του, το βλέπεις στο Clip Monitor.</p>
+<div class="admonition note">
+<p class="admonition-title">Μήνυμα «Switch to clip profile»</p>
+<p>Το Kdenlive προτείνει να ταιριάξει το έργο στο πρώτο βίντεο. <strong>Switch</strong> αλλάζει
+το προφίλ· <strong>Cancel</strong> κρατά το υπάρχον. Για παράδειγμα, <code>1080×1920, 59.94fps</code>
+σημαίνει κατακόρυφο έργο, περίπου 60 καρέ/δευτερόλεπτο. Δέξου το μόνο αν αυτό
+είναι το αποτέλεσμα που θέλεις. Δες τη <a href="../../02-formats-resolution/lesson-02/#project-profile">ρύθμιση προφίλ στο Μ2</a>.</p>
+</div>
+<h3 id="14-in-out-point">1.4 Σημείο εισόδου και εξόδου (in / out point)<a class="headerlink" href="#14-in-out-point" title="Permanent link">&para;</a></h3>
+<p>Σπάνια θέλεις ολόκληρο ένα ακατέργαστο πλάνο — συνήθως μόνο ένα κομμάτι του. Στο Clip
+Monitor, καθώς παρακολουθείς το πλάνο, ορίζεις:</p>
+<ul>
+<li><strong>in point</strong> — πλήκτρο <strong>I</strong> — «από εδώ αρχίζει το κομμάτι που με ενδιαφέρει»</li>
+<li><strong>out point</strong> — πλήκτρο <strong>O</strong> — «εδώ τελειώνει»</li>
+</ul>
+<p>Η σύμβαση I/O είναι κοινή σε σχεδόν όλα τα προγράμματα μοντάζ — μία φορά που τη μάθεις,
+τη χρησιμοποιείς και αλλού. Η περιοχή ανάμεσα σε in και out είναι η <strong>ζώνη</strong> (zone).
+Για να προσθέσεις μια ζώνη από το κλιπ στο <strong>Project Bin</strong> πάτησε <strong>Ctrl+I</strong>: δημιουργείται sub-clip κάτω από το αρχικό κλιπ. Μπορείς να σύρεις αυτό το sub-clip στο timeline.</p>
+<div class="admonition warning">
+<p class="admonition-title">Η πιο συχνή σύγχυση αρχαρίου</p>
+<p>Το να ορίσεις in/out στο Clip Monitor <strong>δεν</strong> κόβει το αρχείο. Ορίζει μόνο ποιο
+κομμάτι επιλέγεις για χρήση. Το ίδιο πλάνο μπορεί να δώσει πολλές ζώνες/sub-clips
+χωρίς να αλλάξει το αρχείο πηγής.</p>
+</div>
+<h3 id="15-project">1.5 Αποθήκευση project ≠ Εξαγωγή βίντεο<a class="headerlink" href="#15-project" title="Permanent link">&para;</a></h3>
+<p>Αυτή είναι η πιο σημαντική διάκριση του σημερινού μαθήματος:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Αποθήκευση project (<code>Ctrl+S</code>)</th>
+<th>Εξαγωγή / Render</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Τι παράγει</strong></td>
+<td>Αρχείο <code>.kdenlive</code> (κείμενο XML)</td>
+<td>Αρχείο βίντεο (π.χ. <code>.mp4</code>)</td>
+</tr>
+<tr>
+<td><strong>Μέγεθος</strong></td>
+<td>Συνήθως μικρό XML· αυξάνεται με την πολυπλοκότητα</td>
+<td>Εξαρτάται κυρίως από διάρκεια και bitrate</td>
+</tr>
+<tr>
+<td><strong>Περιέχει τα πλάνα;</strong></td>
+<td>Όχι — μόνο <em>αναφορές</em> στις διαδρομές τους</td>
+<td>Ναι — το πραγματικό βίντεο, ενσωματωμένο</td>
+</tr>
+<tr>
+<td><strong>Ανοίγει σε;</strong></td>
+<td>Kdenlive, με τα απαιτούμενα μέσα διαθέσιμα</td>
+<td>Player/browser/συσκευή που υποστηρίζει container και codecs</td>
+</tr>
+<tr>
+<td><strong>Ξαναγίνεται επεξεργάσιμο;</strong></td>
+<td>Ναι, ως έργο με τα αρχικά clips, εφέ και tracks</td>
+<td>Ως ενιαίο νέο clip· δεν επαναφέρει την αρχική δομή μοντάζ</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Ο κανόνας που πρέπει να θυμάσαι</p>
+<p>Το <code>Ctrl+S</code> <strong>δεν</strong> παράγει το τελικό σου βίντεο. Παράγει μόνο το αρχείο εργασίας
+που ανοίγεις ξανά στο Kdenlive για να συνεχίσεις να επεξεργάζεσαι. Το βίντεο που θα
+στείλεις σε κάποιον ή θα ανεβάσεις κάπου παράγεται <strong>μόνο</strong> με Render — είναι δύο
+εντελώς διαφορετικές ενέργειες, όχι συνώνυμα.</p>
+<p>Σύμβαση που θα σε γλιτώσει: αποθήκευε το project σου <strong>συχνά</strong> (<code>Ctrl+S</code>) καθ' όλη
+τη διάρκεια της δουλειάς, και κάνε Render <strong>μόνο στο τέλος</strong>, όταν είσαι έτοιμος/η
+να δεις/παραδώσεις το αποτέλεσμα.</p>
+</div>
+<h3 id="16-render">1.6 Εξαγωγή (Render)<a class="headerlink" href="#16-render" title="Permanent link">&para;</a></h3>
+<p>Το κουμπί <strong>Render</strong> (στην κύρια γραμμή εργαλείων, δίπλα στο Paste, ή <code>Ctrl+Enter</code>) ανοίγει το παράθυρο εξαγωγής. Εκεί:</p>
+<ol>
+<li>Διαλέγεις έναν <strong>προκαθορισμένο τύπο</strong> (preset) — για σήμερα,
+   <em>MP4 - H.264/AAC</em> είναι συνήθως συμβατή επιλογή· έλεγξε την αναπαραγωγή στη συσκευή προορισμού.</li>
+<li>Επίλεξε <strong>Full Project</strong>, ώστε να εξαχθεί όλο το μοντάζ και όχι μόνο μια επιλεγμένη ζώνη.</li>
+<li>Στο <strong>Output file</strong> όρισε φάκελο και όνομα με κατάληξη <code>.mp4</code>, π.χ. <code>01-ena-plano.mp4</code>.</li>
+<li>Πάτησε <strong>Render to File</strong> και περίμενε να ολοκληρωθεί η εργασία χωρίς σφάλμα.</li>
+<li>Άνοιξε αυτό ακριβώς το MP4 από τον φάκελο εξαγωγής και έλεγξε εικόνα, ήχο και διάρκεια.</li>
+</ol>
+<p>Η εξαγωγή παίρνει χρόνο ανάλογο με τη διάρκεια και την πολυπλοκότητα του project —
+μπορεί να διαρκέσει περισσότερο κι απ' το ίδιο το βίντεο. Το Kdenlive συνεχίζει να
+δουλεύει σε background ενώ εξάγει, οπότε δεν χρειάζεται να περιμένεις με σταυρωμένα χέρια.</p>
+<div class="admonition tip">
+<p class="admonition-title">Η αυτόματη αποθήκευση δεν σε απαλλάσσει από το Ctrl+S</p>
+<p>Το Kdenlive αποθηκεύει αυτόματα αντίγραφα ανάκτησης σε τακτά διαστήματα, ώστε μια
+απότομη διακοπή (κόλλημα, διακοπή ρεύματος) να μην είναι καταστροφική. Δεν είναι
+όμως υποκατάστατο της συνειδητής αποθήκευσης — μην βασιστείς σε αυτήν αντί να
+πατάς <code>Ctrl+S</code> μόνος/η σου.</p>
+</div>
+<h3 id="17">1.7 Ασφαλείς συνήθειες από την πρώτη μέρα<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Κράτα τα πλάνα σου σε έναν σταθερό φάκελο</strong> πριν τα εισάγεις, και μην τον
+  μετακινήσεις/μετονομάσεις μετά — δες 1.1.</li>
+<li><strong><code>Ctrl+S</code> μετά από κάθε ουσιαστική αλλαγή.</strong> Αν κολλήσει το πρόγραμμα, χάνεις μόνο
+  ό,τι έγινε από την τελευταία αποθήκευση.</li>
+<li><strong>Ένα project ανά στάδιο</strong>, όχι ένα μόνο αρχείο που ξαναγράφεις συνέχεια: <code>01-ena-plano.kdenlive</code>,
+  <code>02-polla-plana.kdenlive</code>… Το χθεσινό δουλεύει πάντα, ό,τι κι αν χαλάσεις σήμερα.</li>
+</ul>
+<h3 id="1">Στάδιο 1 — Ένα πλάνο, από την αρχή ως την εξαγωγή<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Εισαγωγή πλάνου, in/out point, τοποθέτηση στο timeline, πρώτη εξαγωγή.</p>
+</div>
+<p>Ακολούθησε αυτό το στάδιο ακριβώς μία φορά, αργά, χωρίς να παραλείψεις βήμα. Όλα τα
+επόμενα στάδια του μαθήματος έχουν την ίδια μορφή:</p>
+<ol>
+<li>Από <strong>File → New</strong> δημιούργησε έργο, επίλεξε το προφίλ της άσκησης και πάτησε <strong>OK</strong>.</li>
+<li>Στο <strong>Project Bin → Add Clip or Folder</strong> διάλεξε <strong>ένα</strong> βίντεο και πάτησε <strong>Open</strong>.
+   Περίμενε να εμφανιστεί η μικρογραφία του. Αν εμφανιστεί Switch/Cancel, ακολούθησε τη σημείωση του 1.3.</li>
+<li>Διπλό κλικ πάνω του — ανοίγει στο Clip Monitor.</li>
+<li>Κάνε κλικ στο <strong>Clip Monitor</strong>, σταμάτησε στο επιθυμητό πρώτο καρέ και πάτησε <strong>I</strong>.
+   Προχώρησε λίγα δευτερόλεπτα, σταμάτησε και πάτησε <strong>O</strong>. Παρατήρησε τη ζώνη
+   που φωτίζεται στη γραμμή χρόνου του Clip Monitor.</li>
+<li>Πάτησε <strong>Ctrl+I</strong> για sub-clip στο Bin και σύρε το μέσα στο <strong>V1</strong> track του timeline.</li>
+<li>Πάτησε <strong>Ctrl+S</strong>, δώσε όνομα όπως <code>01-ena-plano.kdenlive</code>.</li>
+<li>Άνοιξε <strong>Render</strong> και ακολούθησε το 1.6: preset MP4, Full Project, όνομα αρχείου και Render to File.</li>
+<li>Όταν τελειώσει, άνοιξε το εξαγόμενο αρχείο <strong>έξω</strong> από το Kdenlive (διπλό κλικ στον
+   φάκελο) και δες ότι παίζει σωστά.</li>
+</ol>
+<p><strong>Πριν προχωρήσεις:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Άνοιξε ξανά το <code>.kdenlive</code> σου και βεβαιώσου ότι ανοίγει με το πλάνο στη θέση του.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Σύγκρινε το μέγεθος του <code>.kdenlive</code> αρχείου με το μέγεθος του εξαγόμενου <code>.mp4</code>.</li>
+</ul>
+<h2 id="cycle-2">Κύκλος 2 — Πολλά πλάνα σε σειρά<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
+<h3 id="21-bin-timeline">2.1 Από το Bin στο timeline<a class="headerlink" href="#21-bin-timeline" title="Permanent link">&para;</a></h3>
+<p>Για ολόκληρο πλάνο σύρε το αρχικό clip από το Bin. Για επιλεγμένη ζώνη σύρε το
+sub-clip που δημιούργησες με Ctrl+I μέσα σε ένα track του timeline.
+Εκεί γίνεται πλέον ένα <strong>timeline clip</strong> — ένα κομμάτι
+με συγκεκριμένη θέση και διάρκεια μέσα στο project.</p>
+<h3 id="trim">2.2 Trim: επιλέγω πού αρχίζει και πού τελειώνει το πλάνο<a class="headerlink" href="#trim" title="Permanent link">&para;</a></h3>
+<p><strong>Trim</strong> είναι η αλλαγή της αρχής ή του τέλους ενός clip <strong>πάνω στο timeline</strong>.
+Για παράδειγμα, αφαιρείς τα πρώτα δευτερόλεπτα μέχρι να σταθεροποιηθεί η κάμερα ή
+το τέλος μετά την ολοκλήρωση μιας κίνησης. Το αρχικό αρχείο παραμένει διαθέσιμο στο Bin.</p>
+<p>Σήμερα δουλεύουμε σε <strong>Normal Mode</strong> (κανονική λειτουργία, από το μενού <strong>Tool</strong>)
+με το εργαλείο <strong>Selection / Επιλογή</strong>, πλήκτρο <strong>S</strong>. Έλεγξε ότι το track δεν είναι
+κλειδωμένο. Μεγέθυνε το timeline με τον έλεγχο zoom για να διακρίνεις τις άκρες.</p>
+<table>
+<thead>
+<tr>
+<th>Πού πιάνεις το clip</th>
+<th>Προς τα πού το σέρνεις</th>
+<th>Τι αλλάζει</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Στο κέντρο</td>
+<td>Αριστερά ή δεξιά</td>
+<td><strong>Μετακίνηση:</strong> αλλάζει η θέση ολόκληρου του clip· κρατά τα ίδια καρέ και την ίδια διάρκεια.</td>
+</tr>
+<tr>
+<td>Στην αριστερή άκρη</td>
+<td>Προς τα δεξιά, μέσα στο clip</td>
+<td><strong>Trim αρχής:</strong> παραλείπεις καρέ από την αρχή. Το clip αρχίζει αργότερα στο timeline· το τέλος του μένει στη θέση του.</td>
+</tr>
+<tr>
+<td>Στη δεξιά άκρη</td>
+<td>Προς τα αριστερά, μέσα στο clip</td>
+<td><strong>Trim τέλους:</strong> παραλείπεις καρέ από το τέλος. Η αρχή μένει στη θέση της· το clip τελειώνει νωρίτερα.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Βήματα — κρατάω τα δευτερόλεπτα 2 έως 8 από ένα clip 10″:</strong></p>
+<ol>
+<li>Για τη δοκιμή βάλε ένα clip διάρκειας <strong>10″</strong> στην αρχή ενός άδειου V1. Αν έχει
+   ήχο στο A1, άφησέ τον συνδεδεμένο με το βίντεο.</li>
+<li>Πάτησε <strong>S</strong> και φέρε το ποντίκι στο μέσο του <strong>αριστερού κατακόρυφου ορίου</strong>
+   του clip, μέχρι να εμφανιστεί ο δείκτης αλλαγής μεγέθους. Μην πιάσεις το κέντρο
+   του clip ή τη λαβή fade στην επάνω γωνία.</li>
+<li>Κράτησε πατημένο το αριστερό κουμπί και σύρε την άκρη μέχρι το <strong>2″</strong> του
+   timeline. Άφησε το κουμπί. Τώρα υπάρχει κενό 0–2″ και το clip καταλαμβάνει 2–10″.</li>
+<li>Πιάσε με τον ίδιο τρόπο τη <strong>δεξιά άκρη</strong> και σύρε την από το 10″ στο <strong>8″</strong>.
+   Το clip καταλαμβάνει πλέον 2–8″ και έχει διάρκεια <strong>6″</strong>.</li>
+<li>Παίξε την αρχή και το τέλος του στο Project Monitor. Έλεγξε ότι κράτησες την
+   επιθυμητή δράση. Με διπλό κλικ στο clip ανοίγεις το παράθυρο <strong>Duration</strong> για
+   να ελέγξεις με ακρίβεια τη θέση και τη διάρκειά του.</li>
+<li>Για να αρχίζει το μοντάζ αμέσως, κλείσε το κενό 0–2″ με <strong>Remove Space</strong> όπως
+   εξηγείται στο 3.3. Το clip μετακινείται στην αρχή και εξακολουθεί να διαρκεί 6″.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Μπορώ να επαναφέρω ό,τι έκοψα;</p>
+<p>Ναι: με <strong>Ctrl+Z</strong>, ή τραβώντας ξανά την άκρη προς τα έξω, εφόσον υπάρχουν
+διαθέσιμα καρέ στο αρχικό πλάνο και ελεύθερος χώρος στο track. Δεν μπορείς να
+επεκταθείς πριν από την αρχή ή μετά το τέλος της πηγής. Το trim κρατά μικρότερο
+ή μεγαλύτερο απόσπασμα· η ταχύτητα αναπαραγωγής παραμένει ίδια.</p>
+</div>
+<p>Στο απλό trim τα επόμενα clips <strong>μένουν στις θέσεις τους</strong>, επομένως μπορεί να
+δημιουργηθεί κενό. Η αυτόματη μετακίνησή τους ανήκει στο διαφορετικό εργαλείο
+<strong>Ripple</strong>, το οποίο δεν χρησιμοποιούμε σε αυτή την άσκηση.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/cutting_and_assembling/editing.html#resizing-a-clip">Kdenlive — Resizing a Clip</a>.</p>
+<h3 id="23">2.3 Σειρά πλάνων<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>Η σειρά που βλέπει ο θεατής είναι η σειρά που έχουν τα clips <strong>αριστερά προς δεξιά</strong>
+πάνω στο track, όχι η σειρά που τα εισήγαγες στο Bin. Θέλεις να αλλάξεις τη σειρά;
+Σύρεις το clip σε νέα θέση πάνω στο ίδιο track.</p>
+<h3 id="2">Στάδιο 2 — Πολλά πλάνα σε σειρά<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Πολλαπλή εισαγωγή, τοποθέτηση σε σειρά, trim από τις άκρες.</p>
+</div>
+<p>Ένα πλάνο δεν είναι μοντάζ — είναι απλώς ένα κομμένο βίντεο. Το μοντάζ ξεκινά όταν
+αποφασίζεις τη <strong>σειρά</strong>.</p>
+<ol>
+<li>Εισάγαγε τα 4 πλάνα της θεματικής άσκησης στο Bin.</li>
+<li>Για το καθένα, όρισε in/out στο Clip Monitor, πάτησε <strong>Ctrl+I</strong> για sub-clip στο
+   Bin και σύρε το sub-clip στο <strong>V1</strong>, το ένα μετά το άλλο, χωρίς κενά ανάμεσά τους.</li>
+<li>Δοκίμασε δύο διαφορετικές σειρές πλάνων — παίξ' τες και στις δύο. Ποια «διαβάζεται»
+   καλύτερα ως μικρή ιστορία ή ακολουθία;</li>
+<li>Σημείωσε τη διάρκεια του τελευταίου clip πριν το αλλάξεις. Με <strong>S / Selection</strong>
+   κάνε trim στη <strong>δεξιά άκρη</strong> του για να αφαιρέσεις μια περιττή στιγμή στο τέλος.
+   Ακολούθησε την <a href="#trim">αναλυτική οδηγία trim</a>.</li>
+<li>Στο ίδιο clip κάνε trim στην <strong>αριστερή άκρη</strong> για να αρχίζει αμέσως η δράση.
+   Παρατήρησε το κενό που δημιουργήθηκε πριν από αυτό και κλείσ' το με
+   <a href="#remove-space">Remove Space</a>. Έλεγξε ξανά την ένωση με το προηγούμενο πλάνο.</li>
+<li>Σημείωσε στο φύλλο εργασίας τη διάρκεια του clip πριν και μετά τα δύο trims.
+   Αποθήκευσε τη σειρά που επέλεξες ως <code>M1-entasi-iremia-30-40s.kdenlive</code> με <strong>Save As</strong>.</li>
+</ol>
+<p><strong>Σκέψου πριν προχωρήσεις:</strong> αν δύο διαδοχικά πλάνα δείχνουν σχεδόν το ίδιο πράγμα από
+παρόμοια γωνία, το μάτι του θεατή μπερδεύεται («jump cut»). Θα το ξαναδείς στο Μάθημα 3.</p>
+<h2 id="cycle-3">Κύκλος 3 — Ακριβές κόψιμο στη μέση<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
+<h3 id="31-razor">3.1 Κόψιμο στη μέση: το εργαλείο Razor<a class="headerlink" href="#31-razor" title="Permanent link">&para;</a></h3>
+<p>Το <strong>Razor / Ξυράφι</strong> χωρίζει ένα timeline clip σε τμήματα που μπορείς στη συνέχεια
+να επιλέξεις ξεχωριστά. <strong>Ένα κόψιμο δημιουργεί δύο τμήματα, δύο κοψίματα τρία.</strong>
+Αμέσως μετά την κοπή, η εικόνα, ο ήχος και η συνολική διάρκεια παραμένουν ίδια:
+δεν έχει διαγραφεί τίποτα ακόμη. Το αρχικό αρχείο στον δίσκο παραμένει άθικτο.</p>
+<h3 id="razor">3.2 Razor βήμα προς βήμα<a class="headerlink" href="#razor" title="Permanent link">&para;</a></h3>
+<p>Παράδειγμα: από ένα clip 10″ θέλεις να αφαιρέσεις το τμήμα <strong>3–5″</strong>, όπου η κάμερα
+τραντάζεται. Χρησιμοποίησε ολόκληρο το clip στην αρχή άδειου V1, σε <strong>Normal Mode</strong>.</p>
+<ol>
+<li>Παίξε το clip στο Project Monitor και εντόπισε πού αρχίζει και πού τελειώνει το
+   ανεπιθύμητο τμήμα. Σταμάτησε την αναπαραγωγή και μεγέθυνε το timeline.</li>
+<li>Τοποθέτησε το playhead στο <strong>3″</strong>, κάνοντας κλικ στον χάρακα του timeline.
+   Για ακριβή θέση μπορείς να γράψεις <code>00:00:03:00</code> στο πεδίο χρόνου του Project Monitor.</li>
+<li>Πάτησε <strong>X</strong> ή επίλεξε το <strong>Razor</strong> από τη γραμμή εργαλείων. Κάνε ένα κλικ
+   <strong>πάνω στο σώμα του clip στο V1, στην ίδια κατακόρυφη θέση με το playhead</strong>.
+   Η κοπή γίνεται στη θέση του ποντικιού· το playhead είναι οδηγός, δεν κόβει μόνο του.</li>
+<li>Βάλε το playhead στο <strong>5″</strong> (<code>00:00:05:00</code>) και κάνε δεύτερο κλικ με το Razor
+   πάνω στο clip σε εκείνη τη θέση. Πλέον βλέπεις τρία διαδοχικά τμήματα: 0–3″,
+   3–5″ και 5–10″. Μην κάνεις επιπλέον κλικ μέσα τους όσο είναι ενεργό το Razor.</li>
+<li>Πάτησε <strong>S</strong> ή <strong>Esc</strong> για επιστροφή στην <strong>Επιλογή</strong>. Κάνε κλικ στο <strong>μεσαίο
+   τμήμα 3–5″</strong>, έλεγξε την επισήμανσή του και πάτησε <strong>Delete</strong>. Αν υπάρχει
+   συνδεδεμένος ήχος, πρέπει να κοπεί και να αφαιρεθεί μαζί το αντίστοιχο τμήμα του.</li>
+<li>Παίξε το σημείο: υπάρχει πλέον <strong>κενό 2″</strong>. Το τμήμα 5–10″ παραμένει στη θέση
+   του. Συνέχισε με την «Αφαίρεση κενού» παρακάτω.</li>
+</ol>
+<p>Οι συντομεύσεις αφορούν τις προεπιλεγμένες ρυθμίσεις. Στη γραφή <code>ωω:λλ:δδ:κκ</code>
+τα τελευταία δύο ψηφία είναι <strong>καρέ</strong>, όχι εκατοστά του δευτερολέπτου.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/menu/tool_menu.html">Kdenlive — εργαλεία επιλογής και κοπής</a>.</p>
+<h3 id="remove-space">3.3 Αφαίρεση κενού: τι ακριβώς μετακινείται;<a class="headerlink" href="#remove-space" title="Permanent link">&para;</a></h3>
+<p>Το <strong>Delete</strong> σε Normal Mode αδειάζει το διάστημα που καταλάμβανε το επιλεγμένο
+τμήμα. Το διάστημα παραμένει στο timeline ως <strong>κενό (gap)</strong>. Στο σημερινό μοντάζ,
+με ένα video track, βλέπεις μαύρο για όσο διαρκεί το κενό. Σε έργο με άλλα video
+tracks μπορεί να φαίνεται η εικόνα τους· ένα κενό σε ένα track δεν σημαίνει πάντα μαύρο.</p>
+<ol>
+<li>Κάνε <strong>δεξί κλικ μέσα στο κενό του V1</strong>, όχι επάνω σε clip ή στον χάρακα.</li>
+<li>Επίλεξε <strong>«Αφαίρεση κενού» / Remove Space</strong>.</li>
+<li>Παρατήρησε ότι τα επόμενα clips του συγκεκριμένου track μετακινούνται μαζί
+   προς τα αριστερά, μέχρι να κλείσει αυτό το κενό. Στο παράδειγμα μετακινούνται
+   <strong>κατά 2″</strong>. Τα clips πριν από το κενό παραμένουν στη θέση τους.</li>
+<li>Παίξε από λίγο πριν έως λίγο μετά την ένωση. Έλεγξε εικόνα και ήχο και μετά
+   αποθήκευσε με <strong>Ctrl+S</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Κατάσταση του παραδείγματος</th>
+<th>Τι υπάρχει στο timeline</th>
+<th style="text-align: right;">Συνολική διάρκεια</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Πριν από τα κοψίματα</td>
+<td>Ένα clip από 0 έως 10″</td>
+<td style="text-align: right;">10″</td>
+</tr>
+<tr>
+<td>Μετά τα δύο κοψίματα</td>
+<td>Τμήματα 0–3″, 3–5″, 5–10″, χωρίς κενά</td>
+<td style="text-align: right;">10″</td>
+</tr>
+<tr>
+<td>Μετά το Delete του μεσαίου</td>
+<td>Τμήμα 0–3″, <strong>κενό 3–5″</strong>, τμήμα 5–10″</td>
+<td style="text-align: right;">10″</td>
+</tr>
+<tr>
+<td>Μετά το Remove Space</td>
+<td>Πρώτο τμήμα 0–3″, τελευταίο τμήμα <strong>στη θέση 3–8″</strong></td>
+<td style="text-align: right;"><strong>8″</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Το τελευταίο τμήμα εξακολουθεί να δείχνει το υλικό <strong>5–10″ της πηγής</strong> και να
+διαρκεί <strong>5″</strong>. Απλώς αρχίζει νωρίτερα στο project. Η αναπαραγωγή περνά από το
+πρώτο τμήμα κατευθείαν στο τελευταίο: η ανεπιθύμητη δράση λείπει, ενώ η ταχύτητα
+και τα καρέ των τμημάτων που κράτησες δεν αλλάζουν. Τα δύο τμήματα ακουμπούν,
+αλλά παραμένουν ξεχωριστά clips· δεν δημιουργείται αυτόματα μετάβαση.</p>
+<p>Αν ακολουθούσε άλλο clip από το 10″, θα ξεκινούσε πλέον στο 8″. Η συνολική διάρκεια
+του έργου μικραίνει αντίστοιχα <strong>εφόσον δεν υπάρχει υλικό σε άλλο track που συνεχίζεται
+πιο πέρα</strong>, όπως στο παραπάνω παράδειγμα.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ποιο track επηρεάζεται και τι γίνεται με τον ήχο;</p>
+<p>Το <strong>Remove Space</strong> αφορά το track όπου έκανες δεξί κλικ· δεν μετακινεί
+ανεξάρτητα clips σε όλα τα tracks. Κράτα ομαδοποιημένο τον ήχο του πλάνου με
+το βίντεο και έλεγξε ότι τα αντίστοιχα τμήματα στο A1 ακολούθησαν την αλλαγή.
+Αν δεις ότι ο ήχος έμεινε πίσω, πάτησε <strong>Ctrl+Z</strong> και έλεγξε την ομαδοποίηση
+πριν επαναλάβεις. Η ξεχωριστή εντολή <strong>Remove Space in All Tracks</strong> αφορά
+αφαίρεση κενού σε όλα τα tracks· δεν είναι η εντολή αυτής της άσκησης.</p>
+</div>
+<p>Πηγές: <a href="https://docs.kdenlive.org/en/cutting_and_assembling/editing.html#removing-space-between-clips">Kdenlive — Removing Space Between Clips</a>,
+<a href="https://docs.kdenlive.org/en/user_interface/menu/sequence_menu.html#remove-space-remove-space-in-all-tracks">Remove Space / Remove Space in All Tracks</a>.</p>
+<h3 id="3">Στάδιο 3 — Ακριβές κόψιμο στη μέση<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Εργαλείο Razor, αφαίρεση κομματιού από τη μέση, «Αφαίρεση κενού».</p>
+</div>
+<ol>
+<li>Διάλεξε ένα πλάνο με περιττή ή επαναλαμβανόμενη δράση στη μέση, π.χ. λίγα
+   δευτερόλεπτα από την κίνηση του νερού, ή ένα τράνταγμα της κάμερας.
+   Σημείωσε στο φύλλο εργασίας τις δύο θέσεις <strong>στο timeline του project</strong> που την
+   περικλείουν. Εδώ το πλάνο μπορεί να αρχίζει μετά το 0″· χρησιμοποίησε τις δικές σου θέσεις.</li>
+<li>Ακολούθησε την <a href="#razor">οδηγία Razor</a>: zoom, <strong>X</strong>, ένα κλικ στο clip στην πρώτη
+   θέση και ένα στη δεύτερη. Μέτρησε <strong>τρία τμήματα</strong> πριν διαγράψεις οτιδήποτε.</li>
+<li>Πάτησε <strong>S</strong>, επίλεξε μόνο το μεσαίο τμήμα και πάτησε <strong>Delete</strong>. Παρατήρησε ότι
+   το τελευταίο τμήμα δεν έχει μετακινηθεί ακόμη. Έλεγξε και τον συνδεδεμένο ήχο.</li>
+<li>Σημείωσε τη διάρκεια του κενού. Κάνε δεξί κλικ <strong>μέσα στο κενό του V1</strong> →
+   <strong>Remove Space</strong>. Κατά πόσο μετακινήθηκε το τμήμα στα δεξιά;</li>
+<li>Παίξε λίγο πριν και λίγο μετά την ένωση και μετά ολόκληρο το μοντάζ. Έλεγξε ότι
+   λείπει η ανεπιθύμητη δράση, χωρίς κενό ή απώλεια συγχρονισμού εικόνας/ήχου.</li>
+<li>Αν η κοπή αφαιρεί χρήσιμη κίνηση ή λέξη, αναίρεσε διαδοχικά με <strong>Ctrl+Z</strong> μέχρι
+   πριν από τις κοπές και επανάλαβε με καλύτερες θέσεις. Αποθήκευσε με <strong>Ctrl+S</strong>.</li>
+</ol>
+<h2 id="cycle-4">Κύκλος 4 — Το ολοκληρωμένο μοντάζ<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
+<h3 id="4">Στάδιο 4 — Τελική έκδοση<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Καμία νέα εντολή — μόνο προδιαγραφές. Η δομή την ξέρεις ήδη από τα Στάδια 1-3.</p>
+</div>
+<p>Ξεκίνα από το δικό σου project του Σταδίου 3 και ολοκλήρωσε:</p>
+<ol>
+<li><strong>4 διαφορετικά αρχεία πηγής</strong>, με ρόλους πόλη → διαδρομή → φύση → ήρεμο κλείσιμο.</li>
+<li>Κάθε πλάνο κομμένο καθαρά στις άκρες — καμία «νεκρή» στιγμή στην αρχή/τέλος.</li>
+<li>Τουλάχιστον <strong>ένα</strong> κόψιμο από τη μέση ενός πλάνου (Στάδιο 3), με «Αφαίρεση κενού».</li>
+<li>Καμία μαύρη οθόνη/κενό πουθενά στην τελική αναπαραγωγή.</li>
+<li>Εξαγωγή σε MP4, με όνομα αρχείου που λέει τι είναι (όχι <code>project1_final_FINAL2.mp4</code>).</li>
+<li>Πλήρης εκδοχή <strong>30–40″</strong> και συντομευμένη <strong>20″</strong>, χωρίς αλλαγή ταχύτητας,
+   αποθηκευμένες σε διαφορετικά projects και MP4. Ακολούθησε τις Δραστηριότητες
+   4–6 του <a href="../worksheet-01/">φύλλου εργασίας</a> για τη σειρά Save As και Render.</li>
+</ol>
+<hr />
+<h1 id="_5">Μετά το μοντάζ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">Συνηθισμένα λάθη<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ξέχασες Ctrl+S πριν το κόλλημα.</strong> Σύμπτωμα: χάνεις πρόσφατη δουλειά. Λύση: αποθήκευε μετά από κάθε στάδιο, όχι μόνο στο τέλος.</li>
+<li><strong>Μπέρδεψες αποθήκευση με εξαγωγή.</strong> Σύμπτωμα: ψάχνεις το «τελικό βίντεο» και βρίσκεις μόνο ένα <code>.kdenlive</code> που δεν ανοίγει πουθενά αλλού.</li>
+<li><strong>Κενό ανάμεσα σε πλάνα μετά από διαγραφή.</strong> Σύμπτωμα: μαύρη οθόνη στο Project Monitor. Λύση: «Αφαίρεση κενού».</li>
+<li><strong>Μετακίνησες τον φάκελο με τα πλάνα.</strong> Σύμπτωμα: κόκκινο πλαίσιο, «missing clip». Λύση: δεξί κλικ στο πλάνο στο Bin → «Επανασύνδεση» (Relocate/Relink) και δείξε τη νέα διαδρομή.</li>
+<li><strong>Export με λάθος preset.</strong> Σύμπτωμα: το αρχείο δεν ανοίγει σε άλλον υπολογιστή ή έχει τεράστιο μέγεθος. Λύση: MP4 - H.264 είναι ασφαλής προεπιλογή για σήμερα· ξαναδές το θέμα εις βάθος στο Μάθημα 14.</li>
+</ul>
+<h2 id="_7">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>Οι τρεις δοκιμές είναι πρόσθετη αυτοτελής επανάληψη των βασικών εντολών.
+Αποθήκευσε πρώτα το project. Για κάθε δοκιμή γράψε πρόβλεψη, εκτέλεσε την ενέργεια,
+παρατήρησε και πάτησε <strong>Ctrl+Z όσες φορές χρειάζεται</strong> για να επανέλθεις πριν από
+την επόμενη. Δούλεψε σε Normal Mode, με εικόνα στο V1 και τον συνδεδεμένο ήχο της.</p>
+<ol>
+<li><strong>Trim ή μετακίνηση;</strong> Πιάσε την αριστερή άκρη ενός clip και σύρε την περίπου
+   1″ προς τα δεξιά. Κατέγραψε αν άλλαξαν η αρχή, το τέλος και η διάρκεια.
+   Αναίρεσε. Τώρα σύρε το ίδιο clip <strong>από το κέντρο</strong> σε ελεύθερη θέση μετά το
+   τελευταίο πλάνο. Άλλαξε η διάρκειά του αυτή τη φορά; Αναίρεσε.</li>
+<li><strong>Το Razor διαγράφει;</strong> Κάνε μόνο <strong>ένα</strong> κόψιμο στο εσωτερικό ενός clip,
+   πάτησε <strong>S</strong> και παίξε την ένωση χωρίς να διαγράψεις τίποτα. Πόσα τμήματα
+   βλέπεις και άλλαξε η αναπαραγωγή ή η συνολική διάρκεια; Αναίρεσε.</li>
+<li><strong>Delete και Remove Space:</strong> Κόψε ένα μικρό ενδιάμεσο τμήμα με δύο κοπές,
+   επίλεξέ το με <strong>S</strong> και πάτησε <strong>Delete</strong>. Κατέγραψε τη θέση έναρξης του
+   δεξιού τμήματος. Κλείσε το κενό με <strong>Remove Space</strong> και κατέγραψε τη νέα θέση.
+   Η διαφορά ισούται με τη διάρκεια του κενού; Αναίρεσε μέχρι την αρχική κατάσταση.</li>
+</ol>
+<h2 id="_8">Δική σου εκδοχή<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Αν μείνει χρόνος, διάλεξε μία επέκταση και κάνε <strong>μία αλλαγή τη φορά</strong>.</p>
+<ul>
+<li><strong>Επέκταση Α:</strong> πρόσθεσε ένα 5ο αρχείο από την τράπεζα στην πλήρη εκδοχή,
+  κρατώντας τη διάρκεια 30–40″, και εξήγησε τι προσθέτει στην ιστορία.</li>
+<li><strong>Επέκταση Β:</strong> σε ξεχωριστό αντίγραφο, άλλαξε τη σειρά ώστε η ίδια εικόνα
+  να λέει «Από την ηρεμία στην ένταση». Σύγκρινε τις δύο προθέσεις.</li>
+</ul>
+<h2 id="practice-exercises">Ασκήσεις εμπέδωσης<a class="headerlink" href="#practice-exercises" title="Permanent link">&para;</a></h2>
+<p>Οι ασκήσεις αναλύουν τις δεξιότητες του υποχρεωτικού πυρήνα σε μικρότερα βήματα.
+Στο εργαστήριο συμβουλεύσου την αντίστοιχη άσκηση όσο εκτελείς τις Δραστηριότητες Α–Γ.
+Για αυτοτελή επανάληψη, ακόμη και μετά το μάθημα, χρησιμοποίησε <strong>ξεχωριστό project
+ανά άσκηση</strong>, ώστε να κρατήσεις ανέπαφο το τελικό σου μοντάζ.</p>
+<p><strong>Προετοιμασία:</strong> ένα βίντεο Α τουλάχιστον 12″ και ένα διαφορετικό Β τουλάχιστον 5″.
+Σε κάθε νέο project χρησιμοποίησε Normal Mode, V1 και, αν υπάρχει, τον συνδεδεμένο
+ήχο στο A1. Για τις ασκήσεις με ακριβείς διάρκειες έλεγχε το παράθυρο <strong>Duration</strong>
+με διπλό κλικ στο timeline clip. Π.χ. <code>00:00:10:00</code> σημαίνει διάρκεια 10″.</p>
+<h3 id="1-trim">Άσκηση 1 — Trim και στα δύο άκρα<a class="headerlink" href="#1-trim" title="Permanent link">&para;</a></h3>
+<p><strong>Στόχος:</strong> να ξεχωρίζεις την αλλαγή διάρκειας από την αλλαγή θέσης.</p>
+<ol>
+<li>Σύρε το Α από το Bin στην αρχή του V1 και περιόρισέ το στα πρώτα <strong>10″</strong> με
+   trim της δεξιάς άκρης. Έλεγξε ότι η διάρκειά του είναι 10″.</li>
+<li>Με <strong>S</strong> σύρε την αριστερή άκρη στο 2″ και τη δεξιά στο 8″, όπως στο 2.2.</li>
+<li>Πριν κλείσεις το κενό, συμπλήρωσε: αρχή στο timeline ___, τέλος ___,
+   διάρκεια ___. Παίξε το τμήμα και εντόπισε ποια δράση από την πηγή κράτησες.</li>
+<li>Κλείσε το αρχικό κενό με <strong>Remove Space</strong>. Συμπλήρωσε ξανά τις τρεις τιμές.</li>
+<li>Αποθήκευσε ως <code>01-empedosi-trim.kdenlive</code>.</li>
+</ol>
+<p><strong>Έλεγχος επιτυχίας:</strong> πριν από την αφαίρεση κενού το clip βρίσκεται στα 2–8″,
+μετά στα 0–6″. Και στις δύο περιπτώσεις διαρκεί <strong>6″</strong> και δείχνει το ίδιο απόσπασμα.
+Στο αρχικό πλάνο του Bin μπορείς ακόμη να δεις το υλικό που παρέλειψες.</p>
+<h3 id="2_1">Άσκηση 2 — Τρία ανεξάρτητα αποσπάσματα από την ίδια πηγή<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><strong>Στόχος:</strong> να δημιουργείς και να εξάγεις τη ζώνη που επέλεξες, χωρίς να παίρνεις
+κατά λάθος ολόκληρο το αρχικό πλάνο.</p>
+<ol>
+<li>Σε νέο project εισήγαγε το Α. Με διπλό κλικ άνοιξέ το στο <strong>Clip Monitor</strong>.</li>
+<li>Διάλεξε τρεις διαφορετικές ζώνες, περίπου <strong>0–3″</strong>, <strong>4–7″</strong> και <strong>8–11″</strong>.
+   Για καθεμία: βάλε <strong>I</strong> στην αρχή, <strong>O</strong> στο τέλος και πάτησε <strong>Ctrl+I</strong>.
+   Πριν ορίσεις την επόμενη ζώνη, άνοιξε ξανά το <strong>αρχικό Α</strong> από το Bin.</li>
+<li>Σύρε μόνο το πρώτο sub-clip στην αρχή του άδειου V1. Κάνε Render → <strong>Full Project</strong>
+   → MP4 με όνομα <code>01-zoni-1.mp4</code>, ακολουθώντας το 1.6.</li>
+<li>Με <strong>S</strong>, επίλεξε το πρώτο sub-clip στο timeline και πάτησε <strong>Delete</strong> μαζί με
+   τον συνδεδεμένο ήχο του. Σύρε το δεύτερο sub-clip στην αρχή του V1 και εξήγαγε
+   ως <code>01-zoni-2.mp4</code>. Επανάλαβε για το τρίτο, ως <code>01-zoni-3.mp4</code>.</li>
+<li>Άνοιξε και τα τρία MP4 εκτός Kdenlive. Σημείωσε για το καθένα τη διάρκεια και
+   τι δείχνει. Γράψε μία πρόταση για το ποιο απόσπασμα θα επέλεγες και γιατί.</li>
+</ol>
+<p><strong>Έλεγχος επιτυχίας:</strong> υπάρχουν <strong>τρία χωριστά MP4</strong>, περίπου 3″ το καθένα, με
+διαφορετικό περιεχόμενο. Κανένα δεν περιέχει και τις τρεις ζώνες μαζί ή ολόκληρο
+το Α. Οι χρόνοι εδώ είναι ενδεικτικοί· το ακριβές όριο καθορίζεται από το καρέ του I/O.</p>
+<h3 id="3-razor">Άσκηση 3 — Razor, δύο διαγραφές και δύο κενά<a class="headerlink" href="#3-razor" title="Permanent link">&para;</a></h3>
+<p><strong>Στόχος:</strong> να διαχωρίζεις την κοπή, τη διαγραφή και την αφαίρεση κενού.</p>
+<ol>
+<li>Σε νέο project βάλε τα πρώτα <strong>10″ του Α</strong> στο V1 από το 0″ και τα πρώτα
+   <strong>5″ του Β</strong> αμέσως μετά, από το 10″. Περιόρισε τις διάρκειες με trim.
+   Έλεγξε: δύο clips χωρίς κενό, συνολικά <strong>15″</strong>.</li>
+<li>Με <strong>X / Razor</strong> κόψε το Α στις θέσεις <strong>2″, 4″ και 6″ του timeline</strong>.
+   Τώρα το Α έχει τέσσερα τμήματα: Α1 = 0–2″, Α2 = 2–4″, Α3 = 4–6″,
+   Α4 = 6–10″. Το Β παραμένει ολόκληρο.</li>
+<li>Πάτησε <strong>S</strong>. Επίλεξε και διέγραψε πρώτα το <strong>Α4</strong> και μετά το <strong>Α2</strong>, μαζί
+   με τον συνδεδεμένο ήχο τους. Κρατάς τα <strong>Α1, Α3 και Β</strong>.</li>
+<li>Πριν κλείσεις τα κενά, παίξε το timeline. Σημείωσε τις διάρκειες των δύο
+   κενών: ___ και ___. Η θέση του Β παραμένει στο 10″.</li>
+<li>Κάνε δεξί κλικ μέσα στο <strong>πρώτο κενό από αριστερά</strong> → <strong>Remove Space</strong>.
+   Εντόπισε ξανά το κενό που απομένει — έχει μετακινηθεί — και αφαίρεσέ το επίσης.</li>
+<li>Αποθήκευσε ως <code>01-empedosi-razor.kdenlive</code> και εξήγαγε <strong>Full Project</strong> σε
+   <code>01-empedosi-razor.mp4</code>. Έλεγξε το αρχείο σε εξωτερικό player.</li>
+</ol>
+<p><strong>Έλεγχος επιτυχίας:</strong> η τελική σειρά είναι <strong>Α1 (2″) → Α3 (2″) → Β (5″)</strong>,
+χωρίς μαύρα κενά, συνολικής διάρκειας <strong>9″</strong>. Το Β αρχίζει πλέον στο <strong>4″</strong>.
+Εξήγησε με μία πρόταση γιατί οι τρεις κοπές μόνες τους δεν μείωσαν τη διάρκεια.</p>
+<h2 id="_9">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Το «εξήχθη το βίντεο» δεν αρκεί. Δείξε στο project σου και απάντησε προφορικά:</p>
+<ol>
+<li>Ποια είναι η διαφορά ανάμεσα σε αποθήκευση (<code>Ctrl+S</code>) και εξαγωγή (Render); Γιατί χρειάζεσαι και τις δύο;</li>
+<li>Τι σημαίνει «in point» και «out point»; Πού τα ορίζεις;</li>
+<li>Γιατί χρειάστηκε «Αφαίρεση κενού» κάπου στο project σου — τι θα φαινόταν χωρίς αυτήν;</li>
+<li>Αν μετακινούσες τον φάκελο με τα ακατέργαστα πλάνα σου τώρα, τι θα συνέβαινε στο project;</li>
+<li>Ποια σειρά πλάνων διάλεξες και γιατί αυτήν;</li>
+<li>Πώς ξεχωρίζεις το trim από τη μετακίνηση ενός clip; Δείξε μία άκρη και το κέντρο του.</li>
+<li>Μετά το Remove Space, άλλαξε η διάρκεια του clip στα δεξιά ή η θέση του; Κατά πόσο;</li>
+</ol>
+<h2 id="_10">Για να θυμάσαι<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Το project (<code>.kdenlive</code>) κρατά μόνο <strong>αναφορές</strong> στα αρχεία των πλάνων, όχι τα ίδια τα πλάνα. Αν τα μετακινήσεις ή τα μετονομάσεις, το project δεν τα βρίσκει.</li>
+<li>Τέσσερις περιοχές: <strong>Project Bin</strong> (τα αρχεία), <strong>Clip Monitor</strong> (προεπισκόπηση ενός πλάνου), <strong>Project Monitor</strong> (το αποτέλεσμα) και <strong>Timeline</strong> (τα tracks). Το playhead δείχνει πού βρίσκεσαι στον χρόνο.</li>
+<li>Το <strong>I</strong> και το <strong>O</strong> ορίζουν in και out point στο Clip Monitor. Δεν κόβουν το αρχείο· το <strong>Ctrl+I</strong> φτιάχνει sub-clip στο Bin.</li>
+<li>Στο timeline, σύρσιμο από την <strong>άκρη</strong> ενός clip είναι trim (αλλάζει αρχή ή τέλος)· σύρσιμο από το <strong>κέντρο</strong> είναι μετακίνηση.</li>
+<li>Το <strong>Razor</strong> (<strong>X</strong>) κόβει ένα clip εκεί που κάνεις κλικ: ένα κόψιμο δίνει δύο τμήματα. Το Delete αφήνει κενό και η <strong>Αφαίρεση κενού</strong> (δεξί κλικ μέσα στο κενό) το κλείνει.</li>
+<li>Στο timecode <code>00:00:03:00</code> τα τελευταία δύο ψηφία είναι <strong>καρέ</strong>, όχι εκατοστά του δευτερολέπτου.</li>
+<li><code>Ctrl+S</code> αποθηκεύει το project· το <strong>Render</strong> φτιάχνει το αρχείο βίντεο (MP4 - H.264, <strong>Full Project</strong>). Άνοιξε το αποτέλεσμα σε player πριν το παραδώσεις.</li>
+<li>Αποθήκευε συχνά, και δώσε περιγραφικά ονόματα σε projects και εξαγωγές.</li>
+</ul>
+<h2 id="_11">Λεξιλόγιο<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><strong>NLE (μη-γραμμικό μοντάζ)</strong>, <strong>project bin</strong>, <strong>clip monitor</strong>, <strong>project monitor</strong>,
+<strong>timeline</strong>, <strong>track</strong>, <strong>playhead</strong>, <strong>in point / out point</strong>, <strong>ζώνη (zone)</strong>,
+<strong>trim</strong>, <strong>razor / split</strong>, <strong>κενό (gap)</strong>, <strong>render / εξαγωγή</strong>, <strong>preset εξαγωγής</strong>,
+<strong>missing clip</strong>, <strong>relink / επανασύνδεση</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Επιστροφή στην αρχή
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Υποσέλιδο" >
+        
+          
+          <a href="../../lab-samples/" class="md-footer__link md-footer__link--prev" aria-label="Προηγούμενο: Δείγματα εργαστηρίου">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Προηγούμενο
+              </span>
+              <div class="md-ellipsis">
+                Δείγματα εργαστηρίου
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worksheet-01/" class="md-footer__link md-footer__link--next" aria-label="Επόμενο: Φύλλο εργασίας">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Επόμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Θόδωρος Θεμελής — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el"
+   target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

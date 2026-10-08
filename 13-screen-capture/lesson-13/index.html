@@ -1,0 +1,3077 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Εργαστηριακό υλικό μαθήματος — ΣΑΕΚ, Γ΄ εξάμηνο">
+      
+      
+        <meta name="author" content="Θόδωρος Θεμελής">
+      
+      
+        <link rel="canonical" href="https://ththemelis.github.io/kdenlive-site/13-screen-capture/lesson-13/">
+      
+      
+        <link rel="prev" href="../../12-restoration/worksheet-12/">
+      
+      
+        <link rel="next" href="../worksheet-13/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Μάθημα - Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#13-gameplay" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-header__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Μάθημα
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Σκοτεινό θέμα"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Σκοτεινό θέμα" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Φωτεινό θέμα"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Φωτεινό θέμα" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Αναζήτηση" placeholder="Αναζήτηση" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Αναζήτηση">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Καθαρισμός" aria-label="Καθαρισμός" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Αρχικοποίηση αναζήτησης
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-nav__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Αρχική
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εγκατάσταση και ρύθμιση
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Δείγματα εργαστηρίου
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/lesson-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/worksheet-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/lesson-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/worksheet-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/lesson-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/worksheet-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/lesson-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/worksheet-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/lesson-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/worksheet-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 6 — Keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 6 — Keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/lesson-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/worksheet-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/lesson-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/worksheet-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/lesson-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/worksheet-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/lesson-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/worksheet-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 10 — Μάσκες
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 10 — Μάσκες
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/lesson-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/worksheet-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/lesson-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/worksheet-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/lesson-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-restoration/worksheet-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Η πρώτη καταγραφή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Η πρώτη καταγραφή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-obs-studio-scenes-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Το OBS Studio: Scenes και Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Ρυθμίσεις εξόδου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Ήχος: ξεχωριστά κανάλια
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Πριν πατήσεις Record
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Πρώτη καταγραφή οθόνης
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Webcam και μεταγενέστερος σχολιασμός
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Webcam και μεταγενέστερος σχολιασμός">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Προαιρετικό PiP με μεταγενέστερο σχολιασμό
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-webcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Webcam ως επέκταση μετά τον πυρήνα
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Σύνθεση στο Kdenlive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Σύνθεση στο Kdenlive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-obs-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Από το OBS στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Το μοντάζ οθόνης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Σύνθεση στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksheet-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/lesson-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/worksheet-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/extension-handbrake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Επέκταση — HandBrake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/lesson-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/worksheet-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Η πρώτη καταγραφή
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Η πρώτη καταγραφή">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-obs-studio-scenes-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Το OBS Studio: Scenes και Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Ρυθμίσεις εξόδου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Ήχος: ξεχωριστά κανάλια
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Πριν πατήσεις Record
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Πρώτη καταγραφή οθόνης
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Webcam και μεταγενέστερος σχολιασμός
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Webcam και μεταγενέστερος σχολιασμός">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Προαιρετικό PiP με μεταγενέστερο σχολιασμό
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-webcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Webcam ως επέκταση μετά τον πυρήνα
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Σύνθεση στο Kdenlive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Σύνθεση στο Kdenlive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-obs-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Από το OBS στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Το μοντάζ οθόνης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kdenlive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Σύνθεση στο Kdenlive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Το ολοκληρωμένο μοντάζ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Το ολοκληρωμένο μοντάζ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική έκδοση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="13-gameplay">Μάθημα 13: Καταγραφή οθόνης και gameplay<a class="headerlink" href="#13-gameplay" title="Permanent link">&para;</a></h1>
+<p><strong>Διάρκεια:</strong> 3 διδακτικές ώρες (3 × 45′ μάθημα + 3 × 15′ διάλειμμα)  <strong>Παραδοτέο:</strong> σύντομο highlight/demo με καταγραφή οθόνης, edit, προαιρετικά webcam PiP</p>
+<div class="admonition info">
+<p class="admonition-title">Φύλλο εργασίας</p>
+<p>Οι δραστηριότητες του εργαστηρίου βρίσκονται στο <a href="../worksheet-13/">Φύλλο εργασίας 13</a>.</p>
+</div>
+<h2 id="required-core">Υποχρεωτικός πυρήνας<a class="headerlink" href="#required-core" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Σύντομη καταγραφή οθόνης, εισαγωγή και κόψιμο στο Kdenlive.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Εξαγωγή με κατάλληλη ανάλυση/fps και έλεγχο ήχου.</li>
+</ul>
+<h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Ως τώρα όλη η πρώτη ύλη σου ήταν πλάνα κάμερας. Η ειδικότητά σου όμως έχει
+προσανατολισμό <em>web/games</em> — πολύ περιεχόμενο σε αυτόν τον χώρο είναι <strong>καταγραφή
+οθόνης</strong>: demo εφαρμογής, gameplay, tutorial. Σήμερα μαθαίνεις να καταγράφεις οθόνη/
+gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξεργάζεσαι στο Kdenlive.</p>
+<h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>να δημιουργείς Scene και Sources στο OBS Studio</li>
+<li>να καταγράφεις οθόνη ή παράθυρο εφαρμογής/παιχνιδιού</li>
+<li>προαιρετικά, να καταγράφεις webcam με τη φωνή σου για μεταγενέστερο σχολιασμό</li>
+<li>να εισάγεις την καταγραφή στο Kdenlive και να τη μοντάρεις</li>
+<li>προαιρετικά, να συνθέτεις webcam PiP πάνω σε gameplay (εφαρμογή του Μαθήματος 8)</li>
+</ul>
+<h2 id="_3">Πριν ξεκινήσεις<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Εγκατέστησε το <strong>OBS Studio</strong> (δωρεάν, ανοιχτού κώδικα) — δες <a href="../../">index.md</a>.
+Διάλεξε τι θα καταγράψεις: μια εφαρμογή, ένα παιχνίδι, ή απλά την επιφάνεια εργασίας
+σου κάνοντας κάτι ενδιαφέρον.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ο κύκλος των τεσσάρων βημάτων</p>
+<p><strong>δες το αποτέλεσμα → αντέγραψε τα βήματα → παράλλαξε μία παράμετρο → φτιάξε το δικό σου</strong></p>
+</div>
+<h2 id="_4">Οι τέσσερις κύκλοι<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Το μάθημα έχει τέσσερις κύκλους. Κάθε κύκλος έχει θεωρία (όπου χρειάζεται) και ένα στάδιο του ίδιου βίντεο:
+όταν τελειώσεις τον κύκλο, έχεις ένα νέο κομμάτι που έχεις ελέγξει. Το φύλλο εργασίας ακολουθεί τους κύκλους.</p>
+<table>
+<thead>
+<tr>
+<th>Κύκλος</th>
+<th>Τι προσθέτεις</th>
+<th>Φύλλο εργασίας</th>
+<th>Ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Η πρώτη καταγραφή</td>
+<td>καταγραφή οθόνης με OBS</td>
+<td>βήματα 0–1</td>
+<td>1η</td>
+</tr>
+<tr>
+<td>2 — Webcam και μεταγενέστερος σχολιασμός</td>
+<td>webcam και σχολιασμός (επέκταση)</td>
+<td>βήμα 2</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>3 — Σύνθεση στο Kdenlive</td>
+<td>μοντάζ της καταγραφής στο Kdenlive</td>
+<td>βήμα 3</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>4 — Το ολοκληρωμένο μοντάζ</td>
+<td>έλεγχος, ταυτότητα καταγραφής, εξαγωγή</td>
+<td>βήματα 4–9</td>
+<td>3η</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cycle-1">Κύκλος 1 — Η πρώτη καταγραφή<a class="headerlink" href="#cycle-1" title="Permanent link">&para;</a></h2>
+<h3 id="11-obs-studio-scenes-sources">1.1 Το OBS Studio: Scenes και Sources<a class="headerlink" href="#11-obs-studio-scenes-sources" title="Permanent link">&para;</a></h3>
+<p>Το OBS οργανώνεται σε δύο επίπεδα:</p>
+<ul>
+<li><strong>Scene</strong> (σκηνή): ένας συνδυασμός στοιχείων που βλέπεις/καταγράφεις μαζί</li>
+<li><strong>Source</strong> (πηγή): κάθε ξεχωριστό στοιχείο μέσα σε μια σκηνή — οθόνη, παράθυρο,
+  παιχνίδι, κάμερα, μικρόφωνο</li>
+</ul>
+<p>Τύποι πηγής που θα χρειαστείς:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Καταγράφει</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display Capture</strong></td>
+<td>Ολόκληρη την οθόνη</td>
+</tr>
+<tr>
+<td><strong>Window Capture</strong></td>
+<td>Μόνο ένα συγκεκριμένο παράθυρο εφαρμογής</td>
+</tr>
+<tr>
+<td><strong>Game Capture</strong></td>
+<td>Παιχνίδι, συχνά με καλύτερη απόδοση από το Display Capture</td>
+</tr>
+<tr>
+<td><strong>Video Capture Device</strong></td>
+<td>Webcam</td>
+</tr>
+<tr>
+<td><strong>Audio Input/Output Capture</strong></td>
+<td>Μικρόφωνο / ήχος συστήματος (π.χ. ήχος παιχνιδιού)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 Ρυθμίσεις εξόδου<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>Πριν καταγράψεις, όρισε στις ρυθμίσεις του OBS (Settings → Output/Video):</p>
+<ul>
+<li><strong>Ανάλυση και fps</strong> που ταιριάζουν με το project σου στο Kdenlive (θυμήσου το
+  Μάθημα 2 — ίδια λογική ισχύει κι εδώ)</li>
+<li><strong>Format εξόδου</strong> — το OBS καταγράφει συχνά σε <code>.mkv</code> από προεπιλογή (πιο ανθεκτικό
+  σε απότομο κλείσιμο/κόλλημα σε σχέση με <code>.mp4</code>) — μπορείς να το «ξαναγράψεις» σε mp4
+  μετά χωρίς επανακωδικοποίηση, ή απλά να το εισάγεις κατευθείαν στο Kdenlive, που
+  διαβάζει κανονικά .mkv</li>
+</ul>
+<h3 id="13">1.3 Ήχος: ξεχωριστά κανάλια<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>Το OBS σου επιτρέπει να καταγράφεις <strong>ξεχωριστά</strong> τον ήχο του παιχνιδιού/συστήματος
+(desktop audio) και τη φωνή σου (μικρόφωνο) — ακόμη κι αν καταλήγουν στο ίδιο αρχείο,
+συχνά σε ξεχωριστά κανάλια/tracks. Αυτό σου δίνει ακριβώς το υλικό που χρειάζεσαι για
+τη μείξη του Μαθήματος 11 (ducking παιχνιδιού κάτω από τη φωνή σου, για παράδειγμα).</p>
+<p>Για την πρόσθετη δοκιμή πολλών audio tracks χρειάζεται ρητή ρύθμιση:
+<strong>Advanced Audio Properties → Tracks</strong> για αντιστοίχιση πηγών και
+<strong>Settings → Output → Recording</strong> για ενεργοποίηση των αντίστοιχων tracks.
+Έλεγξε τα streams που εισάγεις στο Kdenlive. Ένας συνηθισμένος player μπορεί να
+παίζει μόνο ένα track κάθε φορά· δεν αποδεικνύει ότι τα υπόλοιπα λείπουν.
+Πηγή: <a href="https://obsproject.com/kb/multiple-audio-track-recording-guide">OBS — Multiple Audio Track Recording Guide</a>.</p>
+<h3 id="before-record">1.4 Πριν πατήσεις Record<a class="headerlink" href="#before-record" title="Permanent link">&para;</a></h3>
+<p>Ό,τι φαίνεται στην οθόνη καταγράφεται. Πέρνα αυτή τη λίστα πριν από κάθε λήψη:</p>
+<ul>
+<li><strong>Καθάρισε την οθόνη.</strong> Κλείσε τις ειδοποιήσεις και τα παράθυρα με προσωπικά στοιχεία
+  (email, μηνύματα, κωδικοί, ιδιωτικές καρτέλες). Αν καταγραφεί κάτι ιδιωτικό, δεν σβήνεται εύκολα μετά.</li>
+<li><strong>Ένας στόχος ανά λήψη.</strong> Γράψε σε μία πρόταση τι θα δείξεις και σε ποια 2–3 βήματα.
+  Κάνε μία δοκιμή χωρίς καταγραφή.</li>
+<li><strong>Ο δρομέας.</strong> Στο Display Capture και στο Window Capture υπάρχει η επιλογή <strong>Capture Cursor</strong>.
+  Σε tutorial την κρατάς ενεργή· σε gameplay μπορεί να χρειάζεται να την κλείσεις.</li>
+<li><strong>Ήχος.</strong> Παίξε έναν ήχο και δες τον Audio Mixer: οι μετρητές κινούνται στο πράσινο και στο κίτρινο,
+  όχι στο κόκκινο (clipping, όπως στο Μ3).</li>
+<li><strong>Έναρξη και λήξη.</strong> Όρισε πλήκτρα συντόμευσης στο <strong>Settings → Hotkeys</strong> (Start Recording,
+  Stop Recording), ώστε να μην καταγράφεται το κλικ στο κουμπί.</li>
+<li><strong>Χώρος για κόψιμο.</strong> Άφησε 2–3 δευτερόλεπτα ησυχίας στην αρχή και στο τέλος, για trim χωρίς να χαθεί χρήσιμο υλικό.</li>
+<li><strong>Κράτα το αρχικό αρχείο</strong> μέχρι να παραδοθεί το project.</li>
+</ul>
+<h3 id="1">Στάδιο 1 — Πρώτη καταγραφή οθόνης<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>OBS Scene/Source, Display ή Window ή Game Capture.</p>
+</div>
+<ol>
+<li>Στο OBS, πάτησε <strong>+</strong> στο <strong>Scenes</strong>, δώσε όνομα, π.χ. <code>Demo</code>, και επίλεξέ το.
+   Στο <strong>Sources → +</strong> διάλεξε Display/Window/Game Capture και δώσε όνομα στην πηγή.
+   Στις ιδιότητές της επίλεξε τη σωστή οθόνη ή εφαρμογή· επιβεβαίωσε ότι φαίνεται στην προεπισκόπηση.</li>
+<li>Στο <strong>Settings → Video</strong> όρισε <strong>Output (Scaled) Resolution</strong> και <strong>Common FPS Values</strong>
+   ίδια με το project Kdenlive. Έλεγξε και το <strong>Base (Canvas) Resolution</strong>, που ορίζει τον καμβά σύνθεσης.
+   Κλείσε τις ρυθμίσεις και, με επιλεγμένη την πηγή, πάτησε <strong>Ctrl+F</strong> για προσαρμογή στον καμβά.</li>
+<li>Στο <strong>Settings → Output → Recording</strong>, σημείωσε το <strong>Recording Path</strong> και
+   διάλεξε MKV για αυτή τη δοκιμή. Στον <strong>Audio Mixer</strong> παίξε έναν ήχο και έλεγξε
+   ότι κινείται ο μετρητής της κατάλληλης πηγής και δεν είναι σε σίγαση.
+   Αν δεν κινείται, διάλεξε τη σωστή συσκευή από <strong>Settings → Audio</strong>.</li>
+<li>Πέρνα τη λίστα της <a href="#before-record">1.4</a>. Πάτησε <strong>Start Recording</strong> στο <strong>Controls</strong>, κάνε μια σύντομη δοκιμή και
+   <strong>Stop Recording</strong>. Άνοιξε το αρχείο από το Recording Path και άκουσέ το.
+   Αν όλα λειτουργούν, κατέγραψε τα 20–40 δευτερόλεπτα της άσκησης.</li>
+</ol>
+<p>Πηγές: <a href="https://obsproject.com/kb/quick-start-guide">OBS — Quick Start</a>,
+<a href="https://obsproject.com/kb/obs-studio-overview">OBS — Video και Output settings</a>.</p>
+<h2 id="cycle-2">Κύκλος 2 — Webcam και μεταγενέστερος σχολιασμός<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
+<h3 id="21-pip">2.1 Προαιρετικό PiP με μεταγενέστερο σχολιασμό<a class="headerlink" href="#21-pip" title="Permanent link">&para;</a></h3>
+<p>Ο υποχρεωτικός πυρήνας είναι η καταγραφή και επεξεργασία οθόνης. Αφού τον ολοκληρώσεις,
+μπορείς να καταγράψεις webcam <strong>αργότερα</strong>, παρακολουθώντας το ήδη γραμμένο gameplay
+και σχολιάζοντας επιλεγμένα γεγονότα. Στο Kdenlive χρονίζεις τις φράσεις πάνω στα
+γεγονότα που περιγράφουν. Αυτό είναι μεταγενέστερος σχολιασμός, όχι ταυτόχρονη αντίδραση.
+Οι διαδοχικές λήψεις δεν έχουν κοινό χειροκρότημα ή άλλο αυτόματο σήμα συγχρονισμού.</p>
+<div class="admonition success">
+<p class="admonition-title">Γιατί έτσι, ενώ το OBS θα μπορούσε να το κάνει μόνο του</p>
+<p>Επειδή έτσι εφαρμόζεις ξανά, με πραγματικό υλικό, ό,τι έμαθες στο Μάθημα 8. Επίσης
+σου δίνει <strong>περισσότερη ελευθερία</strong> στο μοντάζ — μπορείς να αλλάξεις τη θέση/μέγεθος
+του PiP αργότερα, κάτι αδύνατο αν η σύνθεση έχει ήδη «καεί» μέσα στο ζωντανό αρχείο.</p>
+</div>
+<h3 id="2-webcam">Στάδιο 2 — Webcam ως επέκταση μετά τον πυρήνα<a class="headerlink" href="#2-webcam" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Video Capture Device, ξεχωριστή καταγραφή.</p>
+</div>
+<ol>
+<li>Αν ο πυρήνας εκκρεμεί, συνέχισε πρώτα την εισαγωγή, το κόψιμο και τη δοκιμή εξαγωγής
+   της καταγραφής οθόνης. Η webcam δεν απαιτείται για τον πυρήνα.</li>
+<li>Για την επέκταση, δημιούργησε Scene με <strong>Video Capture Device</strong> και έλεγξε το
+   μικρόφωνο στον Audio Mixer. Παρακολούθησε την προηγούμενη καταγραφή και διάλεξε
+   δύο γεγονότα που θα σχολιάσεις, σημειώνοντας τους χρόνους τους.</li>
+<li>Κατέγραψε 10–20 s σχολιασμού. Παίξε το αποτέλεσμα για να ελέγξεις εικόνα και φωνή.</li>
+</ol>
+<h2 id="cycle-3">Κύκλος 3 — Σύνθεση στο Kdenlive<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
+<h3 id="31-obs-kdenlive">3.1 Από το OBS στο Kdenlive<a class="headerlink" href="#31-obs-kdenlive" title="Permanent link">&para;</a></h3>
+<p>Οι καταγραφές μπαίνουν στο Project Bin ακριβώς όπως οποιοδήποτε άλλο πλάνο. Η σύνθεση
+webcam-πάνω-σε-gameplay είναι <strong>ό,τι ακριβώς έμαθες στο Μάθημα 8</strong>: δεύτερο track,
+Transform effect για μέγεθος/θέση, προαιρετικά keyframes για κίνηση.</p>
+<h3 id="screen-edit">3.2 Το μοντάζ οθόνης<a class="headerlink" href="#screen-edit" title="Permanent link">&para;</a></h3>
+<p>Η καταγραφή οθόνης δεν χρειάζεται καινούργια εργαλεία. Χρειάζεται αυτά που ήδη ξέρεις:</p>
+<table>
+<thead>
+<tr>
+<th>Πρόβλημα στην καταγραφή</th>
+<th>Τι ξαναχρησιμοποιείς</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Νεκρός χρόνος: αναμονή, λάθη, σκέψη</td>
+<td>Razor και Remove Space (Μ1)</td>
+</tr>
+<tr>
+<td>Βαρετό μέρος που πρέπει να φανεί (φόρτωση, πληκτρολόγηση)</td>
+<td>Change Speed 200% (Μ7), με σίγαση του ήχου</td>
+</tr>
+<tr>
+<td>Μικρή λεπτομέρεια που χάνεται στην οθόνη</td>
+<td>Zoom με keyframes στο Transform (Μ6)</td>
+</tr>
+<tr>
+<td>Ο θεατής δεν ξέρει τι βλέπει</td>
+<td>Τίτλος ή lower third (Μ4)</td>
+</tr>
+<tr>
+<td>Φωνή πάνω από ήχο παιχνιδιού</td>
+<td>Ducking του ήχου του παιχνιδιού (Μ11)</td>
+</tr>
+<tr>
+<td>Σχολιασμός με πρόσωπο</td>
+<td>PiP (Μ8)</td>
+</tr>
+</tbody>
+</table>
+<p>Κράτα το zoom μικρό (π.χ. έως 120%): πάνω από 100% μεγεθύνονται τα pixel της καταγραφής και η
+εικόνα θολώνει (για τα όρια της μεγέθυνσης δες Μ12 §4.1).</p>
+<h3 id="3-kdenlive">Στάδιο 3 — Σύνθεση στο Kdenlive<a class="headerlink" href="#3-kdenlive" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Εφαρμογή Μαθήματος 8 σε πραγματικό υλικό OBS.</p>
+</div>
+<ol>
+<li>Στο Kdenlive, δεξί κλικ σε κενό του <strong>Project Bin → Add Clip or Folder</strong> και
+   άνοιξε το καταγεγραμμένο MKV. Δες τις <strong>Clip Properties</strong> για ανάλυση/fps.
+   Αν προτείνει <strong>Switch</strong> σε άλλο profile, σύγκρινέ το πρώτα με τις προδιαγραφές
+   του έργου· κράτησε τις συμφωνημένες ρυθμίσεις της άσκησης.</li>
+<li>Σύρε την καταγραφή στο V1 μαζί με τον ήχο της. Με το εργαλείο κοπής <strong>X</strong> κόψε
+   πριν και μετά το χρήσιμο απόσπασμα· επίστρεψε στο <strong>Selection Tool (S)</strong>,
+   αφαίρεσε τα περιττά τμήματα και κλείσε τα κενά. Άκουσε το αποτέλεσμα.</li>
+<li>Αν έκανες την επέκταση, βάλε το webcam στο V2 και πρόσθεσε Transform για PiP.</li>
+<li>Στην επέκταση, κόψε τον μεταγενέστερο σχολιασμό σε φράσεις και τοποθέτησέ τες στα γεγονότα που
+   περιγράφουν. Χρησιμοποίησε τους σημειωμένους χρόνους και ακρόαση για τον χρονισμό·
+   μην αναζητάς κοινό χειροκρότημα σε διαδοχικές λήψεις.</li>
+</ol>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/menu/media_menu.html#add-clip-or-folder">Kdenlive — Add Clip or Folder</a>.</p>
+<h2 id="cycle-4">Κύκλος 4 — Το ολοκληρωμένο μοντάζ<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
+<h3 id="4">Στάδιο 4 — Τελική έκδοση<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Καμία νέα εντολή — μόνο προδιαγραφές.</p>
+</div>
+<ol>
+<li>Επεξεργασμένη καταγραφή οθόνης/gameplay με ελεγμένο ήχο.</li>
+<li>Προαιρετικά, πρόσθεσε τίτλο (Μάθημα 4).</li>
+<li>Προαιρετικά: webcam PiP με σωστά χρονισμένο μεταγενέστερο σχολιασμό,
+   κίνηση στο PiP (Μ8) και μείξη ήχου παιχνιδιού/φωνής (Μ11).</li>
+<li>Εξαγωγή σε MP4.</li>
+</ol>
+<hr />
+<h1 id="_5">Μετά το μοντάζ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">Συνηθισμένα λάθη<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ανάλυση/fps OBS διαφορετικά από το project Kdenlive.</strong> Σύμπτωμα: συμπτώματα αναντιστοιχίας (Μάθημα 2).</li>
+<li><strong>Δεν ελέγχθηκε το αρχείο μετά την καταγραφή.</strong> Σύμπτωμα: ανακαλύπτεις πρόβλημα (π.χ. κενή οθόνη, κατεστραμμένο αρχείο) πολύ αργότερα.</li>
+<li><strong>Ασυγχρόνιστο webcam/gameplay.</strong> Σύμπτωμα: η αντίδραση φαίνεται πριν ή μετά το γεγονός που σχολιάζει.</li>
+<li><strong>Ξεχασμένος ήχος μικροφώνου (καμία πηγή ήχου ενεργή).</strong> Σύμπτωμα: σιωπηλή καταγραφή.</li>
+</ul>
+<h2 id="_7">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Κατέγραψε με ρύθμιση ανάλυσης πολύ διαφορετική από το project σου. Τι σύμπτωμα βλέπεις στο Kdenlive;</li>
+<li>Σύνθεσε το webcam PiP με λάθος χρονική μετατόπιση (1-2 δευτερόλεπτα εκτός συγχρονισμού). Πόσο αντιληπτό είναι;</li>
+<li>Απενεργοποίησε προσωρινά όλες τις πηγές ήχου στο OBS πριν καταγράψεις. Τι παίρνεις;</li>
+</ol>
+<h2 id="_8">Ασκήσεις εμπέδωσης<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Display vs Window Capture.</strong> Κατέγραψε το ίδιο σύντομο περιεχόμενο δύο φορές: μία
+   με Display Capture, μία με Window Capture. Υπάρχει αισθητή διαφορά στην απόδοση ή
+   στο τελικό αποτέλεσμα;</li>
+<li><strong>Δύο χρονισμοί σχολιασμού (επέκταση).</strong> Τοποθέτησε μία φράση πάνω στο γεγονός
+   που περιγράφει και μετά 1 s αργότερα. Ποια εκδοχή είναι πιο κατανοητή; Αιτιολόγησε.</li>
+</ol>
+<h2 id="_9">Δική σου εκδοχή<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Αν μείνει χρόνος, διάλεξε μία επέκταση και κάνε <strong>μία αλλαγή τη φορά</strong>.</p>
+<ul>
+<li><strong>Επέκταση Α:</strong> Webcam PiP ως μεταγενέστερος σχολιασμός.</li>
+<li><strong>Επέκταση Β:</strong> Κινούμενο PiP και επιπλέον μείξη ήχου.</li>
+</ul>
+<h2 id="_10">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Πώς έλεγξες ότι η καταγραφή οθόνης περιλαμβάνει τον ήχο που χρειάζεσαι;</li>
+<li>Αν έκανες την επέκταση, πώς χρονίζεις τον μεταγενέστερο σχολιασμό και γιατί δεν αρκεί η κοινή αρχή των αρχείων;</li>
+<li>Ποιες ρυθμίσεις εξόδου όρισες στο OBS και γιατί ταιριάζουν με το project σου;</li>
+</ol>
+<h2 id="_11">Για να θυμάσαι<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Το OBS οργανώνεται σε <strong>Scenes</strong> (συνδυασμός στοιχείων) και <strong>Sources</strong> (κάθε στοιχείο: οθόνη, παράθυρο, παιχνίδι, κάμερα, μικρόφωνο).</li>
+<li><strong>Display Capture</strong> καταγράφει ολόκληρη την οθόνη, <strong>Window Capture</strong> ένα παράθυρο, <strong>Game Capture</strong> ένα παιχνίδι.</li>
+<li>Πριν καταγράψεις, όρισε ανάλυση και fps που ταιριάζουν με το project σου (Μ2).</li>
+<li>Το OBS καταγράφει συχνά σε <code>.mkv</code>, που αντέχει καλύτερα σε απότομο κλείσιμο· το Kdenlive το διαβάζει κανονικά.</li>
+<li>Ο ήχος του παιχνιδιού και το μικρόφωνο μπορούν να καταγραφούν ξεχωριστά. Για πολλά audio tracks χρειάζεται ρητή ρύθμιση (Advanced Audio Properties → Tracks και Settings → Output → Recording).</li>
+<li>Έλεγξε από την πρώτη δοκιμή ότι η καταγραφή περιέχει τον ήχο που χρειάζεσαι.</li>
+<li>Στον μεταγενέστερο σχολιασμό καταγράφεις webcam αργότερα και χρονίζεις τις φράσεις πάνω στα γεγονότα. Δεν υπάρχει αυτόματο σήμα συγχρονισμού ανάμεσα στις δύο λήψεις.</li>
+<li>Η σύνθεση webcam πάνω σε gameplay είναι το PiP του Μ8: δεύτερο track και Transform. Επειδή δεν «καίγεται» στο αρχείο, αλλάζεις θέση και μέγεθος όποτε θέλεις.</li>
+</ul>
+<h2 id="_12">Λεξιλόγιο<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><strong>OBS Studio</strong>, <strong>Scene</strong>, <strong>Source</strong>, <strong>Display / Window / Game Capture</strong>, <strong>Video
+Capture Device</strong>, <strong>desktop audio</strong>, <strong>συγχρονισμός (sync)</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Επιστροφή στην αρχή
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Υποσέλιδο" >
+        
+          
+          <a href="../../12-restoration/worksheet-12/" class="md-footer__link md-footer__link--prev" aria-label="Προηγούμενο: Φύλλο εργασίας">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Προηγούμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worksheet-13/" class="md-footer__link md-footer__link--next" aria-label="Επόμενο: Φύλλο εργασίας">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Επόμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Θόδωρος Θεμελής — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el"
+   target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

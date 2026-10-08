@@ -1,0 +1,3101 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Εργαστηριακό υλικό μαθήματος — ΣΑΕΚ, Γ΄ εξάμηνο">
+      
+      
+        <meta name="author" content="Θόδωρος Θεμελής">
+      
+      
+        <link rel="canonical" href="https://ththemelis.github.io/kdenlive-site/12-restoration/lesson-12/">
+      
+      
+        <link rel="prev" href="../../11-audio-mix/worksheet-11/">
+      
+      
+        <link rel="next" href="../worksheet-12/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Μάθημα - Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#12" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-header__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Μάθημα
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Σκοτεινό θέμα"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Σκοτεινό θέμα" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Φωτεινό θέμα"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Φωτεινό θέμα" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Αναζήτηση" placeholder="Αναζήτηση" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Αναζήτηση">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Καθαρισμός" aria-label="Καθαρισμός" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Αρχικοποίηση αναζήτησης
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" class="md-nav__button md-logo" aria-label="Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ηλεκτρονική επεξεργασία κινούμενης εικόνας — video (Kdenlive)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Αρχική
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εγκατάσταση και ρύθμιση
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Δείγματα εργαστηρίου
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 1 — Πρώτη επαφή με το Kdenlive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/lesson-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-first-cut/worksheet-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 2 — Formats, ανάλυση, fps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/lesson-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-formats-resolution/worksheet-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 3 — Μεταβάσεις και μουσική
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/lesson-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-transitions-audio/worksheet-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 4 — Τίτλοι, γραφικά και υπότιτλοι
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/lesson-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-titles/worksheet-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 5 — Διόρθωση χρώματος
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/lesson-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-color-correction/worksheet-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 6 — Keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 6 — Keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/lesson-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-keyframes/worksheet-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 7 — Ταχύτητα και αντίστροφη
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/lesson-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-speed-reverse/worksheet-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 8 — Σύνθεση εικόνας (PiP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/lesson-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-compositing/worksheet-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 9 — Προχωρημένα keyframes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/lesson-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-advanced-keyframes/worksheet-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 10 — Μάσκες
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 10 — Μάσκες
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/lesson-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-masks/worksheet-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 11 — Μείξη ήχου
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/lesson-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-audio-mix/worksheet-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 12 — Παλιό βίντεο, νέα ζωή
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Αρχεία εργαστηρίου
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Interlaced και κασέτα
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Interlaced και κασέτα">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-interlacing-palntsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Interlacing: το κληροδότημα του PAL/NTSC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Από την κασέτα στο αρχείο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-interlaced-progressive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Έλεγχος interlaced πηγής και progressive εξαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Θόρυβος
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Θόρυβος">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-denoise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Θόρυβος και denoise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-denoise-sharpen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Denoise και Sharpen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Σταθεροποίηση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Σταθεροποίηση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-project-bin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Σταθεροποίηση με εργασία στο Project Bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stabilize-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Stabilize job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Όρια και τελική αποκατάσταση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Όρια και τελική αποκατάσταση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-upscaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Τα πραγματικά όρια του upscaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ροή εργασιών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική αποκατάσταση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worksheet-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 13 — Καταγραφή οθόνης / gameplay
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/lesson-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-screen-capture/worksheet-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 14 — Εξαγωγή και ενσωμάτωση στον ιστό
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/lesson-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/worksheet-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-export-web/extension-handbrake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Επέκταση — HandBrake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Μάθημα 15 — Τελικό project και παρουσίαση
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/lesson-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-final-project/worksheet-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Φύλλο εργασίας
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Υποχρεωτικός πυρήνας
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα φτιάξεις σήμερα
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Τι θα μπορείς να κάνεις στο τέλος
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Αρχεία εργαστηρίου
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Πριν ξεκινήσεις
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Οι τέσσερις κύκλοι
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 1 — Interlaced και κασέτα
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 1 — Interlaced και κασέτα">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-interlacing-palntsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Interlacing: το κληροδότημα του PAL/NTSC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Από την κασέτα στο αρχείο
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-interlaced-progressive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 1 — Έλεγχος interlaced πηγής και progressive εξαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 2 — Θόρυβος
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 2 — Θόρυβος">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-denoise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Θόρυβος και denoise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-denoise-sharpen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 2 — Denoise και Sharpen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 3 — Σταθεροποίηση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 3 — Σταθεροποίηση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-project-bin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Σταθεροποίηση με εργασία στο Project Bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stabilize-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 3 — Stabilize job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Κύκλος 4 — Όρια και τελική αποκατάσταση
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Κύκλος 4 — Όρια και τελική αποκατάσταση">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-upscaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Τα πραγματικά όρια του upscaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ροή εργασιών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Στάδιο 4 — Τελική αποκατάσταση
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="12">Μάθημα 12: Παλιό βίντεο, νέα ζωή<a class="headerlink" href="#12" title="Permanent link">&para;</a></h1>
+<p><strong>Διάρκεια:</strong> 3 διδακτικές ώρες (3 × 45′ μάθημα + 3 × 15′ διάλειμμα)  <strong>Παραδοτέο:</strong> ένα «αποκατεστημένο» παλιό/χαμηλής ποιότητας πλάνο, πριν/μετά</p>
+<div class="admonition info">
+<p class="admonition-title">Φύλλο εργασίας</p>
+<p>Οι δραστηριότητες του εργαστηρίου βρίσκονται στο <a href="../worksheet-12/">Φύλλο εργασίας 12</a>.</p>
+</div>
+<h2 id="required-core">Υποχρεωτικός πυρήνας<a class="headerlink" href="#required-core" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Έλεγχος interlaced δείγματος και progressive εξαγωγής, ήπια αποθορυβοποίηση/χρωματική διόρθωση όπου χρειάζεται.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Stabilize job σε progressive τρεμάμενο δείγμα, σύγκριση πηγής/αποτελέσματος και καταγραφή απώλειας κάδρου.</li>
+</ul>
+<h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Οικογενειακό βίντεο από παλιά κάμερα, ή απλά ένα πλάνο τραβηγμένο σε κακές συνθήκες
+(χαμηλό φως, τρεμάμενο χέρι, παλιά συσκευή), δείχνει αισθητά χειρότερο δίπλα σε ό,τι
+έχεις φτιάξει φέτος. Σήμερα μαθαίνεις τις βασικές τεχνικές που βελτιώνουν —<strong>όχι που
+μεταμορφώνουν</strong>— τέτοιο υλικό.</p>
+<h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>να περιγράφεις τη διαδρομή ψηφιοποίησης μιας αναλογικής κασέτας και να λες τι ποιότητα να περιμένεις</li>
+<li>να αναγνωρίζεις το σύμπτωμα interlacing και να το διορθώνεις (deinterlace)</li>
+<li>να μειώνεις θόρυβο/κόκκο εικόνας (denoise) και να αντισταθμίζεις την απώλεια ευκρίνειας (sharpen)</li>
+<li>να σταθεροποιείς τρεμάμενο πλάνο (stabilize)</li>
+<li>να εξηγείς τα πραγματικά όρια του upscaling</li>
+</ul>
+<h2 id="_3">Αρχεία εργαστηρίου<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Από το <a href="../../lab-samples/">πακέτο δειγμάτων</a>. Τα δείγματα είναι συνθετικά και διαρκούν 6 s το καθένα.</p>
+<table>
+<thead>
+<tr>
+<th>Αρχείο</th>
+<th>Ιδιότητες</th>
+<th>Πού το χρησιμοποιείς</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../assets/lab-samples/interlaced-noisy-tff.mpg">interlaced-noisy-tff.mpg</a></td>
+<td>720×576, πλεγμένο (top field first), θορυβώδες</td>
+<td>Στάδιο 1 (έλεγχος σάρωσης) και Στάδιο 2 (denoise, sharpen)</td>
+</tr>
+<tr>
+<td><a href="../../assets/lab-samples/progressive-shaky.mp4">progressive-shaky.mp4</a></td>
+<td>720×540, 25fps, progressive, τρεμάμενο</td>
+<td>Στάδιο 3 (Stabilize)</td>
+</tr>
+<tr>
+<td><a href="../../assets/lab-samples/interlaced-frame.png">interlaced-frame.png</a></td>
+<td>καρέ αναφοράς με χτένισμα</td>
+<td>Στάδιο 1, αν ο player αποπλέκει αυτόματα το αρχικό</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">Πριν ξεκινήσεις<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Κατέβασε τα <a href="../../lab-samples/">δείγματα εργαστηρίου</a>: interlaced/θορυβώδες και progressive τρεμάμενο.
+Ο εκπαιδευτής μπορεί επιπλέον να δώσει πραγματικό αρχειακό υλικό. Τα συνθετικά δείγματα έχουν
+διάρκεια 6 s το καθένα, γνωστές ιδιότητες και καρέ αναφοράς. Χρησιμοποίησέ
+τα για τον υποχρεωτικό έλεγχο· δικό σου παλιό υλικό μπορεί να είναι πρόσθετη δοκιμή.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ο κύκλος των τεσσάρων βημάτων</p>
+<p><strong>δες το αποτέλεσμα → αντέγραψε τα βήματα → παράλλαξε μία παράμετρο → φτιάξε το δικό σου</strong></p>
+</div>
+<h2 id="_5">Οι τέσσερις κύκλοι<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>Το μάθημα έχει τέσσερις κύκλους. Κάθε κύκλος έχει θεωρία (όπου χρειάζεται) και ένα στάδιο του ίδιου βίντεο:
+όταν τελειώσεις τον κύκλο, έχεις ένα νέο κομμάτι που έχεις ελέγξει. Το φύλλο εργασίας ακολουθεί τους κύκλους.</p>
+<table>
+<thead>
+<tr>
+<th>Κύκλος</th>
+<th>Τι προσθέτεις</th>
+<th>Φύλλο εργασίας</th>
+<th>Ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Interlaced και κασέτα</td>
+<td>έλεγχος σάρωσης και progressive εξαγωγή</td>
+<td>βήματα 0–2</td>
+<td>1η</td>
+</tr>
+<tr>
+<td>2 — Θόρυβος</td>
+<td>denoise και sharpen</td>
+<td>βήμα 3</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>3 — Σταθεροποίηση</td>
+<td>Stabilize job</td>
+<td>βήμα 4</td>
+<td>2η</td>
+</tr>
+<tr>
+<td>4 — Όρια και τελική αποκατάσταση</td>
+<td>τελική αποκατάσταση, έλεγχος</td>
+<td>βήματα 5–9</td>
+<td>3η</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cycle-1">Κύκλος 1 — Interlaced και κασέτα<a class="headerlink" href="#cycle-1" title="Permanent link">&para;</a></h2>
+<h3 id="11-interlacing-palntsc">1.1 Interlacing: το κληροδότημα του PAL/NTSC<a class="headerlink" href="#11-interlacing-palntsc" title="Permanent link">&para;</a></h3>
+<p>Θυμήσου το Μάθημα 2 §2.1: παλιές αναλογικές τηλεοράσεις μετέδιδαν σε PAL/NTSC. Πολλές
+παλιές κάμερες κατέγραφαν βίντεο <strong>interlaced</strong> (πεπλεγμένο): κάθε καρέ αποτελείται
+στην πραγματικότητα από δύο μισά, μονές και ζυγές γραμμές, τραβηγμένες σε ελαφρώς
+διαφορετική στιγμή. Σε σύγχρονη, προοδευτική (progressive) οθόνη, αυτό φαίνεται σαν
+οριζόντιο «χτένισμα» (combing) γύρω από κινούμενα αντικείμενα.</p>
+<p>Το <strong>deinterlacing</strong> παράγει progressive καρέ από τα πεδία της πηγής. Στην άσκηση
+το ελέγχουμε μέσω των ιδιοτήτων clip και του <strong>Deinterlacer στο Render</strong>, όχι με
+αναζήτηση ενός γενικού effect «Deinterlace». Η προεπισκόπηση μπορεί ήδη να κάνει
+αποπλέξη· η απουσία χτενίσματος στο monitor δεν αποδεικνύει progressive πηγή.</p>
+<h3 id="analog">1.2 Από την κασέτα στο αρχείο<a class="headerlink" href="#analog" title="Permanent link">&para;</a></h3>
+<p>Το παλιό υλικό δεν ξεκίνησε ως αρχείο. Οικογενειακά και αρχειακά βίντεο βρίσκονται
+συχνά σε <strong>αναλογικές κασέτες</strong> και πρέπει να ψηφιοποιηθούν πριν από οποιοδήποτε
+μοντάζ. Το πρότυπο της κασέτας (PAL, NTSC ή SECAM, Μάθημα 2 §2.1) και ο τύπος της
+καθορίζουν τι ποιότητα να περιμένεις.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Εποχή</th>
+<th style="text-align: center;">Οριζόντια ανάλυση (περίπου)</th>
+<th>Σημείωση</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VHS</strong></td>
+<td>μέσα δεκαετίας 1970</td>
+<td style="text-align: center;">240 γραμμές</td>
+<td>το πιο διαδεδομένο οικιακό format</td>
+</tr>
+<tr>
+<td><strong>Betamax</strong></td>
+<td>μέσα δεκαετίας 1970</td>
+<td style="text-align: center;">250</td>
+<td>ανταγωνιστής του VHS· εγκαταλείφθηκε στο οικιακό βίντεο</td>
+</tr>
+<tr>
+<td><strong>S-VHS</strong></td>
+<td>1987</td>
+<td style="text-align: center;">400</td>
+<td>βελτιωμένο VHS, με αισθητά υψηλότερη ανάλυση</td>
+</tr>
+<tr>
+<td><strong>Video8</strong></td>
+<td>μέσα δεκαετίας 1980</td>
+<td style="text-align: center;">250</td>
+<td>μικρή κασέτα 8 mm για κάμερες χειρός</td>
+</tr>
+<tr>
+<td><strong>Hi8</strong></td>
+<td>τέλη δεκαετίας 1980</td>
+<td style="text-align: center;">400</td>
+<td>βελτιωμένο Video8</td>
+</tr>
+</tbody>
+</table>
+<p>Οι τιμές διαφέρουν λίγο ανά πηγή. Κράτα τη σειρά μεγέθους (περίπου 240–250 έναντι
+περίπου 400), όχι τον ακριβή αριθμό. Το Εγχειρίδιο αναφέρει και τα <strong>D-VHS</strong> (ψηφιακή
+εγγραφή σε κασέτα VHS) και <strong>W-VHS</strong> (αναλογικό υψηλής ευκρίνειας)· σε οικιακά αρχεία
+τα συναντάς σπάνια.</p>
+<p>Η διαδρομή από την κασέτα στο αρχείο:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>κασέτα → συσκευή αναπαραγωγής (VCR ή κάμερα)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       → καλώδια εικόνας και ήχου
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       → συσκευή σύλληψης (capture device, π.χ. USB)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       → λογισμικό καταγραφής → ψηφιακό αρχείο
+</span></code></pre></div>
+<ul>
+<li><strong>Σε πραγματικό χρόνο.</strong> Η αναπαραγωγή και η καταγραφή γίνονται ταυτόχρονα, άρα μια
+  κασέτα 60′ χρειάζεται 60′.</li>
+<li><strong>Καλώδια.</strong> Το <strong>composite</strong> (RCA) μεταφέρει όλη την εικόνα σε ένα βύσμα, συνήθως
+  κίτρινο, με ξεχωριστά καλώδια για τον ήχο. Το <strong>S-Video</strong> μεταφέρει χωριστά
+  φωτεινότητα και χρώμα και μπορεί να δώσει καθαρότερη εικόνα. Το <strong>SCART</strong> είναι
+  συνηθισμένο σε ευρωπαϊκές συσκευές και συχνά χρειάζεται προσαρμογέα.</li>
+<li><strong>Συσκευή σύλληψης.</strong> Μετατρέπει το αναλογικό σήμα σε ψηφιακό. Την καταγραφή κάνεις
+  με το λογισμικό της συσκευής ή με πρόγραμμα όπως το OBS Studio (Μάθημα 13). Επιλέγεις
+  το πρότυπο της κασέτας, PAL ή NTSC.</li>
+<li><strong>Δοκιμή πριν την καταγραφή.</strong> Πρώτα ένα μικρό απόσπασμα για εικόνα και ήχο, και
+  κράτα πάντα την αρχική κασέτα.</li>
+<li><strong>Τι παίρνεις.</strong> Ένα αρχείο συνήθως πεπλεγμένο (interlaced), με θόρυβο και τρέμουλο:
+  ακριβώς τα προβλήματα που λύνεις σήμερα. Η ψηφιοποίηση δεν προσθέτει λεπτομέρεια πάνω
+  από την ανάλυση της κασέτας (δες 4.1).</li>
+</ul>
+<p>Στο εργαστήριο <strong>δεν ψηφιοποιούμε κασέτες</strong>: δεν υπάρχει συσκευή αναπαραγωγής ούτε
+συσκευή σύλληψης. Μαθαίνεις τη διαδρομή για να ξέρεις τι να ζητήσεις και τι να περιμένεις.</p>
+<h3 id="1-interlaced-progressive">Στάδιο 1 — Έλεγχος interlaced πηγής και progressive εξαγωγή<a class="headerlink" href="#1-interlaced-progressive" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Εισήγαγε το σύντομο interlaced δείγμα. Στο <strong>Project Bin</strong>, δεξί κλικ στο
+   όνομά του → <strong>Clip Properties</strong>: διάβασε scan type και field order και σύγκρινέ
+   τα με τις γνωστές ιδιότητες του δείγματος· μην τα αλλάξεις αυθαίρετα.</li>
+<li>Από τα <strong>Project Settings</strong> διάλεξε progressive profile και βάλε το δείγμα
+   στο V1. Άνοιξε <strong>Render</strong> με <strong>Ctrl+Enter</strong>, διάλεξε <strong>MP4-H264/AAC</strong> και
+   στο <strong>More Options → Video</strong> επίλεξε <strong>Deinterlacer: YADIF</strong>. Όρισε νέο
+   όνομα, π.χ. <code>interlaced_after.mp4</code>, και πάτησε <strong>Render to File</strong>.</li>
+<li>Σύγκρινε αρχικό και εξαγόμενο δείγμα, κίνηση και ιδιότητες. Αν ο player κάνει
+   αυτόματο deinterlace, χρησιμοποίησε τα καρέ αναφοράς του εκπαιδευτή για το αρχικό.</li>
+<li>Εισήγαγε το MP4 στο Bin και άνοιξε τις δικές του <strong>Clip Properties</strong>.
+   Κατέγραψε scan type πηγής/εξόδου και μέθοδο. Σε progressive πηγή δεν απαιτείται
+   αποπλέξη· γι' αυτό χρησιμοποιούμε το συγκεκριμένο interlaced δείγμα όλοι.</li>
+</ol>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/exporting/render.html">Render — Deinterlacer</a>.</p>
+<h2 id="cycle-2">Κύκλος 2 — Θόρυβος<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
+<h3 id="21-denoise">2.1 Θόρυβος και denoise<a class="headerlink" href="#21-denoise" title="Permanent link">&para;</a></h3>
+<p>Παλιά ή φθηνά αισθητήρια καμερών, ειδικά σε χαμηλό φωτισμό, καταγράφουν εμφανή
+<strong>θόρυβο</strong> (κόκκος/grain) — τυχαίες διακυμάνσεις φωτεινότητας/χρώματος που δεν
+υπάρχουν στην πραγματική εικόνα. Το <strong>HQ 3D Denoiser (frei0r)</strong> τις εξομαλύνει,
+με τις παραμέτρους Spatial και Temporal του Σταδίου 2.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ο συμβιβασμός denoise-sharpen</p>
+<p>Η μείωση θορύβου μαλακώνει αναπόφευκτα και πραγματική λεπτομέρεια — δεν ξεχωρίζει
+τέλεια «θόρυβο» από «λεπτή υφή». Υπερβολικό denoise δίνει εικόνα που μοιάζει
+«κέρινη»/ξεθωριασμένη. Το <strong>Sharpen</strong> μετά αντισταθμίζει μερικώς αυτή την απώλεια —
+δούλεψε τα δύο μαζί, ισορροπημένα, όχι το ένα στο μέγιστο.</p>
+</div>
+<h3 id="2-denoise-sharpen">Στάδιο 2 — Denoise και Sharpen<a class="headerlink" href="#2-denoise-sharpen" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Ισορροπία θορύβου/ευκρίνειας.</p>
+</div>
+<ol>
+<li>Επίλεξε το θορυβώδες clip <strong>στο timeline</strong>. Στο <strong>Effects</strong>, αναζήτησε
+   <strong>HQ 3D Denoiser (frei0r)</strong> και σύρε το πάνω στο clip. Στο
+   <strong>Effect/Composition Stack</strong> έλεγξε ότι εμφανίζεται το σωστό όνομα clip.
+   Χρησιμοποίησε τις προεπιλογές και κατέγραψε
+   <strong>Spatial</strong> και <strong>Temporal</strong> όπως εμφανίζονται στην εγκατάσταση.</li>
+<li>Σταμάτησε σε καρέ με λεπτή υφή και χρησιμοποίησε την ενεργοποίηση/απενεργοποίηση
+   δίπλα στο όνομα του effect για σύγκριση. Άλλαξε μόνο <strong>Spatial</strong> σε
+   μία μικρή υψηλότερη τιμή· επανάφερε και δοκίμασε μόνο <strong>Temporal</strong>.
+   Έλεγξε λεπτές υφές και κινούμενες ακμές για θόλωση ή ίχνη κίνησης.
+   Μείωσε τις τιμές αν χάνεται λεπτομέρεια· μην χρησιμοποιείς υποχρεωτικά το μέγιστο.</li>
+<li>Δοκίμασε ήπιο <strong>Sharpen</strong> στο ίδιο clip, κάτω από το denoise στη στοίβα.
+   Παίξε ολόκληρο το σύντομο πλάνο. Αν η εικόνα δείχνει κέρινη, μείωσε πρώτα το
+   denoise· το sharpen δεν ανακτά χαμένες υφές.</li>
+</ol>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/grain_and_noise/denoise_hqdn3d.html">HQ 3D Denoiser</a>.</p>
+<h2 id="cycle-3">Κύκλος 3 — Σταθεροποίηση<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
+<h3 id="31-project-bin">3.1 Σταθεροποίηση με εργασία στο Project Bin<a class="headerlink" href="#31-project-bin" title="Permanent link">&para;</a></h3>
+<p>Η <strong>Stabilize</strong> εκτελείται ως <strong>Media/Clip Job</strong> στο Project Bin, όχι ως ένα ακόμη
+effect στη στοίβα του timeline. Αναλύει την κίνηση και δημιουργεί αποτέλεσμα που
+χρησιμοποιείς ως clip. Η αντιστάθμιση συχνά απαιτεί zoom, άρα χάνεται μέρος του κάδρου.</p>
+<p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/menu/media_menu.html#stabilize">Kdenlive — Stabilize</a>.</p>
+<h3 id="3-stabilize-job">Στάδιο 3 — Stabilize job<a class="headerlink" href="#3-stabilize-job" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Επίλεξε το <strong>progressive τρεμάμενο clip στο Project Bin</strong>.</li>
+<li>Δεξί κλικ → <strong>Media Jobs / Clip Jobs → Stabilize</strong> (ή το αντίστοιχο μενού Media).</li>
+<li>Διάλεξε νέο αρχείο αποτελέσματος και εισαγωγή του στο project. Ξεκίνα με τις
+   προεπιλογές και σημείωσε <strong>Smoothing</strong> και <strong>Optimal Zoom</strong>.</li>
+<li>Εκκίνησε το job, περίμενε να ολοκληρωθεί και βάλε το παραγόμενο clip στο timeline.
+   Αν δεν προστέθηκε αυτόματα στο Bin, εισήγαγέ το από τη διαδρομή που επέλεξες.</li>
+<li>Σύγκρινε δίπλα στο αρχικό: κραδασμούς, άκρες και απώλεια κάδρου. Άλλαξε μόνο
+   μία ρύθμιση σε δεύτερη δοκιμή. Μην αφαιρέσεις τα αρχεία από τα οποία εξαρτάται το αποτέλεσμα.
+   Για απλή σύγκριση, βάλε αρχικό και αποτέλεσμα διαδοχικά στο V1, με ίδια
+   αρχή/διάρκεια πηγής. Παρατήρησε το ίδιο αντικείμενο κοντά στην άκρη και στις
+   δύο εκδοχές. Μην τοποθετήσεις το αποτέλεσμα πάνω στο αρχικό, γιατί θα το καλύπτει.</li>
+</ol>
+<p>Η απενεργοποίηση της στοίβας effects δεν ακυρώνει ένα ήδη παραγόμενο stabilized
+clip· για πριν/μετά χρησιμοποιούμε το πρωτότυπο και το αποτέλεσμα.</p>
+<h2 id="cycle-4">Κύκλος 4 — Όρια και τελική αποκατάσταση<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
+<h3 id="41-upscaling">4.1 Τα πραγματικά όρια του upscaling<a class="headerlink" href="#41-upscaling" title="Permanent link">&para;</a></h3>
+<p>Το να μεγαλώσεις την ανάλυση ενός βίντεο (upscale) δεν «εφευρίσκει» λεπτομέρεια που δεν
+καταγράφηκε ποτέ — απλώς μεγεθύνει τα υπάρχοντα pixel, με κάποιο αλγόριθμο εξομάλυνσης
+ανάμεσά τους. Ένα βίντεο 480p που γίνεται 1080p δεν αποκτά ξαφνικά την ευκρίνεια ενός
+πραγματικού 1080p πλάνου — απλώς φαίνεται λιγότερο pixelated σε μεγάλη οθόνη.</p>
+<div class="admonition note">
+<p class="admonition-title">Γιατί έχει σημασία να το ξέρεις</p>
+<p>Ο οδηγός κατάρτισης μιλά για να <strong>ενισχύσεις</strong> την ποιότητα παλιού υλικού, όχι να
+την «αναδημιουργήσεις». Ρεαλιστικός στόχος: το πλάνο να δείχνει <strong>καλύτερο απ' ό,τι
+ήταν</strong>, όχι ισάξιο με σύγχρονο 4K. Διαχείριση προσδοκιών — δικών σου και του κοινού
+σου.</p>
+</div>
+<h3 id="42">4.2 Ροή εργασιών<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>Ελέγχουμε πρώτα αν η πηγή είναι interlaced και επιλέγουμε progressive έξοδο.
+Για αυτή την άσκηση χρησιμοποιούμε δύο μικρά δείγματα: ένα interlaced/θορυβώδες
+και ένα <strong>progressive</strong> τρεμάμενο. Έτσι το Stabilize δοκιμάζεται ξεχωριστά,
+χωρίς να θεωρούμε ότι επεξεργάζεται τη στοίβα effects του timeline.</p>
+<p>Στο θορυβώδες clip: ήπιο denoise → προαιρετικό ήπιο sharpen → χρώμα/έκθεση.
+Στο progressive τρεμάμενο: Stabilize job → εισαγωγή αποτελέσματος → έλεγχος
+κάδρου και τυχόν effects. Αν ένα interlaced clip χρειάζεται και σταθεροποίηση,
+δημιούργησε πρώτα ελεγμένο progressive ενδιάμεσο και μετά εκτέλεσε το job.</p>
+<h3 id="4">Στάδιο 4 — Τελική αποκατάσταση<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Νέο σε αυτό το στάδιο</p>
+<p>Καμία νέα εντολή — σωστή σειρά εργασιών.</p>
+</div>
+<ol>
+<li>Εφάρμοσε τη σωστή σειρά (4.2) σε ένα πλάνο, όσα βήματα χρειάζεται πραγματικά.</li>
+<li>Πρόσθεσε διόρθωση χρώματος (Μάθημα 5) στο τέλος.</li>
+<li>Κράτησε πριν/μετά σύγκριση (δύο εξαγωγές, ή split-screen αν διαλέξεις την Επέκταση Β).</li>
+<li>Εξαγωγή σε MP4.</li>
+</ol>
+<hr />
+<h1 id="_6">Μετά το μοντάζ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<h2 id="_7">Συνηθισμένα λάθη<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Denoise στο μέγιστο.</strong> Σύμπτωμα: «κέρινη», ξεθωριασμένη εικόνα.</li>
+<li><strong>Λάθος σειρά — sharpen πριν από denoise.</strong> Σύμπτωμα: ενισχύεται ο θόρυβος αντί να μειώνεται.</li>
+<li><strong>Προσδοκία τέλειου αποτελέσματος.</strong> Σύμπτωμα: απογοήτευση όταν το upscale δεν φέρνει πραγματική νέα λεπτομέρεια.</li>
+<li><strong>Stabilize χωρίς έλεγχο crop.</strong> Σύμπτωμα: απροσδόκητα κομμένες άκρες εικόνας.</li>
+</ul>
+<h2 id="_8">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Εφάρμοσε sharpen πριν από denoise. Πόσο πιο εμφανής είναι ο θόρυβος;</li>
+<li>Ανέβασε το denoise στο μέγιστο. Πόσο «κέρινη» γίνεται η εικόνα;</li>
+<li>Κάνε upscale σε πολύ χαμηλής ανάλυσης πλάνο σε 4K. Δείχνει σαν πραγματικό 4K;</li>
+</ol>
+<h2 id="_9">Ασκήσεις εμπέδωσης<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Denoise σε καθαρό πλάνο.</strong> Πάρε ένα πλάνο <strong>χωρίς</strong> εμφανή θόρυβο και εφάρμοσε
+   δυνατό denoise ούτως ή άλλως. Τι χάνεται, αφού δεν υπήρχε σχεδόν τίποτα να αφαιρεθεί;</li>
+<li><strong>Stabilize σε ήδη σταθερό πλάνο.</strong> Δοκίμασε Stabilize σε πλάνο τραβηγμένο με
+   τρίποδο ή ήδη πολύ σταθερό χέρι. Αλλάζει κάτι αισθητά, ή η σταθεροποίηση δεν προσφέρει βελτίωση;</li>
+<li><strong>Η κασέτα της οικογένειας.</strong> Ρώτα σπίτι ή φίλους αν υπάρχει παλιά βιντεοκασέτα. Βρες τι format είναι
+   (γράφεται πάνω στην κασέτα ή στην κάμερα) και γράψε το σχέδιο διάσωσης όπως στο Φύλλο εργασίας 12.</li>
+</ol>
+<h2 id="_10">Δική σου εκδοχή<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>Ολοκλήρωσε πρώτα τον υποχρεωτικό πυρήνα. Αν μείνει χρόνος, διάλεξε μία επέκταση και κάνε <strong>μία αλλαγή τη φορά</strong>.</p>
+<ul>
+<li><strong>Επέκταση Α:</strong> Σύγκριση δύο ρυθμίσεων Smoothing σε νέο αποτέλεσμα.</li>
+<li><strong>Επέκταση Β:</strong> Πριν/μετά με split-screen αντί δύο διαδοχικών clips.</li>
+</ul>
+<h2 id="_11">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Γιατί ελέγχεις πρώτα τον τύπο σάρωσης και πώς επιβεβαιώνεις progressive έξοδο;</li>
+<li>Ποιος είναι ο συμβιβασμός ανάμεσα σε denoise και sharpen;</li>
+<li>Γιατί το upscaling δεν «φτιάχνει» πραγματική νέα λεπτομέρεια;</li>
+<li>Ποια είναι η διαδρομή από μια αναλογική κασέτα ως ψηφιακό αρχείο, και τι ανάλυση περιμένεις από μια VHS και τι από μια Hi8;</li>
+</ol>
+<h2 id="_12">Για να θυμάσαι<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Μια <strong>interlaced</strong> πηγή έχει καρέ από δύο πεδία (μονές και ζυγές γραμμές) τραβηγμένα σε ελαφρώς διαφορετική στιγμή· σε progressive οθόνη φαίνεται «χτένισμα» (combing) γύρω από κινούμενα αντικείμενα.</li>
+<li>Το <strong>Deinterlacer στο Render</strong> παράγει progressive καρέ. Το ότι δεν βλέπεις χτένισμα στο monitor δεν αποδεικνύει ότι η πηγή είναι progressive.</li>
+<li>Αναλογική κασέτα → συσκευή αναπαραγωγής → καλώδια → συσκευή σύλληψης → λογισμικό → αρχείο, σε πραγματικό χρόνο. Κράτα πάντα την αρχική κασέτα.</li>
+<li>VHS περίπου 240 γραμμές, S-VHS και Hi8 περίπου 400. Η ψηφιοποίηση δεν προσθέτει λεπτομέρεια πάνω από την ανάλυση της κασέτας.</li>
+<li>Το <strong>denoise</strong> (HQ 3D Denoiser) μαλακώνει και την πραγματική λεπτομέρεια· το <strong>Sharpen</strong> την αντισταθμίζει μερικώς. Δούλεψέ τα μαζί, χωρίς υπερβολές.</li>
+<li>Το <strong>Stabilize</strong> είναι Clip Job στο Project Bin, όχι effect στο timeline. Συχνά χρειάζεται zoom, άρα χάνεται μέρος του κάδρου.</li>
+<li>Το <strong>upscaling</strong> μεγεθύνει τα υπάρχοντα pixel, δεν εφευρίσκει λεπτομέρεια. Στόχος είναι καλύτερο από πριν, όχι ισάξιο με 4K.</li>
+<li>Σειρά εργασίας: έλεγχος σάρωσης → ήπιο denoise → προαιρετικό sharpen → χρώμα/έκθεση. Για πηγή interlaced και τρεμάμενη, πρώτα ελεγμένο progressive ενδιάμεσο και μετά Stabilize.</li>
+</ul>
+<h2 id="_13">Λεξιλόγιο<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><strong>αναλογική κασέτα (VHS, S-VHS, Betamax, Video8, Hi8)</strong>, <strong>συσκευή σύλληψης (capture device)</strong>,
+<strong>composite / S-Video</strong>, <strong>interlacing (πεπλεγμένη σάρωση)</strong>, <strong>deinterlace</strong>, <strong>θόρυβος / κόκκος (noise/grain)</strong>,
+<strong>denoise</strong>, <strong>sharpen</strong>, <strong>stabilize (σταθεροποίηση)</strong>, <strong>upscale</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Επιστροφή στην αρχή
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Υποσέλιδο" >
+        
+          
+          <a href="../../11-audio-mix/worksheet-11/" class="md-footer__link md-footer__link--prev" aria-label="Προηγούμενο: Φύλλο εργασίας">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Προηγούμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../worksheet-12/" class="md-footer__link md-footer__link--next" aria-label="Επόμενο: Φύλλο εργασίας">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Επόμενο
+              </span>
+              <div class="md-ellipsis">
+                Φύλλο εργασίας
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Θόδωρος Θεμελής — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el"
+   target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
