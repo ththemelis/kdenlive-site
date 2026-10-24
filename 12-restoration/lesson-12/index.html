@@ -1800,6 +1800,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#read-combing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Διαβάζω το χτένισμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1-interlaced-progressive" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1839,6 +1850,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#noise-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Διαβάζω τον πίνακα θορύβου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-denoise-sharpen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1871,6 +1893,17 @@
     <span class="md-ellipsis">
       
         3.1 Σταθεροποίηση με εργασία στο Project Bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frame-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Πόσο κάδρο χάνω;
       
     </span>
   </a>
@@ -2487,6 +2520,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#read-combing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Διαβάζω το χτένισμα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1-interlaced-progressive" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2526,6 +2570,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#noise-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Διαβάζω τον πίνακα θορύβου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-denoise-sharpen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2558,6 +2613,17 @@
     <span class="md-ellipsis">
       
         3.1 Σταθεροποίηση με εργασία στο Project Bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frame-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Πόσο κάδρο χάνω;
       
     </span>
   </a>
@@ -2657,12 +2723,16 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Έλεγχος interlaced δείγματος και progressive εξαγωγής, ήπια αποθορυβοποίηση/χρωματική διόρθωση όπου χρειάζεται.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Stabilize job σε progressive τρεμάμενο δείγμα, σύγκριση πηγής/αποτελέσματος και καταγραφή απώλειας κάδρου.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ανάγνωση χτενίσματος χωρίς υπολογιστή: γραμμές ανά πεδίο, πεδία ανά δευτερόλεπτο και ταχύτητα κίνησης από το πλάτος των «δοντιών».</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Υπολογισμός της απώλειας κάδρου μιας σταθεροποίησης από τη μέγιστη μετατόπιση (ελάχιστο ζουμ και ποσοστό κάδρου που χάνεται) και σύγκριση με το αποτέλεσμα του Stabilize.</li>
 </ul>
 <h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Οικογενειακό βίντεο από παλιά κάμερα, ή απλά ένα πλάνο τραβηγμένο σε κακές συνθήκες
 (χαμηλό φως, τρεμάμενο χέρι, παλιά συσκευή), δείχνει αισθητά χειρότερο δίπλα σε ό,τι
 έχεις φτιάξει φέτος. Σήμερα μαθαίνεις τις βασικές τεχνικές που βελτιώνουν —<strong>όχι που
 μεταμορφώνουν</strong>— τέτοιο υλικό.</p>
+<p>Θα μάθεις και να <strong>μετράς</strong> τα προβλήματα: πόσο μεγάλο είναι το χτένισμα και τι ταχύτητα δείχνει, πού σταματά να ωφελεί το denoise, και πόσο κάδρο
+κοστίζει μια σταθεροποίηση.</p>
 <h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>να περιγράφεις τη διαδρομή ψηφιοποίησης μιας αναλογικής κασέτας και να λες τι ποιότητα να περιμένεις</li>
@@ -2670,6 +2740,9 @@
 <li>να μειώνεις θόρυβο/κόκκο εικόνας (denoise) και να αντισταθμίζεις την απώλεια ευκρίνειας (sharpen)</li>
 <li>να σταθεροποιείς τρεμάμενο πλάνο (stabilize)</li>
 <li>να εξηγείς τα πραγματικά όρια του upscaling</li>
+<li>να διαβάζεις το χτένισμα: πεδία, ρυθμός πεδίων και ταχύτητα από το πλάτος των δοντιών</li>
+<li>να διαβάζεις έναν πίνακα θορύβου και λεπτομέρειας και να βρίσκεις την ισορροπία</li>
+<li>να υπολογίζεις πόσο κάδρο χάνει μια σταθεροποίηση</li>
 </ul>
 <h2 id="_3">Αρχεία εργαστηρίου<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Από το <a href="../../lab-samples/">πακέτο δειγμάτων</a>. Τα δείγματα είναι συνθετικά και διαρκούν 6 s το καθένα.</p>
@@ -2689,8 +2762,8 @@
 </tr>
 <tr>
 <td><a href="../../assets/lab-samples/progressive-shaky.mp4">progressive-shaky.mp4</a></td>
-<td>720×540, 25fps, progressive, τρεμάμενο</td>
-<td>Στάδιο 3 (Stabilize)</td>
+<td>720×540, 25fps, progressive, τρεμάμενο: μετατόπιση έως ±14 px οριζόντια και ±10 px κατακόρυφα</td>
+<td>Στάδιο 3 (Stabilize) και ενότητα 3.2</td>
 </tr>
 <tr>
 <td><a href="../../assets/lab-samples/interlaced-frame.png">interlaced-frame.png</a></td>
@@ -2723,26 +2796,26 @@
 <tbody>
 <tr>
 <td>1 — Interlaced και κασέτα</td>
-<td>έλεγχος σάρωσης και progressive εξαγωγή</td>
-<td>βήματα 0–2</td>
+<td>έλεγχος σάρωσης, progressive εξαγωγή και ανάγνωση του χτενίσματος</td>
+<td>βήματα 0–3</td>
 <td>1η</td>
 </tr>
 <tr>
 <td>2 — Θόρυβος</td>
-<td>denoise και sharpen</td>
-<td>βήμα 3</td>
+<td>denoise και sharpen, ανάγνωση πίνακα θορύβου</td>
+<td>βήμα 4</td>
 <td>2η</td>
 </tr>
 <tr>
 <td>3 — Σταθεροποίηση</td>
-<td>Stabilize job</td>
-<td>βήμα 4</td>
+<td>Stabilize job και υπολογισμός απώλειας κάδρου</td>
+<td>βήματα 5–6</td>
 <td>2η</td>
 </tr>
 <tr>
 <td>4 — Όρια και τελική αποκατάσταση</td>
 <td>τελική αποκατάσταση, έλεγχος</td>
-<td>βήματα 5–9</td>
+<td>βήματα 7–11</td>
 <td>3η</td>
 </tr>
 </tbody>
@@ -2833,6 +2906,36 @@
 </ul>
 <p>Στο εργαστήριο <strong>δεν ψηφιοποιούμε κασέτες</strong>: δεν υπάρχει συσκευή αναπαραγωγής ούτε
 συσκευή σύλληψης. Μαθαίνεις τη διαδρομή για να ξέρεις τι να ζητήσεις και τι να περιμένεις.</p>
+<h3 id="read-combing">1.3 Διαβάζω το χτένισμα<a class="headerlink" href="#read-combing" title="Permanent link">&para;</a></h3>
+<p>Ένα <strong>πεδίο</strong> (field) είναι οι μισές γραμμές ενός καρέ: οι μονές ή οι ζυγές. Στο PAL το καρέ έχει 576 γραμμές, άρα <strong>288 γραμμές ανά πεδίο</strong>, και 25 καρέ ανά
+δευτερόλεπτο σημαίνουν <strong>50 πεδία ανά δευτερόλεπτο</strong>: ένα πεδίο κάθε <strong>20 ms</strong>. (Στο NTSC: 480 γραμμές, 240 ανά πεδίο, περίπου 60 πεδία ανά δευτερόλεπτο.)</p>
+<p>Τα δύο πεδία ενός καρέ είναι τραβηγμένα με 20 ms διαφορά. Ένα αντικείμενο που κινείται οριζόντια έχει στο δεύτερο πεδίο μετατοπιστεί, και οι γραμμές
+του φαίνονται σαν «δόντια»:</p>
+<p><strong>πλάτος δοντιού = ταχύτητα ÷ 50</strong> (pixel, για ταχύτητα σε pixel ανά δευτερόλεπτο), δηλαδή <strong>ταχύτητα = πλάτος δοντιού × 50</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Ταχύτητα αντικειμένου</th>
+<th style="text-align: right;">Πλάτος δοντιού</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">200 px/s</td>
+<td style="text-align: right;">4 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">300 px/s</td>
+<td style="text-align: right;">6 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">600 px/s</td>
+<td style="text-align: right;">12 px</td>
+</tr>
+</tbody>
+</table>
+<p>Ένα ακίνητο αντικείμενο δεν έχει δόντια, γιατί και τα δύο πεδία δείχνουν την ίδια εικόνα. Ο κανόνας ισχύει για <strong>οριζόντια</strong> κίνηση: σε λοξές ή κατακόρυφες
+κινήσεις το σχήμα είναι πιο σύνθετο.</p>
 <h3 id="1-interlaced-progressive">Στάδιο 1 — Έλεγχος interlaced πηγής και progressive εξαγωγή<a class="headerlink" href="#1-interlaced-progressive" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Εισήγαγε το σύντομο interlaced δείγμα. Στο <strong>Project Bin</strong>, δεξί κλικ στο
@@ -2847,6 +2950,8 @@
 <li>Εισήγαγε το MP4 στο Bin και άνοιξε τις δικές του <strong>Clip Properties</strong>.
    Κατέγραψε scan type πηγής/εξόδου και μέθοδο. Σε progressive πηγή δεν απαιτείται
    αποπλέξη· γι' αυτό χρησιμοποιούμε το συγκεκριμένο interlaced δείγμα όλοι.</li>
+<li><strong>Διάβασε το χτένισμα</strong> (φύλλο εργασίας, βήμα 3). Χωρίς υπολογιστή, υπολόγισε γραμμές ανά πεδίο, πεδία ανά δευτερόλεπτο και ταχύτητες από πλάτη δοντιών.
+   Στο καρέ αναφοράς βρες πού φαίνεται χτένισμα και πού όχι.</li>
 </ol>
 <p>Πηγή: <a href="https://docs.kdenlive.org/en/exporting/render.html">Render — Deinterlacer</a>.</p>
 <h2 id="cycle-2">Κύκλος 2 — Θόρυβος<a class="headerlink" href="#cycle-2" title="Permanent link">&para;</a></h2>
@@ -2861,6 +2966,95 @@
 τέλεια «θόρυβο» από «λεπτή υφή». Υπερβολικό denoise δίνει εικόνα που μοιάζει
 «κέρινη»/ξεθωριασμένη. Το <strong>Sharpen</strong> μετά αντισταθμίζει μερικώς αυτή την απώλεια —
 δούλεψε τα δύο μαζί, ισορροπημένα, όχι το ένα στο μέγιστο.</p>
+</div>
+<h3 id="noise-table">2.2 Διαβάζω τον πίνακα θορύβου<a class="headerlink" href="#noise-table" title="Permanent link">&para;</a></h3>
+<p>Σε ένα πείραμα με το θορυβώδες δείγμα, χρησιμοποιήθηκε denoise με διαφορετικό Spatial και μετρήθηκαν δύο πράγματα: ο <strong>θόρυβος</strong> σε μια επίπεδη περιοχή (όσο
+μικρότερος, τόσο καλύτερα) και το <strong>PSNR</strong> (dB) του πλάνου σε σχέση με το ίδιο πλάνο χωρίς θόρυβο (όσο μεγαλύτερο, τόσο πιο κοντά στο καθαρό):</p>
+<table>
+<thead>
+<tr>
+<th>Spatial</th>
+<th style="text-align: right;">Θόρυβος σε επίπεδη περιοχή</th>
+<th style="text-align: right;">PSNR σε σχέση με το καθαρό</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>κανένα</td>
+<td style="text-align: right;">2,8</td>
+<td style="text-align: right;">39,7 dB</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2,05</td>
+<td style="text-align: right;">42,0 dB</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1,67</td>
+<td style="text-align: right;">43,1 dB</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: right;">1,23</td>
+<td style="text-align: right;">44,2 dB</td>
+</tr>
+<tr>
+<td>16</td>
+<td style="text-align: right;">1,13</td>
+<td style="text-align: right;">43,7 dB</td>
+</tr>
+<tr>
+<td>32</td>
+<td style="text-align: right;">1,46</td>
+<td style="text-align: right;">40,4 dB</td>
+</tr>
+</tbody>
+</table>
+<p>Ο θόρυβος στην επίπεδη περιοχή πέφτει ως το 16, αλλά το πλάνο <strong>πλησιάζει περισσότερο το καθαρό στο 8</strong> και απομακρύνεται μετά: η υπερβολική τιμή αφαιρεί και
+πραγματική υφή. Για τη σειρά των εφέ (τιμές Spatial 4, ήπιο Sharpen):</p>
+<table>
+<thead>
+<tr>
+<th>Σειρά</th>
+<th style="text-align: right;">Θόρυβος σε επίπεδη περιοχή</th>
+<th style="text-align: right;">PSNR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Χωρίς επεξεργασία</td>
+<td style="text-align: right;">2,8</td>
+<td style="text-align: right;">39,7 dB</td>
+</tr>
+<tr>
+<td>Μόνο denoise</td>
+<td style="text-align: right;">1,67</td>
+<td style="text-align: right;">43,1 dB</td>
+</tr>
+<tr>
+<td>Denoise → sharpen</td>
+<td style="text-align: right;">2,52</td>
+<td style="text-align: right;">37,4 dB</td>
+</tr>
+<tr>
+<td>Sharpen → denoise</td>
+<td style="text-align: right;">2,89</td>
+<td style="text-align: right;">36,9 dB</td>
+</tr>
+<tr>
+<td>Μόνο sharpen</td>
+<td style="text-align: right;">3,9</td>
+<td style="text-align: right;">35,4 dB</td>
+</tr>
+</tbody>
+</table>
+<p>Το sharpen ενισχύει και τον θόρυβο: αν μπει πρώτο, το denoise δεν τον αφαιρεί πλήρως. Και στις δύο σειρές το sharpen <strong>δεν</strong> πλησιάζει το καθαρό πλάνο
+(PSNR κάτω από του μόνο denoise).</p>
+<div class="admonition warning">
+<p class="admonition-title">Ενδεικτικές τιμές</p>
+<p>Ο πίνακας προέρχεται από φίλτρα του FFmpeg (hqdn3d, unsharp) σε <strong>συνθετικό</strong> πλάνο με θόρυβο που ξέρουμε. Το HQ 3D Denoiser του Kdenlive είναι ανάλογο, όχι ίδιο, και
+οι κλίμακες των τιμών Spatial διαφέρουν. Το νόημα είναι ο τρόπος ανάγνωσης: υπάρχει ένα σημείο ισορροπίας και μετά το περνάς.</p>
 </div>
 <h3 id="2-denoise-sharpen">Στάδιο 2 — Denoise και Sharpen<a class="headerlink" href="#2-denoise-sharpen" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -2881,6 +3075,7 @@
 <li>Δοκίμασε ήπιο <strong>Sharpen</strong> στο ίδιο clip, κάτω από το denoise στη στοίβα.
    Παίξε ολόκληρο το σύντομο πλάνο. Αν η εικόνα δείχνει κέρινη, μείωσε πρώτα το
    denoise· το sharpen δεν ανακτά χαμένες υφές.</li>
+<li><strong>Διάβασε τον πίνακα</strong> (φύλλο εργασίας, βήμα 4, ενότητα 2.2). Βρες από τον πίνακα πού σταματά να ωφελεί η αύξηση του Spatial και ποια σειρά αφήνει λιγότερο θόρυβο.</li>
 </ol>
 <p>Πηγή: <a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/grain_and_noise/denoise_hqdn3d.html">HQ 3D Denoiser</a>.</p>
 <h2 id="cycle-3">Κύκλος 3 — Σταθεροποίηση<a class="headerlink" href="#cycle-3" title="Permanent link">&para;</a></h2>
@@ -2889,6 +3084,15 @@
 effect στη στοίβα του timeline. Αναλύει την κίνηση και δημιουργεί αποτέλεσμα που
 χρησιμοποιείς ως clip. Η αντιστάθμιση συχνά απαιτεί zoom, άρα χάνεται μέρος του κάδρου.</p>
 <p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/menu/media_menu.html#stabilize">Kdenlive — Stabilize</a>.</p>
+<h3 id="frame-loss">3.2 Πόσο κάδρο χάνω;<a class="headerlink" href="#frame-loss" title="Permanent link">&para;</a></h3>
+<p>Για να μη φαίνονται μαύρες άκρες, η σταθεροποίηση μετακινεί κάθε καρέ αντίθετα από το τρέμουλο και μεγεθύνει (zoom) όσο χρειάζεται. Αν η εικόνα μετατοπίζεται το πολύ
+<strong>dx</strong> pixel οριζόντια και <strong>dy</strong> pixel κατακόρυφα, κόβονται dx pixel από κάθε πλευρά και dy pixel από πάνω και κάτω. Για κάδρο πλάτους W και ύψους H:</p>
+<ul>
+<li><strong>ζουμ = max( W ÷ (W − 2·dx), H ÷ (H − 2·dy) )</strong></li>
+<li><strong>κάδρο που χάνεται = 1 − (W − 2·dx)(H − 2·dy) ÷ (W·H)</strong></li>
+</ul>
+<p>Παράδειγμα με το τρεμάμενο δείγμα (720×540, dx = 14, dy = 10): οριζόντια 720 ÷ 692 = 1,0405 και κατακόρυφα 540 ÷ 520 = 1,0385, άρα <strong>ζουμ ≈ 4%</strong>. Μένουν 692 × 520 =
+359.840 pixel από 388.800, δηλαδή χάνεται το <strong>7,4%</strong> του κάδρου. Το ζουμ μεγεθύνει pixel, και γι' αυτό η εικόνα θολώνει ελαφρά (δες 4.1).</p>
 <h3 id="3-stabilize-job">Στάδιο 3 — Stabilize job<a class="headerlink" href="#3-stabilize-job" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Επίλεξε το <strong>progressive τρεμάμενο clip στο Project Bin</strong>.</li>
@@ -2902,6 +3106,8 @@ effect στη στοίβα του timeline. Αναλύει την κίνηση �
    Για απλή σύγκριση, βάλε αρχικό και αποτέλεσμα διαδοχικά στο V1, με ίδια
    αρχή/διάρκεια πηγής. Παρατήρησε το ίδιο αντικείμενο κοντά στην άκρη και στις
    δύο εκδοχές. Μην τοποθετήσεις το αποτέλεσμα πάνω στο αρχικό, γιατί θα το καλύπτει.</li>
+<li><strong>Πόσο κάδρο χάνω;</strong> (φύλλο εργασίας, βήμα 6). Υπολόγισε ζουμ και χαμένο κάδρο από τη μετατόπιση του δείγματος και σύγκρινέ τα με το Optimal Zoom και το
+   αποτέλεσμα του δικού σου Stabilize: φαίνονται μαύρες άκρες; Αν ναι, το ζουμ ήταν μικρότερο από το απαιτούμενο.</li>
 </ol>
 <p>Η απενεργοποίηση της στοίβας effects δεν ακυρώνει ένα ήδη παραγόμενο stabilized
 clip· για πριν/μετά χρησιμοποιούμε το πρωτότυπο και το αποτέλεσμα.</p>
@@ -2918,6 +3124,8 @@ clip· για πριν/μετά χρησιμοποιούμε το πρωτότυ
 ήταν</strong>, όχι ισάξιο με σύγχρονο 4K. Διαχείριση προσδοκιών — δικών σου και του κοινού
 σου.</p>
 </div>
+<p>Σε αριθμούς: από 854×480 (480p) σε 1920×1080 τα pixel πολλαπλασιάζονται επί (1080 ÷ 480)² ≈ 5,06, άρα μόνο περίπου <strong>1 στα 5 pixel (20%)</strong> προέρχεται από την πηγή.
+Σε 4K (3840×2160) τα pixel είναι περίπου 20 φορές περισσότερα και η πραγματική πληροφορία μόλις το <strong>5%</strong>.</p>
 <h3 id="42">4.2 Ροή εργασιών<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
 <p>Ελέγχουμε πρώτα αν η πηγή είναι interlaced και επιλέγουμε progressive έξοδο.
 Για αυτή την άσκηση χρησιμοποιούμε δύο μικρά δείγματα: ένα interlaced/θορυβώδες
@@ -2946,12 +3154,15 @@ clip· για πριν/μετά χρησιμοποιούμε το πρωτότυ
 <li><strong>Λάθος σειρά — sharpen πριν από denoise.</strong> Σύμπτωμα: ενισχύεται ο θόρυβος αντί να μειώνεται.</li>
 <li><strong>Προσδοκία τέλειου αποτελέσματος.</strong> Σύμπτωμα: απογοήτευση όταν το upscale δεν φέρνει πραγματική νέα λεπτομέρεια.</li>
 <li><strong>Stabilize χωρίς έλεγχο crop.</strong> Σύμπτωμα: απροσδόκητα κομμένες άκρες εικόνας.</li>
+<li><strong>Λάθος μονάδα στο χτένισμα.</strong> Σύμπτωμα: η ταχύτητα βγαίνει στο μισό, γιατί το πλάτος του δοντιού πολλαπλασιάστηκε με 25 (καρέ) αντί για 50 (πεδία).</li>
+<li><strong>Ζουμ μικρότερο από το απαιτούμενο.</strong> Σύμπτωμα: μένουν μαύρες άκρες σε ορισμένα καρέ μετά τη σταθεροποίηση.</li>
 </ul>
 <h2 id="_8">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Εφάρμοσε sharpen πριν από denoise. Πόσο πιο εμφανής είναι ο θόρυβος;</li>
 <li>Ανέβασε το denoise στο μέγιστο. Πόσο «κέρινη» γίνεται η εικόνα;</li>
 <li>Κάνε upscale σε πολύ χαμηλής ανάλυσης πλάνο σε 4K. Δείχνει σαν πραγματικό 4K;</li>
+<li>Σταθεροποίησε το δείγμα με το μεγαλύτερο Smoothing που επιτρέπεται. Χρειάστηκε περισσότερο ζουμ από πριν;</li>
 </ol>
 <h2 id="_9">Ασκήσεις εμπέδωσης<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2974,6 +3185,8 @@ clip· για πριν/μετά χρησιμοποιούμε το πρωτότυ
 <li>Ποιος είναι ο συμβιβασμός ανάμεσα σε denoise και sharpen;</li>
 <li>Γιατί το upscaling δεν «φτιάχνει» πραγματική νέα λεπτομέρεια;</li>
 <li>Ποια είναι η διαδρομή από μια αναλογική κασέτα ως ψηφιακό αρχείο, και τι ανάλυση περιμένεις από μια VHS και τι από μια Hi8;</li>
+<li>Πώς βρίσκεις την ταχύτητα ενός αντικειμένου από το πλάτος των δοντιών του, και γιατί πολλαπλασιάζεις με 50;</li>
+<li>Πώς υπολογίζεις πόσο κάδρο θα χάσεις από μια σταθεροποίηση πριν την εφαρμόσεις;</li>
 </ol>
 <h2 id="_12">Για να θυμάσαι<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2985,11 +3198,15 @@ clip· για πριν/μετά χρησιμοποιούμε το πρωτότυ
 <li>Το <strong>Stabilize</strong> είναι Clip Job στο Project Bin, όχι effect στο timeline. Συχνά χρειάζεται zoom, άρα χάνεται μέρος του κάδρου.</li>
 <li>Το <strong>upscaling</strong> μεγεθύνει τα υπάρχοντα pixel, δεν εφευρίσκει λεπτομέρεια. Στόχος είναι καλύτερο από πριν, όχι ισάξιο με 4K.</li>
 <li>Σειρά εργασίας: έλεγχος σάρωσης → ήπιο denoise → προαιρετικό sharpen → χρώμα/έκθεση. Για πηγή interlaced και τρεμάμενη, πρώτα ελεγμένο progressive ενδιάμεσο και μετά Stabilize.</li>
+<li>PAL: 576 γραμμές = 2 πεδία των 288, 50 πεδία ανά δευτερόλεπτο (20 ms). <strong>Πλάτος δοντιού = ταχύτητα ÷ 50</strong>, δηλαδή ταχύτητα = πλάτος δοντιού × 50.</li>
+<li>Το denoise έχει σημείο ισορροπίας: μετά από αυτό αφαιρεί πραγματική υφή. Το sharpen ενισχύει και τον θόρυβο και δεν ανακτά χαμένη λεπτομέρεια.</li>
+<li>Απώλεια κάδρου: ζουμ = max(W ÷ (W − 2·dx), H ÷ (H − 2·dy)). Με dx = 14 και dy = 10 σε 720×540: ζουμ ≈ 4%, χάνεται το 7,4% του κάδρου.</li>
+<li>Από 480p σε 1080p μόνο 1 στα 5 pixel είναι πραγματική πληροφορία· σε 4K μόλις το 5%.</li>
 </ul>
 <h2 id="_13">Λεξιλόγιο<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 <p><strong>αναλογική κασέτα (VHS, S-VHS, Betamax, Video8, Hi8)</strong>, <strong>συσκευή σύλληψης (capture device)</strong>,
 <strong>composite / S-Video</strong>, <strong>interlacing (πεπλεγμένη σάρωση)</strong>, <strong>deinterlace</strong>, <strong>θόρυβος / κόκκος (noise/grain)</strong>,
-<strong>denoise</strong>, <strong>sharpen</strong>, <strong>stabilize (σταθεροποίηση)</strong>, <strong>upscale</strong>.</p>
+<strong>denoise</strong>, <strong>sharpen</strong>, <strong>stabilize (σταθεροποίηση)</strong>, <strong>upscale</strong>, <strong>πεδίο (field)</strong>, <strong>χτένισμα (combing)</strong>.</p>
 
 
 

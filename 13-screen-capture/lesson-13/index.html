@@ -1926,6 +1926,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#size-bitrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Πόσο χώρο πιάνει, πόσο κείμενο διαβάζεται
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2008,6 +2019,17 @@
     <span class="md-ellipsis">
       
         3.2 Το μοντάζ οθόνης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Διαβάζω τα καρέ
       
     </span>
   </a>
@@ -2498,6 +2520,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#size-bitrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Πόσο χώρο πιάνει, πόσο κείμενο διαβάζεται
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2587,6 +2620,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#read-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Διαβάζω τα καρέ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#3-kdenlive" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2657,12 +2701,16 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Σύντομη καταγραφή οθόνης, εισαγωγή και κόψιμο στο Kdenlive.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Εξαγωγή με κατάλληλη ανάλυση/fps και έλεγχο ήχου.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Υπολογισμός μεγέθους αρχείου από bitrate και διάρκεια, και του bitrate του δικού σου αρχείου από μέγεθος και διάρκεια.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Υπολογισμός χρόνου καρέ, καρέ που χάνονται ή επαναλαμβάνονται όταν τα fps διαφέρουν, και απόκλισης σε καρέ και ms.</li>
 </ul>
 <h2 id="_1">Τι θα φτιάξεις σήμερα<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Ως τώρα όλη η πρώτη ύλη σου ήταν πλάνα κάμερας. Η ειδικότητά σου όμως έχει
 προσανατολισμό <em>web/games</em> — πολύ περιεχόμενο σε αυτόν τον χώρο είναι <strong>καταγραφή
 οθόνης</strong>: demo εφαρμογής, gameplay, tutorial. Σήμερα μαθαίνεις να καταγράφεις οθόνη/
 gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξεργάζεσαι στο Kdenlive.</p>
+<p>Θα μάθεις και να <strong>μετράς</strong> μια καταγραφή: πόσο χώρο πιάνει ανάλογα με το bitrate, πόσο μικραίνει το κείμενο της οθόνης, τι γίνεται όταν τα fps του OBS διαφέρουν
+από του project, και πόσο ασυγχρόνιστος είναι ένας ήχος σε καρέ και σε χιλιοστά του δευτερολέπτου.</p>
 <h2 id="_2">Τι θα μπορείς να κάνεις στο τέλος<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>να δημιουργείς Scene και Sources στο OBS Studio</li>
@@ -2670,6 +2718,8 @@ gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξ
 <li>προαιρετικά, να καταγράφεις webcam με τη φωνή σου για μεταγενέστερο σχολιασμό</li>
 <li>να εισάγεις την καταγραφή στο Kdenlive και να τη μοντάρεις</li>
 <li>προαιρετικά, να συνθέτεις webcam PiP πάνω σε gameplay (εφαρμογή του Μαθήματος 8)</li>
+<li>να υπολογίζεις πόσο χώρο πιάνει μια καταγραφή και να βρίσκεις το bitrate ενός αρχείου από το μέγεθος και τη διάρκειά του</li>
+<li>να υπολογίζεις χρόνο καρέ, καρέ που χάνονται όταν τα fps διαφέρουν και απόκλιση σε καρέ και ms</li>
 </ul>
 <h2 id="_3">Πριν ξεκινήσεις<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Εγκατέστησε το <strong>OBS Studio</strong> (δωρεάν, ανοιχτού κώδικα) — δες <a href="../../">index.md</a>.
@@ -2694,26 +2744,26 @@ gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξ
 <tbody>
 <tr>
 <td>1 — Η πρώτη καταγραφή</td>
-<td>καταγραφή οθόνης με OBS</td>
-<td>βήματα 0–1</td>
+<td>καταγραφή οθόνης με OBS, υπολογισμός μεγέθους και bitrate</td>
+<td>βήματα 0–2</td>
 <td>1η</td>
 </tr>
 <tr>
 <td>2 — Webcam και μεταγενέστερος σχολιασμός</td>
 <td>webcam και σχολιασμός (επέκταση)</td>
-<td>βήμα 2</td>
+<td>βήμα 3</td>
 <td>2η</td>
 </tr>
 <tr>
 <td>3 — Σύνθεση στο Kdenlive</td>
-<td>μοντάζ της καταγραφής στο Kdenlive</td>
-<td>βήμα 3</td>
+<td>μοντάζ της καταγραφής στο Kdenlive, ανάγνωση καρέ και απόκλισης</td>
+<td>βήματα 4–5</td>
 <td>2η</td>
 </tr>
 <tr>
 <td>4 — Το ολοκληρωμένο μοντάζ</td>
 <td>έλεγχος, ταυτότητα καταγραφής, εξαγωγή</td>
-<td>βήματα 4–9</td>
+<td>βήματα 6–11</td>
 <td>3η</td>
 </tr>
 </tbody>
@@ -2794,6 +2844,66 @@ gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξ
 <li><strong>Χώρος για κόψιμο.</strong> Άφησε 2–3 δευτερόλεπτα ησυχίας στην αρχή και στο τέλος, για trim χωρίς να χαθεί χρήσιμο υλικό.</li>
 <li><strong>Κράτα το αρχικό αρχείο</strong> μέχρι να παραδοθεί το project.</li>
 </ul>
+<h3 id="size-bitrate">1.5 Πόσο χώρο πιάνει, πόσο κείμενο διαβάζεται<a class="headerlink" href="#size-bitrate" title="Permanent link">&para;</a></h3>
+<p>Το <strong>bitrate</strong> (ρυθμός δεδομένων) δηλώνει πόσα δεδομένα γράφονται ανά δευτερόλεπτο. Ισχύει:</p>
+<p><strong>μέγεθος (MB) = bitrate (Mbps) × διάρκεια (s) ÷ 8</strong>, με 1 Mbps = 1000 kbps. Το ÷ 8 είναι η μετατροπή από bit σε byte.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bitrate</th>
+<th style="text-align: right;">20 s</th>
+<th style="text-align: right;">10 λεπτά</th>
+<th style="text-align: right;">1 ώρα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">6000 kbps (6 Mbps)</td>
+<td style="text-align: right;">15 MB</td>
+<td style="text-align: right;">450 MB</td>
+<td style="text-align: right;">2,7 GB</td>
+</tr>
+<tr>
+<td style="text-align: right;">12000 kbps (12 Mbps)</td>
+<td style="text-align: right;">30 MB</td>
+<td style="text-align: right;">900 MB</td>
+<td style="text-align: right;">5,4 GB</td>
+</tr>
+</tbody>
+</table>
+<p>Η ασυμπίεστη εικόνα θα ήταν τεράστια: ένα καρέ 1920×1080 με 3 bytes ανά pixel είναι περίπου 6,2 MB, και στα 30 καρέ ανά δευτερόλεπτο περίπου 187 MB/s. Στα 6 Mbps το
+αρχείο είναι 0,75 MB/s, δηλαδή περίπου 250 φορές μικρότερο. Ο ήχος προσθέτει λίγο (π.χ. 160 kbps).</p>
+<p>Το αντίστροφο σου δίνει το bitrate <strong>ενός αρχείου που έχεις ήδη</strong>: <strong>bitrate (Mbps) = μέγεθος (MB) × 8 ÷ διάρκεια (s)</strong>. Αν βγει μικρότερο από όσο όρισες στο OBS, ο encoder δεν
+χρειάστηκε όλο το διαθέσιμο bitrate (συμβαίνει με απλό περιεχόμενο και με ρυθμίσεις ποιότητας αντί για σταθερό bitrate).</p>
+<p>Το κείμενο της οθόνης μικραίνει με τον ίδιο λόγο με το κάδρο. Αν η οθόνη σου είναι 2560×1440 και η έξοδος του OBS 1280×720, ο λόγος είναι 0,5 και ένα γράμμα ύψους 15 px
+γίνεται περίπου 8 px. Ενδεικτικά, σε συνθετική οθόνη (μέτρηση ±1 px):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Κεφαλαίο στην οθόνη 2560×1440</th>
+<th style="text-align: right;">Έξοδος 1920×1080 (×0,75)</th>
+<th style="text-align: right;">Έξοδος 1280×720 (×0,5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">15 px</td>
+<td style="text-align: right;">11 px</td>
+<td style="text-align: right;">8 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">11 px</td>
+<td style="text-align: right;">8 px</td>
+<td style="text-align: right;">5 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">8 px</td>
+<td style="text-align: right;">5 px</td>
+<td style="text-align: right;">3 px</td>
+</tr>
+</tbody>
+</table>
+<p>Για μικρά γράμματα (π.χ. κώδικας) αύξησε το μέγεθος κειμένου στην εφαρμογή, κατέγραψε μικρότερη περιοχή με Window Capture, ή διάλεξε μεγαλύτερη έξοδο.</p>
 <h3 id="1">Στάδιο 1 — Πρώτη καταγραφή οθόνης<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Νέο σε αυτό το στάδιο</p>
@@ -2813,6 +2923,8 @@ gameplay/webcam με το <strong>OBS Studio</strong>, και να το επεξ
 <li>Πέρνα τη λίστα της <a href="#before-record">1.4</a>. Πάτησε <strong>Start Recording</strong> στο <strong>Controls</strong>, κάνε μια σύντομη δοκιμή και
    <strong>Stop Recording</strong>. Άνοιξε το αρχείο από το Recording Path και άκουσέ το.
    Αν όλα λειτουργούν, κατέγραψε τα 20–40 δευτερόλεπτα της άσκησης.</li>
+<li><strong>Πόσο χώρο πιάνει;</strong> (φύλλο εργασίας, βήμα 2). Υπολόγισε μέγεθος από bitrate και διάρκεια· μετά βρες μέγεθος (στις ιδιότητες του αρχείου) και διάρκεια (Clip Properties)
+   της δικής σου καταγραφής και υπολόγισε το bitrate της.</li>
 </ol>
 <p>Πηγές: <a href="https://obsproject.com/kb/quick-start-guide">OBS — Quick Start</a>,
 <a href="https://obsproject.com/kb/obs-studio-overview">OBS — Video και Output settings</a>.</p>
@@ -2885,6 +2997,56 @@ Transform effect για μέγεθος/θέση, προαιρετικά keyframe
 </table>
 <p>Κράτα το zoom μικρό (π.χ. έως 120%): πάνω από 100% μεγεθύνονται τα pixel της καταγραφής και η
 εικόνα θολώνει (για τα όρια της μεγέθυνσης δες Μ12 §4.1).</p>
+<h3 id="read-frames">3.3 Διαβάζω τα καρέ<a class="headerlink" href="#read-frames" title="Permanent link">&para;</a></h3>
+<p>Ο <strong>χρόνος ενός καρέ</strong> είναι 1000 ÷ fps σε ms: 24 fps → 41,7 ms, 25 → 40, 30 → 33,3, 50 → 20 και 60 → 16,7.</p>
+<p>Όταν η καταγραφή και το project έχουν διαφορετικά fps, κάθε καρέ του project παίρνει το πλησιέστερο καρέ της πηγής: κάποια καρέ χάνονται, ή επαναλαμβάνονται. Ενδεικτικά, με το
+φίλτρο fps του FFmpeg (το Kdenlive μπορεί να διαλέγει λίγο διαφορετικά):</p>
+<table>
+<thead>
+<tr>
+<th>Πηγή → project</th>
+<th style="text-align: right;">Καρέ που χάνονται ανά s</th>
+<th style="text-align: right;">Καρέ που επαναλαμβάνονται ανά s</th>
+<th>Βήμα στα καρέ της πηγής</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60 → 30</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0</td>
+<td>2, 2, 2, 2 … (ομοιόμορφο)</td>
+</tr>
+<tr>
+<td>50 → 25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+<td>2, 2, 2, 2 … (ομοιόμορφο)</td>
+</tr>
+<tr>
+<td>60 → 25</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0</td>
+<td>2, 2, 3, 2, 3, 2, 2, 3 … (άνισο)</td>
+</tr>
+<tr>
+<td>30 → 25</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td>1, 1, 2, 1, 1, 1, 1, 2 …</td>
+</tr>
+<tr>
+<td>25 → 30</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td>1, 1, 0, 1, 1, 1, 1, 1, 0 …</td>
+</tr>
+</tbody>
+</table>
+<p>Όταν ο λόγος των fps είναι <strong>ακέραιος</strong> (60 → 30, 50 → 25), τα καρέ της πηγής επιλέγονται ομοιόμορφα. Όταν δεν είναι (60 ÷ 25 = 2,4), άλλοτε το βήμα είναι 2 και άλλοτε 3 καρέ και η
+κίνηση μπορεί να φαίνεται άνιση.</p>
+<p>Η <strong>απόκλιση σε χρόνο</strong> είναι καρέ × 1000 ÷ fps. Τα ίδια 5 καρέ είναι 200 ms στα 25 fps αλλά μόλις 83 ms στα 60 fps· τα 12 καρέ είναι 480 ms και 200 ms. Για να μετρήσεις μια απόκλιση,
+προχώρα καρέ-καρέ με τα βέλη στο monitor.</p>
 <h3 id="3-kdenlive">Στάδιο 3 — Σύνθεση στο Kdenlive<a class="headerlink" href="#3-kdenlive" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Νέο σε αυτό το στάδιο</p>
@@ -2902,6 +3064,7 @@ Transform effect για μέγεθος/θέση, προαιρετικά keyframe
 <li>Στην επέκταση, κόψε τον μεταγενέστερο σχολιασμό σε φράσεις και τοποθέτησέ τες στα γεγονότα που
    περιγράφουν. Χρησιμοποίησε τους σημειωμένους χρόνους και ακρόαση για τον χρονισμό·
    μην αναζητάς κοινό χειροκρότημα σε διαδοχικές λήψεις.</li>
+<li><strong>Διάβασε τα καρέ</strong> (βήμα 5 του φύλλου, ενότητα 3.3). Υπολόγισε χρόνο καρέ, καρέ που χάνονται όταν τα fps διαφέρουν και απόκλιση σε καρέ και ms.</li>
 </ol>
 <p>Πηγή: <a href="https://docs.kdenlive.org/en/user_interface/menu/media_menu.html#add-clip-or-folder">Kdenlive — Add Clip or Folder</a>.</p>
 <h2 id="cycle-4">Κύκλος 4 — Το ολοκληρωμένο μοντάζ<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
@@ -2925,12 +3088,15 @@ Transform effect για μέγεθος/θέση, προαιρετικά keyframe
 <li><strong>Δεν ελέγχθηκε το αρχείο μετά την καταγραφή.</strong> Σύμπτωμα: ανακαλύπτεις πρόβλημα (π.χ. κενή οθόνη, κατεστραμμένο αρχείο) πολύ αργότερα.</li>
 <li><strong>Ασυγχρόνιστο webcam/gameplay.</strong> Σύμπτωμα: η αντίδραση φαίνεται πριν ή μετά το γεγονός που σχολιάζει.</li>
 <li><strong>Ξεχασμένος ήχος μικροφώνου (καμία πηγή ήχου ενεργή).</strong> Σύμπτωμα: σιωπηλή καταγραφή.</li>
+<li><strong>Μπέρδεμα bit και byte.</strong> Σύμπτωμα: ένα αρχείο στα 6000 kbps «βγαίνει» στους υπολογισμούς 8 φορές μεγαλύτερο, γιατί ξεχάστηκε το ÷ 8.</li>
+<li><strong>Μετατροπή fps χωρίς έλεγχο.</strong> Σύμπτωμα: καταγραφή 60 fps σε project 25 fps με άνιση κίνηση, χωρίς να έχει υπολογιστεί ο λόγος.</li>
 </ul>
 <h2 id="_7">Δοκίμασε να το χαλάσεις επίτηδες<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Κατέγραψε με ρύθμιση ανάλυσης πολύ διαφορετική από το project σου. Τι σύμπτωμα βλέπεις στο Kdenlive;</li>
 <li>Σύνθεσε το webcam PiP με λάθος χρονική μετατόπιση (1-2 δευτερόλεπτα εκτός συγχρονισμού). Πόσο αντιληπτό είναι;</li>
 <li>Απενεργοποίησε προσωρινά όλες τις πηγές ήχου στο OBS πριν καταγράψεις. Τι παίρνεις;</li>
+<li>Κατέγραψε το ίδιο σύντομο περιεχόμενο με πολύ χαμηλό bitrate (π.χ. 1000 kbps). Τι αλλάζει στο μέγεθος του αρχείου και στο κείμενο της οθόνης;</li>
 </ol>
 <h2 id="_8">Ασκήσεις εμπέδωσης<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2951,6 +3117,8 @@ Transform effect για μέγεθος/θέση, προαιρετικά keyframe
 <li>Πώς έλεγξες ότι η καταγραφή οθόνης περιλαμβάνει τον ήχο που χρειάζεσαι;</li>
 <li>Αν έκανες την επέκταση, πώς χρονίζεις τον μεταγενέστερο σχολιασμό και γιατί δεν αρκεί η κοινή αρχή των αρχείων;</li>
 <li>Ποιες ρυθμίσεις εξόδου όρισες στο OBS και γιατί ταιριάζουν με το project σου;</li>
+<li>Πώς υπολογίζεις το μέγεθος μιας καταγραφής από το bitrate και τη διάρκεια, και το bitrate ενός αρχείου από το μέγεθος και τη διάρκειά του;</li>
+<li>Τι συμβαίνει όταν το OBS καταγράφει 60 fps και το project είναι 25 fps, και γιατί 5 καρέ δεν είναι πάντα η ίδια απόκλιση σε χιλιοστά του δευτερολέπτου;</li>
 </ol>
 <h2 id="_11">Για να θυμάσαι<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2962,10 +3130,14 @@ Transform effect για μέγεθος/θέση, προαιρετικά keyframe
 <li>Έλεγξε από την πρώτη δοκιμή ότι η καταγραφή περιέχει τον ήχο που χρειάζεσαι.</li>
 <li>Στον μεταγενέστερο σχολιασμό καταγράφεις webcam αργότερα και χρονίζεις τις φράσεις πάνω στα γεγονότα. Δεν υπάρχει αυτόματο σήμα συγχρονισμού ανάμεσα στις δύο λήψεις.</li>
 <li>Η σύνθεση webcam πάνω σε gameplay είναι το PiP του Μ8: δεύτερο track και Transform. Επειδή δεν «καίγεται» στο αρχείο, αλλάζεις θέση και μέγεθος όποτε θέλεις.</li>
+<li><strong>Μέγεθος (MB) = bitrate (Mbps) × διάρκεια (s) ÷ 8.</strong> Αντίστροφα: bitrate = μέγεθος × 8 ÷ διάρκεια. Στα 6 Mbps: 450 MB ανά 10 λεπτά.</li>
+<li>Το κείμενο της οθόνης μικραίνει με τον λόγο ανάλυσης εξόδου προς οθόνη: με ×0,5 ένα γράμμα 15 px γίνεται περίπου 8 px.</li>
+<li><strong>Χρόνος καρέ = 1000 ÷ fps</strong>: 40 ms στα 25 fps, 16,7 ms στα 60 fps. Απόκλιση σε ms = καρέ × 1000 ÷ fps.</li>
+<li>Αν τα fps διαφέρουν: ακέραιος λόγος (60 → 30) δίνει ομοιόμορφη επιλογή καρέ· μη ακέραιος (60 → 25) δίνει βήματα 2 και 3 και άνιση κίνηση.</li>
 </ul>
 <h2 id="_12">Λεξιλόγιο<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p><strong>OBS Studio</strong>, <strong>Scene</strong>, <strong>Source</strong>, <strong>Display / Window / Game Capture</strong>, <strong>Video
-Capture Device</strong>, <strong>desktop audio</strong>, <strong>συγχρονισμός (sync)</strong>.</p>
+Capture Device</strong>, <strong>desktop audio</strong>, <strong>συγχρονισμός (sync)</strong>, <strong>bitrate</strong>, <strong>χρόνος καρέ</strong>.</p>
 
 
 
