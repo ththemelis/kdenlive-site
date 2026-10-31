@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2820,9 +2820,65 @@ slider θερμοκρασίας.</p>
 </div>
 <h3 id="rgb-parade">1.3 Διαβάζω την απόκλιση: RGB Parade<a class="headerlink" href="#rgb-parade" title="Permanent link">&para;</a></h3>
 <p>Το σταγονόμετρο διορθώνει, αλλά δεν σου λέει <strong>τι</strong> ήταν λάθος ούτε αν η διόρθωση πέτυχε. Το <strong>RGB Parade</strong>
-(<strong>View → Scopes → RGB Parade</strong>) δείχνει τρία πάνελ δίπλα-δίπλα: κόκκινο, πράσινο και μπλε. Σε κάθε πάνελ ο
-οριζόντιος άξονας ακολουθεί το κάδρο (η αριστερή στήλη αντιστοιχεί στο αριστερό άκρο της εικόνας) και ο
-κάθετος δείχνει πόσο ισχυρό είναι το κανάλι, από 0 κάτω ως 255 πάνω.</p>
+(<strong>View → Scopes → RGB Parade</strong>) είναι ένα όργανο που σου δείχνει <strong>σε αριθμούς</strong> πόσο κόκκινο, πράσινο και μπλε
+έχει η εικόνα. Δεν εξαρτάται από τη ρύθμιση της οθόνης σου, γι' αυτό βοηθά εκεί που το μάτι ξεγελιέται.</p>
+<p><strong>Από πού προέρχονται οι αριθμοί.</strong> Κάθε pixel του καρέ έχει τρεις τιμές, μία για κάθε κανάλι: <strong>R</strong> (κόκκινο),
+<strong>G</strong> (πράσινο) και <strong>B</strong> (μπλε). Κάθε τιμή είναι από 0 (καθόλου) ως 255 (το μέγιστο). Για παράδειγμα:</p>
+<table>
+<thead>
+<tr>
+<th>Pixel</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: right;">B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Μαύρο</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Ουδέτερο μεσαίο γκρι</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">128</td>
+</tr>
+<tr>
+<td>Λευκό</td>
+<td style="text-align: right;">255</td>
+<td style="text-align: right;">255</td>
+<td style="text-align: right;">255</td>
+</tr>
+<tr>
+<td>Θερμό γκρι (κιτρινοπορτοκαλί απόκλιση)</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>Κόκκινο αντικείμενο</td>
+<td style="text-align: right;">220</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">40</td>
+</tr>
+</tbody>
+</table>
+<p>Στο <strong>ουδέτερο</strong> (μαύρο, γκρι, λευκό) τα τρία κανάλια είναι <strong>ίσα</strong>. Όσο πιο άνισα είναι, τόσο πιο έντονο
+χρώμα έχει το pixel.</p>
+<p><strong>Πώς είναι φτιαγμένο το Parade.</strong> Δείχνει τρία πάνελ δίπλα-δίπλα: κόκκινο, πράσινο και μπλε. Κάθε pixel του
+καρέ σχεδιάζεται ως μία κουκκίδα σε καθένα από τα τρία πάνελ:</p>
+<ul>
+<li><strong>Οριζόντια</strong> η κουκκίδα μπαίνει στη θέση που έχει το pixel στο κάδρο. Η αριστερή στήλη ενός πάνελ αντιστοιχεί
+  στο αριστερό άκρο της εικόνας και η δεξιά στο δεξί. Ένα αντικείμενο που βρίσκεται στο 30% του πλάτους του καρέ
+  βρίσκεται στο 30% από αριστερά <strong>και στα τρία πάνελ</strong>.</li>
+<li><strong>Κάθετα</strong> η κουκκίδα ανεβαίνει ανάλογα με την τιμή του καναλιού: 0 κάτω, 255 πάνω. Στο πάνελ του κόκκινου,
+  ένα pixel με R = 220 μπαίνει ψηλά και ένα με R = 40 χαμηλά.</li>
+<li>Πολλά pixel της ίδιας στήλης δίνουν μια κάθετη «κορδέλα» κουκκίδων. Εκεί που είναι πιο πυκνή, βρίσκονται οι
+  περισσότερες τιμές.</li>
+</ul>
 <p><strong>Ο κανόνας:</strong> μια ουδέτερη περιοχή (γκρι τοίχος, άσφαλτος, λευκό πουκάμισο) έχει τα τρία κανάλια
 <strong>περίπου στο ίδιο ύψος</strong>. Αν ένα κανάλι είναι ψηλότερα από τα άλλα, η περιοχή έχει χρώμα που δεν θα έπρεπε να έχει.</p>
 <table>
@@ -2851,14 +2907,71 @@ slider θερμοκρασίας.</p>
 </tr>
 </tbody>
 </table>
-<p>Πώς το διαβάζεις: βρες στο κάδρο το ουδέτερο αντικείμενο, κοίτα τις <strong>ίδιες στήλες</strong> και στα τρία πάνελ και
-σύγκρινε σε ποιο ύψος κάθονται οι κουκκίδες του αντικειμένου. Αν το πλάνο δεν έχει ουδέτερη επιφάνεια, κοίτα το
-σύνολο: ένα κανάλι που ξεχωρίζει καθαρά από τα άλλα σε όλο το κάδρο μπορεί να δείχνει απόκλιση· έλεγξέ το και με το μάτι.</p>
+<p><strong>Ένα παράδειγμα με μετρήσεις.</strong> Σε ένα δείγμα (γκρι οδόστρωμα σε πλάνο πόλης) μετρήθηκε η μέση τιμή των
+καναλιών στο ίδιο ουδέτερο σημείο, πριν και μετά τη διόρθωση:</p>
+<table>
+<thead>
+<tr>
+<th>Ουδέτερο σημείο</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: right;">B</th>
+<th>Τι δείχνει το Parade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Πρωτότυπο</td>
+<td style="text-align: right;">100,5</td>
+<td style="text-align: right;">99,7</td>
+<td style="text-align: right;">100,9</td>
+<td>τα τρία κανάλια στο ίδιο ύψος</td>
+</tr>
+<tr>
+<td>Με θερμή απόκλιση</td>
+<td style="text-align: right;">122,1</td>
+<td style="text-align: right;">100,7</td>
+<td style="text-align: right;">73,4</td>
+<td>κόκκινο ψηλά, μπλε χαμηλά</td>
+</tr>
+<tr>
+<td>Μετά το White Balance</td>
+<td style="text-align: right;">98,7</td>
+<td style="text-align: right;">98,9</td>
+<td style="text-align: right;">98,7</td>
+<td>τα τρία κανάλια ξανά στο ίδιο ύψος</td>
+</tr>
+</tbody>
+</table>
+<p>Διαβάζεις την απόκλιση ως διαφορά ύψους: το κόκκινο είναι περίπου 21 μονάδες πάνω από το πράσινο και το μπλε 27
+μονάδες κάτω από αυτό, άρα η απόκλιση είναι θερμή. Μετά τη διόρθωση η διαφορά πέφτει κάτω από μία μονάδα.</p>
+<p><strong>Πώς το διαβάζεις βήμα προς βήμα:</strong></p>
+<ol>
+<li>Βρες στο monitor ένα αντικείμενο που θα έπρεπε να είναι ουδέτερο και δες σε ποιο οριζόντιο ποσοστό του κάδρου
+   βρίσκεται (π.χ. στο 30% από αριστερά).</li>
+<li>Κοίτα τις <strong>ίδιες στήλες</strong> και στα τρία πάνελ και βρες σε ποιο ύψος κάθονται οι κουκκίδες του αντικειμένου.</li>
+<li>Σύγκρινε τα ύψη. Αν είναι ίδια, δεν υπάρχει απόκλιση εκεί. Αν ένα ξεχωρίζει, ονόμασέ το (κόκκινο ψηλά, μπλε
+   χαμηλά, κ.ο.κ.) και γράψε τι απόκλιση σημαίνει.</li>
+<li>Στις ίδιες στήλες υπάρχουν συνήθως και άλλα αντικείμενα (δέντρα, ουρανός), γι' αυτό η κορδέλα δεν είναι
+   καθαρή γραμμή: κοίτα εκεί που οι κουκκίδες είναι πιο πυκνές. Αν το πλάνο δεν έχει ουδέτερη επιφάνεια, κοίτα το
+   σύνολο: ένα κανάλι που ξεχωρίζει καθαρά από τα άλλα σε όλο το κάδρο μπορεί να δείχνει απόκλιση· έλεγξέ το και με το μάτι.</li>
+</ol>
+<p><strong>Καμένες περιοχές.</strong> Αν οι κουκκίδες ενός καναλιού στοιβάζονται στο <strong>πάνω άκρο</strong> (255), το κανάλι είναι
+«καμένο»: έχει χάσει λεπτομέρεια. Όταν και τα τρία κανάλια φτάνουν εκεί, η περιοχή είναι καθαρό λευκό. Το <strong>Waveform</strong>
+δείχνει μόνο τη συνολική φωτεινότητα, οπότε μπορεί να κρύψει το κάψιμο ενός μόνο καναλιού, ενώ το Parade το δείχνει.
+Γι' αυτό η περιοχή που διαλέγεις για το σταγονόμετρο δεν πρέπει να είναι καμένη λευκή: εκεί και τα τρία κανάλια είναι 255 και δεν
+δείχνουν τίποτα για την απόκλιση.</p>
 <div class="admonition warning">
 <p class="admonition-title">Το RGB Parade δεν κρίνει την αισθητική</p>
 <p>Σε ένα <strong>κόκκινο</strong> αντικείμενο το κόκκινο κανάλι θα είναι σωστά ψηλότερα. Η σύγκριση των καναλιών έχει νόημα
 μόνο σε περιοχή που θα έπρεπε να είναι ουδέτερη. Δεν εξαρτάται από τη ρύθμιση της οθόνης σου, γι' αυτό
 βοηθά εκεί που το μάτι ξεγελιέται.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Επιλογές του scope</p>
+<p>Το εγχειρίδιο περιγράφει το <strong>Paint Mode</strong> (αλλάζει τον τρόπο ζωγραφικής και συνήθως τη φωτεινότητα) και, στο μενού με
+δεξί κλικ πάνω στο scope, το <strong>Draw Axis</strong> (άξονας με 10 βήματα, που βοηθά να διαβάζεις ύψη) και το <strong>Gradient reference line</strong>
+(διαγώνια γραμμή αναφοράς). Αν δεν τα βρεις στην εγκατάστασή σου, δεν επηρεάζουν τον κανόνα.</p>
 </div>
 <p>Πηγή: <a href="https://docs.kdenlive.org/en/tips_and_tricks/scopes/waveform_and_rgb_parade.html">Waveform και RGB Parade</a>.</p>
 <h3 id="1">Στάδιο 1 — Διόρθωση ισορροπίας λευκού<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
@@ -3224,10 +3337,10 @@ Gamma / Gain</strong>, <strong>σκιές / μεσαίοι τόνοι / highligh
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

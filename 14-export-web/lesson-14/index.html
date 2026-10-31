@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3410,6 +3410,106 @@ plugins:</p>
 <li><strong>Επέκταση Α:</strong> Πρόσθετη δοκιμή συμπίεσης με HandBrake, στη σελίδα <a href="../extension-handbrake/">Επέκταση HandBrake</a>.</li>
 <li><strong>Επέκταση Β:</strong> Τρίτη έκδοση με τεκμηριωμένη σύγκριση ποιότητας/μεγέθους.</li>
 </ul>
+<h2 id="extra-activities">Επιπλέον δραστηριότητες<a class="headerlink" href="#extra-activities" title="Permanent link">&para;</a></h2>
+<p>Αυτές οι δραστηριότητες είναι για όταν έχεις ολοκληρώσει και ελέγξει τον υποχρεωτικό πυρήνα. Δεν έχουν σειρά και δεν χρειάζεται να τις κάνεις όλες: διάλεξε όσες σε ενδιαφέρουν.</p>
+<ul>
+<li>Κάθε μία γίνεται σε <strong>αντίγραφο του project</strong> (<code>extra-14-1.kdenlive</code>, <code>extra-14-2.kdenlive</code> κ.ο.κ.), ώστε να μην πειράξεις το βασικό σου project.</li>
+<li>Δεν βαθμολογούνται. Όταν τελειώσεις μία, δείξε το αποτέλεσμα σε συμμαθητή ή στον διδάσκοντα και σημείωσέ την στο φύλλο εργασίας.</li>
+<li>Κάποιες χρησιμοποιούν εφέ που δεν έχουμε δει στο μάθημα. Αναζήτησέ τα με το όνομά τους στο πάνελ <strong>Effects</strong>, δοκίμασε και κοίτα στο monitor τι αλλάζει. Δεν χρειάζεται να καταλάβεις όλες τις παραμέτρους. Αν ένα εφέ λείπει από την εγκατάστασή σου, παράλειψε την κάρτα και διάλεξε άλλη.</li>
+<li>Οι χρόνοι είναι ενδεικτικοί.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Κάρτα</th>
+<th>Τίτλος</th>
+<th style="text-align: right;">Περίπου</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ε14.1</td>
+<td><a href="#extra-14-1">Δύο πηγές στο video</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε14.2</td>
+<td><a href="#extra-14-2">Πόσο κοστίζει η σελίδα;</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε14.3</td>
+<td><a href="#extra-14-3">Δύο γλώσσες υποτίτλων</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε14.4</td>
+<td><a href="#extra-14-4">9:16 με θολό φόντο</a></td>
+<td style="text-align: right;">20′</td>
+</tr>
+<tr>
+<td>Ε14.5</td>
+<td><a href="#extra-14-5">Ποιο poster θα πατούσες;</a></td>
+<td style="text-align: right;">10′</td>
+</tr>
+<tr>
+<td>Ε14.6</td>
+<td><a href="#extra-14-6">Βίντεο-φόντο</a></td>
+<td style="text-align: right;">12′</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extra-14-1">Ε14.1 Δύο πηγές στο video<a class="headerlink" href="#extra-14-1" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: MP4 και WebM</em></p>
+<ol>
+<li>Εξήγαγε το βίντεο της σελίδας του Σταδίου 4 και σε <strong>WebM</strong> εκτός από MP4.</li>
+<li>Στο HTML βάλε δύο <code>&lt;source&gt;</code>, με τη μορφή που προτιμάς πρώτη, και <code>type</code> για καθένα.</li>
+<li>Δοκίμασε στον Chrome. Μετά άλλαξε επίτηδες το όνομα του πρώτου αρχείου ώστε να μην υπάρχει και δες αν παίζει το δεύτερο.</li>
+<li>Σύγκρινε τα μεγέθη των δύο αρχείων.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Παίζει και με τα δύο και με το ένα, και έχεις τα μεγέθη των δύο αρχείων.</p>
+<h3 id="extra-14-2">Ε14.2 Πόσο κοστίζει η σελίδα;<a class="headerlink" href="#extra-14-2" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: DevTools → Network και preload</em></p>
+<ol>
+<li>Άνοιξε τη σελίδα του Σταδίου 4 με Live Server στον Chrome. Πάτησε <code>F12</code> και διάλεξε το tab <strong>Network</strong>. Ενεργοποίησε το «Disable cache».</li>
+<li>Δοκίμασε το <code>preload</code> με τρεις τιμές: <code>none</code>, <code>metadata</code>, <code>auto</code>. Για κάθε μία ξαναφόρτωσε τη σελίδα <strong>χωρίς να πατήσεις Play</strong> και σημείωσε πόσα bytes μεταφέρθηκαν συνολικά.</li>
+<li>Σημείωσε ποια αρχεία φορτώθηκαν σε κάθε περίπτωση (poster, βίντεο, υπότιτλοι).</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις πίνακα με τα bytes και τα αρχεία ανά τιμή του <code>preload</code>, και μία πρόταση για το πότε θα επέλεγες την καθεμία.</p>
+<h3 id="extra-14-3">Ε14.3 Δύο γλώσσες υποτίτλων<a class="headerlink" href="#extra-14-3" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: πολλαπλά <code>&lt;track&gt;</code></em></p>
+<ol>
+<li>Φτιάξε ένα δεύτερο αρχείο υποτίτλων σε άλλη γλώσσα (μπορεί και λίγες φράσεις) και μετάτρεψέ το σε WebVTT.</li>
+<li>Στο HTML βάλε δύο <code>&lt;track&gt;</code>, καθένα με <code>srclang</code> και <code>label</code>, και μόνο το ένα με <code>default</code>.</li>
+<li>Δοκίμασε στον Chrome και διάλεξε γλώσσα από το μενού υποτίτλων του player.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Το μενού των υποτίτλων προσφέρει δύο επιλογές και η αλλαγή αλλάζει το κείμενο.</p>
+<h3 id="extra-14-4">Ε14.4 9:16 με θολό φόντο<a class="headerlink" href="#extra-14-4" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 20′ · Εστίαση: Gaussian Blur και υπολογισμός επιφάνειας</em></p>
+<ol>
+<li>Σε αντίγραφο του project (<code>extra-14-4.kdenlive</code>) με προφίλ 1080×1920 βάλε το βίντεο 16:9 δύο φορές, στο V1 και στο V2.</li>
+<li>Στο V1 μεγέθυνε το αντίγραφο ώστε να γεμίσει το κάδρο και πρόσθεσε <strong>Gaussian Blur</strong> και μείωσε τη φωτεινότητα.</li>
+<li>Στο V2 κράτα το βίντεο ολόκληρο, στο πλάτος του κάδρου, στο κέντρο.</li>
+<li>Υπολόγισε: πόσο μεγάλο είναι το κύριο βίντεο ως ποσοστό της επιφάνειας του κάδρου 1080×1920;</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις το αποτέλεσμα και έναν υπολογισμό ποσοστού, και μία πρόταση για το πότε προτιμάς αυτήν την εκδοχή από το crop.</p>
+<h3 id="extra-14-5">Ε14.5 Ποιο poster θα πατούσες;<a class="headerlink" href="#extra-14-5" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 10′ · Εστίαση: μικρή έρευνα με τρεις θεατές</em></p>
+<ol>
+<li>Διάλεξε τρία διαφορετικά καρέ του βίντεο ως υποψήφια poster.</li>
+<li>Δείξε τα τρία, με τυχαία σειρά, σε πέντε συμμαθητές και ρώτα «ποιο θα πατούσες για να δεις το βίντεο;».</li>
+<li>Γράψε τα αποτελέσματα και διάλεξε το τελικό poster.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις πίνακα με πέντε απαντήσεις και μία πρόταση που εξηγεί την επιλογή σου.</p>
+<h3 id="extra-14-6">Ε14.6 Βίντεο-φόντο<a class="headerlink" href="#extra-14-6" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 12′ · Εστίαση: autoplay muted loop και προϋπολογισμός bitrate</em></p>
+<ol>
+<li>Φτιάξε ένα βίντεο 10″ χωρίς ήχο που θα παίζει ως φόντο σελίδας.</li>
+<li>Βάλε στο <code>&lt;video&gt;</code> τα χαρακτηριστικά <code>autoplay muted loop playsinline</code>.</li>
+<li>Στόχος μεγέθους: 2 MB. Υπολόγισε το bitrate που χωράει σε 10″ και εξήγαγε με αυτό.</li>
+<li>Δοκίμασε στον Chrome. Μετά αφαίρεσε το <code>muted</code> και δες τι γίνεται.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Το βίντεο παίζει αυτόματα σε επανάληψη και ξέρεις τι συνέβη όταν αφαίρεσες το <code>muted</code>.</p>
 <h2 id="_10">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Τι είναι το bitrate, και πώς σχετίζεται με το μέγεθος αρχείου;</li>
@@ -3539,10 +3639,10 @@ plugins:</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2968,6 +2968,108 @@ Alpha blend. Η δοκιμή είναι επέκταση μετά το βασι�
 <li><strong>Επέκταση Α:</strong> Κινούμενο PiP.</li>
 <li><strong>Επέκταση Β:</strong> Chroma key ή δοκιμή blend mode.</li>
 </ul>
+<h2 id="extra-activities">Επιπλέον δραστηριότητες<a class="headerlink" href="#extra-activities" title="Permanent link">&para;</a></h2>
+<p>Αυτές οι δραστηριότητες είναι για όταν έχεις ολοκληρώσει και ελέγξει τον υποχρεωτικό πυρήνα. Δεν έχουν σειρά και δεν χρειάζεται να τις κάνεις όλες: διάλεξε όσες σε ενδιαφέρουν.</p>
+<ul>
+<li>Κάθε μία γίνεται σε <strong>αντίγραφο του project</strong> (<code>extra-08-1.kdenlive</code>, <code>extra-08-2.kdenlive</code> κ.ο.κ.), ώστε να μην πειράξεις το βασικό σου project.</li>
+<li>Δεν βαθμολογούνται. Όταν τελειώσεις μία, δείξε το αποτέλεσμα σε συμμαθητή ή στον διδάσκοντα και σημείωσέ την στο φύλλο εργασίας.</li>
+<li>Κάποιες χρησιμοποιούν εφέ που δεν έχουμε δει στο μάθημα. Αναζήτησέ τα με το όνομά τους στο πάνελ <strong>Effects</strong>, δοκίμασε και κοίτα στο monitor τι αλλάζει. Δεν χρειάζεται να καταλάβεις όλες τις παραμέτρους. Αν ένα εφέ λείπει από την εγκατάστασή σου, παράλειψε την κάρτα και διάλεξε άλλη.</li>
+<li>Οι χρόνοι είναι ενδεικτικοί.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Κάρτα</th>
+<th>Τίτλος</th>
+<th style="text-align: right;">Περίπου</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ε8.1</td>
+<td><a href="#extra-8-1">Διαρροή φωτός</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε8.2</td>
+<td><a href="#extra-8-2">Ο ανιχνευτής διαφοράς</a></td>
+<td style="text-align: right;">20′</td>
+</tr>
+<tr>
+<td>Ε8.3</td>
+<td><a href="#extra-8-3">Τριπλή οθόνη με ακρίβεια pixel</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε8.4</td>
+<td><a href="#extra-8-4">Η οθόνη μέσα στη φωτογραφία</a></td>
+<td style="text-align: right;">25′</td>
+</tr>
+<tr>
+<td>Ε8.5</td>
+<td><a href="#extra-8-5">Καθάρισε τις άκρες του key</a></td>
+<td style="text-align: right;">15′</td>
+</tr>
+<tr>
+<td>Ε8.6</td>
+<td><a href="#extra-8-6">Πλαίσιο και σκιά για το PiP</a></td>
+<td style="text-align: right;">12′</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extra-8-1">Ε8.1 Διαρροή φωτός<a class="headerlink" href="#extra-8-1" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: Screen, Gaussian Blur, opacity με keyframes</em></p>
+<ol>
+<li>Σε αντίγραφο του project (<code>extra-08-1.kdenlive</code>) βάλε ένα πλάνο στο V1 και ένα <strong>Color Clip</strong> με ζεστό πορτοκαλί χρώμα στο V2.</li>
+<li>Στο Transform του V2 άλλαξε το <strong>Compositing</strong> σε <strong>Screen</strong> (ή δοκίμασε Add αν υπάρχει στη λίστα).</li>
+<li>Πρόσθεσε <strong>Gaussian Blur</strong> στο V2, με μεγάλη τιμή, ώστε η άκρη του να μοιάζει με λάμψη.</li>
+<li>Φτιάξε keyframes αδιαφάνειας: 0% στην αρχή, περίπου 60% στη μέση, 0% στο τέλος. Μετακίνησε το V2 αργά από μια γωνία προς το κέντρο.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Το πλάνο φωτίζεται ζεστά στη μέση του clip, ενώ το πρώτο και το τελευταίο καρέ είναι ίδια με το πρωτότυπο.</p>
+<h3 id="extra-8-2">Ε8.2 Ο ανιχνευτής διαφοράς<a class="headerlink" href="#extra-8-2" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 20′ · Εστίαση: blend modes: Multiply, Screen, Difference</em></p>
+<ol>
+<li>Σε αντίγραφο του project (<code>extra-08-2.kdenlive</code>) βάλε στο V1 ένα πλάνο και στο V2 ένα Color Clip μεσαίου γκρι.</li>
+<li><strong>Πρόβλεψη:</strong> γράψε σε πίνακα τι θα κάνει κάθε blend mode στο πλάνο: Multiply, Screen και ένα τρίτο της επιλογής σου (π.χ. Overlay) από τη λίστα του πεδίου <strong>Compositing</strong> του Transform.</li>
+<li>Δοκίμασε τα τρία και σημείωσε τι είδες. Συμφώνησε η πρόβλεψη;</li>
+<li>Βάλε στο V2 <strong>αντίγραφο του ίδιου πλάνου</strong> και διάλεξε blend mode <strong>Difference</strong>. Τι χρώμα βγαίνει; Πρόσθεσε στο αντίγραφο ένα εφέ που αλλάζει λίγο το χρώμα (π.χ. Brightness) και ξαναδές.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις πίνακα με τρεις προβλέψεις και παρατηρήσεις, και μία πρόταση για το τι δείχνει το Difference όταν τα δύο clip είναι ίδια και τι όταν διαφέρουν.</p>
+<h3 id="extra-8-3">Ε8.3 Τριπλή οθόνη με ακρίβεια pixel<a class="headerlink" href="#extra-8-3" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: υπολογισμός θέσεων</em></p>
+<ol>
+<li>Σε αντίγραφο του project (<code>extra-08-3.kdenlive</code>) βάλε τρία πλάνα σε τρία tracks.</li>
+<li>Κάθε PiP θα έχει πλάτος 400 px και ύψος 225 px και τα τρία θα είναι στην ίδια σειρά με κενά 20 px ανάμεσά τους και στις άκρες. Σε project 1280 px, υπολόγισε: πόσο είναι το Size του καθενός (ως ποσοστό); Ποιο είναι το x της γωνίας του καθενός; Ποιο το y, ώστε να είναι κεντραρισμένα κάθετα;</li>
+<li>Εφάρμοσε τις τιμές στο Transform και έλεγξε στο monitor ότι τα κενά είναι ίσα.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις τους υπολογισμούς γραμμένους πριν από το Transform, και στο monitor τα τρία πλαίσια έχουν ίσα κενά.</p>
+<h3 id="extra-8-4">Ε8.4 Η οθόνη μέσα στη φωτογραφία<a class="headerlink" href="#extra-8-4" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 25′ · Εστίαση: Corners (κατηγορία Transform, Distort and Perspective)</em></p>
+<ol>
+<li>Βρες μια φωτογραφία με ορθογώνιο αντικείμενο που φαίνεται υπό γωνία (οθόνη υπολογιστή, τηλεόραση, αφίσα) και βάλε την στο V1 σε αντίγραφο του project (<code>extra-08-4.kdenlive</code>).</li>
+<li>Στο V2 βάλε ένα βίντεο, ίδιας διάρκειας.</li>
+<li>Πρόσθεσε στο V2 το εφέ <strong>Corners</strong>. Σύρε τα τέσσερα σημεία του στο monitor, ώστε να ταιριάξουν με τις τέσσερις γωνίες της οθόνης.</li>
+<li>Προσάρμοσε τη φωτεινότητα ώστε το βίντεο να μοιάζει ότι ανήκει στη σκηνή (μια οθόνη είναι φωτεινή, μια αφίσα όχι).</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Στο 200% του monitor δεν φαίνεται κενό ανάμεσα στο βίντεο και στο πλαίσιο της οθόνης, και η φωτεινότητα ταιριάζει με το περιβάλλον.</p>
+<h3 id="extra-8-5">Ε8.5 Καθάρισε τις άκρες του key<a class="headerlink" href="#extra-8-5" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 15′ · Εστίαση: Despill / Spill Suppress</em></p>
+<ol>
+<li>Άνοιξε το project του Σταδίου 4 με το chroma key σε αντίγραφο (<code>extra-08-5.kdenlive</code>).</li>
+<li>Μεγέθυνε το monitor στο 200% γύρω από τα μαλλιά ή τις άκρες του θέματος. Σημείωσε αν φαίνεται πράσινο περίγραμμα.</li>
+<li>Πρόσθεσε μετά το chroma key ένα από τα εφέ <strong>Despill</strong>, <strong>Spill Suppress</strong> ή <strong>Key Spill Mop Up</strong> και ρύθμισέ το.</li>
+<li>Σύγκρινε πριν/μετά στο ίδιο καρέ και στο ίδιο μέγεθος.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Έχεις δύο στιγμιότυπα του ίδιου καρέ στο 200% και μία πρόταση για το τι άλλαξε στις άκρες.</p>
+<h3 id="extra-8-6">Ε8.6 Πλαίσιο και σκιά για το PiP<a class="headerlink" href="#extra-8-6" title="Permanent link">&para;</a></h3>
+<p><em>Περίπου 12′ · Εστίαση: Drop Shadow (κατηγορία Generate)</em></p>
+<ol>
+<li>Σε αντίγραφο του project (<code>extra-08-6.kdenlive</code>) πάρε ένα PiP από το Στάδιο 2.</li>
+<li><strong>Πλαίσιο:</strong> βάλε ένα λευκό Color Clip κάτω από το PiP, μεγαλύτερο κατά 8 px συνολικά (4 px ανά πλευρά).</li>
+<li><strong>Σκιά:</strong> δοκίμασε το εφέ <strong>Drop Shadow</strong> στο PiP. Αν δεν φαίνεται, άλλαξε τη σειρά των εφέ στο stack.</li>
+<li>Δοκίμασε το αποτέλεσμα πάνω σε δύο καρέ: ένα φωτεινό και ένα σκούρο φόντο.</li>
+</ol>
+<p><strong>Έτοιμο όταν:</strong> Το PiP διαβάζεται καθαρά και στα δύο καρέ, και έχεις γράψει ποια από τις δύο βοήθειες (πλαίσιο ή σκιά) έκανε τη διαφορά σε κάθε φόντο.</p>
 <h2 id="_10">Τι πρέπει να μπορείς να εξηγήσεις<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Γιατί το PiP σου βρίσκεται σε ξεχωριστό, ψηλότερο track;</li>
@@ -3096,10 +3198,10 @@ Alpha blend. Η δοκιμή είναι επέκταση μετά το βασι�
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
