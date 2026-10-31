@@ -2904,13 +2904,13 @@ Alpha blend. Η δοκιμή είναι επέκταση μετά το βασι�
 </ol>
 <h2 id="cycle-4">Κύκλος 4 — Chroma key και τελική έκδοση<a class="headerlink" href="#cycle-4" title="Permanent link">&para;</a></h2>
 <h3 id="41-chroma-key">4.1 Βασικό chroma key<a class="headerlink" href="#41-chroma-key" title="Permanent link">&para;</a></h3>
-<p>Το effect <strong>Chroma Key</strong> (ή Blue/Green Screen) αφαιρεί ένα συγκεκριμένο εύρος χρώματος
+<p>Τα effects <strong>Chroma Key: Basic</strong> και <strong>Chroma Key: Advanced</strong> αφαιρούν ένα συγκεκριμένο εύρος χρώματος
 από το πάνω πλάνο, αφήνοντας το κάτω πλάνο να φανεί εκεί που ήταν εκείνο το χρώμα.
 Χρειάζεται:</p>
 <ul>
 <li>ενιαίο, ομοιόμορφα φωτισμένο φόντο (χωρίς σκιές/πτυχώσεις έντονες),</li>
 <li>το θέμα (π.χ. πρόσωπο) να <strong>μην</strong> φοράει χρώμα κοντά σε αυτό του φόντου,</li>
-<li>ρύθμιση του effect ώστε να διαλέξεις με σταγονόμετρο το ακριβές χρώμα του φόντου σου.</li>
+<li>ρύθμιση του effect ώστε να ορίσεις στο <strong>Color Key</strong>, με την πιπέτα, το ακριβές χρώμα του φόντου σου.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Δεν χρειάζεται πραγματικό πράσινο ύφασμα για την άσκηση</p>
@@ -2928,15 +2928,18 @@ Alpha blend. Η δοκιμή είναι επέκταση μετά το βασι�
 <li>Δοκιμή δύο τιμών Opacity και αιτιολόγηση της τελικής επιλογής.
    Αν επέλεξες την Επέκταση Α, πρόσθεσε και μία κίνηση θέσης στο PiP.</li>
 <li><strong>Προαιρετικά:</strong> σε ξεχωριστό πάνω clip πρόσθεσε <strong>Chroma Key: Basic</strong>.
-   Στο <strong>Color Key</strong> πάρε με το σταγονόμετρο δείγμα από το φόντο και αύξησε σταδιακά
-   το <strong>Variance</strong>, μέχρι να εμφανιστεί το κάτω πλάνο χωρίς «τρύπες» στο θέμα.</li>
+   Στο <strong>Color Key</strong> πάτησε το κουμπί που μοιάζει με <strong>πιπέτα</strong> και κάνε κλικ στο φόντο του βίντεο
+   στο monitor. Μετά αύξησε σταδιακά το <strong>Variance</strong>, μέχρι να εμφανιστεί το κάτω πλάνο χωρίς «τρύπες» στο θέμα.
+   Αν δεν βρίσκεις την πιπέτα, δοκίμασε το <strong>Chroma Key: Advanced</strong>: το εγχειρίδιο λέει ότι στην παράμετρο
+   <strong>Color to select</strong> το χρώμα διαλέγεται με πιπέτα στο Project Monitor ή από παλέτα, πατώντας στο χρωματιστό πεδίο.</li>
 <li><strong>Κομμάτι 2 του τρέιλερ:</strong> σε νέο project <code>trailer-2.kdenlive</code>, με το κύριο πλάνο στο V1 και το
    PiP στο V2 (4–6″). Εξαγωγή σε MP4 ως <code>trailer-2.mp4</code>. Αν θέλεις το PiP και στο κύριο μοντάζ σου,
    πρόσθεσέ το εκεί μετά.</li>
 </ol>
 <p>Πηγές χειρισμών: <a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/transform_distort_perspective/transform.html">Transform</a>,
 <a href="https://docs.kdenlive.org/en/compositing.html">Opacity και σύνθεση</a>,
-<a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/alpha_mask_keying/chroma_key.html">Chroma Key: Basic</a>.</p>
+<a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/alpha_mask_keying/chroma_key.html">Chroma Key: Basic</a>,
+<a href="https://docs.kdenlive.org/en/effects_and_filters/video_effects/alpha_mask_keying/chroma_key_advanced.html">Chroma Key: Advanced</a>.</p>
 <hr />
 <h1 id="_5">Μετά το μοντάζ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
 <h2 id="_6">Συνηθισμένα λάθη<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -3086,7 +3089,7 @@ Alpha blend. Η δοκιμή είναι επέκταση μετά το βασι�
 <li><strong>Opacity</strong> 100% είναι συμπαγές· χαμηλότερες τιμές αφήνουν να φανεί το κάτω πλάνο. Σύγκρινε δύο τιμές και κράτα αυτή που αφήνει το PiP ευανάγνωστο.</li>
 <li>Blend modes: <strong>Alpha blend</strong> (κανονική σύνθεση), <strong>Screen</strong> (φωτίζει), <strong>Multiply</strong> (σκουραίνει).</li>
 <li>Κινούμενο PiP σημαίνει keyframes στη θέση X/Y του Transform, ακριβώς όπως στο Μ6. Size και Opacity μένουν ίδια.</li>
-<li><strong>Chroma key</strong>: ενιαίο, ομοιόμορφα φωτισμένο φόντο, θέμα χωρίς χρώμα κοντά στο φόντο, και επιλογή του χρώματος με σταγονόμετρο.</li>
+<li><strong>Chroma key</strong>: ενιαίο, ομοιόμορφα φωτισμένο φόντο, θέμα χωρίς χρώμα κοντά στο φόντο, και επιλογή του χρώματος του φόντου με την πιπέτα του Color Key.</li>
 <li>Στο Color Key αύξησε σταδιακά το Variance, μέχρι να φανεί το κάτω πλάνο χωρίς «τρύπες» στο θέμα.</li>
 <li>Το εμβαδόν ενός PiP είναι το τετράγωνο του μεγέθους: 30% καλύπτει το 9% του κάδρου, 50% καλύπτει το 25%.</li>
 <li>Για να ακουμπά το PiP την κάτω δεξιά γωνία της ασφαλούς ζώνης: x = 1280 − 128 − πλάτος και y = 720 − 72 − ύψος. Επιβεβαίωσέ το στο Edit Mode.</li>
